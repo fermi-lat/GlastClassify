@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeFactory
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.1.1.1 2005/07/03 21:20:57 burnett Exp $
 */
 
 #include "GlastClassify/TreeFactory.h"
@@ -10,6 +10,7 @@ $Header$
 #include "classifier/TrainingInfo.h"
 #include <fstream>
 #include <cassert>
+#include <stdexcept>
 
 using namespace GlastClassify;
 

@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.15 2005/06/23 22:29:03 burnett Exp $
+$Id: release.notes,v 1.1.1.1 2005/07/03 21:20:57 burnett Exp $
 @verbatim
  
- 03-jul-05  v0     Initial checkin.
+03-jul-05  v0r1p1 unix fix
+03-jul-05  v0     Initial checkin.
 
 @endverbatim
 
