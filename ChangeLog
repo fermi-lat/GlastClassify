@@ -1,0 +1,68 @@
+------------------------------------------------------------
+User: burnett  Sun Jul  3 14:20:58 PDT 2005
+GlastClassify
+
+Log Message:
+new import, package with tree data, code to generate them
+
+Status:
+
+Vendor Tag:	THB
+Release Tags:	v0
+		
+N GlastClassify/.cvsignore
+N GlastClassify/cmt/.cvsignore
+N GlastClassify/cmt/NMake
+N GlastClassify/cmt/requirements
+N GlastClassify/data/goodcal/dtree.txt
+N GlastClassify/data/goodcal/efficiencyplot.txt
+N GlastClassify/data/goodcal/files.txt
+N GlastClassify/data/goodcal/log.txt
+N GlastClassify/data/goodcal/testlog.txt
+N GlastClassify/data/goodcal/title.txt
+N GlastClassify/data/goodcal/variables.txt
+N GlastClassify/data/psf_thick_track/dtree.txt
+N GlastClassify/data/psf_thick_track/efficiencyplot.txt
+N GlastClassify/data/psf_thick_track/files.txt
+N GlastClassify/data/psf_thick_track/log.txt
+N GlastClassify/data/psf_thick_track/title.txt
+N GlastClassify/data/psf_thick_track/variables.txt
+N GlastClassify/data/psf_thick_vertex/dtree.txt
+N GlastClassify/data/psf_thick_vertex/efficiencyplot.txt
+N GlastClassify/data/psf_thick_vertex/files.txt
+N GlastClassify/data/psf_thick_vertex/log.txt
+N GlastClassify/data/psf_thick_vertex/title.txt
+N GlastClassify/data/psf_thick_vertex/variables.txt
+N GlastClassify/data/psf_thin_track/dtree.txt
+N GlastClassify/data/psf_thin_track/efficiencyplot.txt
+N GlastClassify/data/psf_thin_track/files.txt
+N GlastClassify/data/psf_thin_track/log.txt
+N GlastClassify/data/psf_thin_track/title.txt
+N GlastClassify/data/psf_thin_track/variables.txt
+N GlastClassify/data/psf_thin_vertex/dtree.txt
+N GlastClassify/data/psf_thin_vertex/efficiencyplot.txt
+N GlastClassify/data/psf_thin_vertex/files.txt
+N GlastClassify/data/psf_thin_vertex/log.txt
+N GlastClassify/data/psf_thin_vertex/title.txt
+N GlastClassify/data/psf_thin_vertex/variables.txt
+N GlastClassify/data/vertex_thick/dtree.txt
+N GlastClassify/data/vertex_thick/efficiencyplot.txt
+N GlastClassify/data/vertex_thick/files.txt
+N GlastClassify/data/vertex_thick/log.txt
+N GlastClassify/data/vertex_thick/title.txt
+N GlastClassify/data/vertex_thick/variables.txt
+N GlastClassify/data/vertex_thin/dtree.txt
+N GlastClassify/data/vertex_thin/efficiencyplot.txt
+N GlastClassify/data/vertex_thin/files.txt
+N GlastClassify/data/vertex_thin/log.txt
+N GlastClassify/data/vertex_thin/testlog.txt
+N GlastClassify/data/vertex_thin/title.txt
+N GlastClassify/data/vertex_thin/variables.txt
+N GlastClassify/doc/release.notes
+N GlastClassify/GlastClassify/TreeFactory.h
+N GlastClassify/src/TreeFactory.cxx
+N GlastClassify/src/test/test_main.cxx
+
+No conflicts created by this import
+
+    *
