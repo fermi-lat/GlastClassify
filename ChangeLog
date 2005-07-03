@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Jul  3 15:38:38 PDT 2005
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+fix unix compile error
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1, operation: add
 Package: GlastClassify
