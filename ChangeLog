@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Jul  3 15:38:38 PDT 2005
+GlastClassify/src
+
+Modified Files:
+	TreeFactory.cxx 
+Log Message:
+fix unix compile error
+    *
+------------------------------------------------------------
+User: burnett  Sun Jul  3 15:38:38 PDT 2005
 GlastClassify/doc
 
 Modified Files:
