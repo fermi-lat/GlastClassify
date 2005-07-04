@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Jul  3 17:50:11 PDT 2005
+GlastClassify/GlastClassify
+
+Modified Files:
+	TreeFactory.h 
+Log Message:
+unix fix, documentation
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1p2, operation: add
 Package: GlastClassify
