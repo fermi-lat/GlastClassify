@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jul 14 07:51:59 PDT 2005
+GlastClassify/data/goodcal
+
+Modified Files:
+	dtree.txt efficiencyplot.txt log.txt 
+Log Message:
+preliminary trees using new variable names and training data generated 24-jun-05
+    *
+------------------------------------------------------------
 User: burnett  Wed Jul  6 11:10:06 PDT 2005
 GlastClassify/data/goodcal
 
