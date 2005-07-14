@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jul 14 07:52:00 PDT 2005
+GlastClassify/data/vertex_thick
+
+Modified Files:
+	dtree.txt efficiencyplot.txt files.txt log.txt variables.txt 
+Log Message:
+preliminary trees using new variable names and training data generated 24-jun-05
+    *
+------------------------------------------------------------
 User: burnett  Thu Jul 14 07:51:59 PDT 2005
 GlastClassify/data/psf_thin_vertex
 
