@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Jul 22 16:16:58 PDT 2005
+GlastClassify/data/goodcal
+
+Modified Files:
+	dtree.txt efficiencyplot.txt files.txt log.txt 
+Log Message:
+update trees with results from HEAD1.594 all-gamma and pdrbackgndavg runs
+    *
+------------------------------------------------------------
 User: burnett  Fri Jul 22 16:15:03 PDT 2005
 GlastClassify/data/gamma
 
