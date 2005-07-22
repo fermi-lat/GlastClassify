@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Jul 22 16:17:00 PDT 2005
+GlastClassify/data/gamma
+
+Added Files:
+	files.txt log.txt title.txt variables.txt 
+Log Message:
+update trees with results from HEAD1.594 all-gamma and pdrbackgndavg runs
+    *
+------------------------------------------------------------
 User: burnett  Fri Jul 22 16:16:59 PDT 2005
 GlastClassify/data/vertex_thin
 
