@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Fri Jul 22 16:23:45 PDT 2005
+GlastClassify/src/classify
+
+Added Files:
+	ClassifyCal.cxx ClassifyCal.h ClassifyCore.cxx ClassifyCore.h 
+	ClassifyGamma.cxx ClassifyGamma.h ClassifyVertex.cxx 
+	ClassifyVertex.h GlastClassify.cxx GlastClassify.h main.cxx 
+Log Message:
+code for performing glast classification
+    *
+------------------------------------------------------------
 User: burnett  Fri Jul 22 16:23:05 PDT 2005
 GlastClassify/src/classify
 
