@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Fri Jul 22 16:16:59 PDT 2005
+GlastClassify/data/vertex_thick
+
+Modified Files:
+	dtree.txt efficiencyplot.txt files.txt log.txt 
+Log Message:
+update trees with results from HEAD1.594 all-gamma and pdrbackgndavg runs
+    *
+------------------------------------------------------------
+User: burnett  Fri Jul 22 16:16:59 PDT 2005
 GlastClassify/data/psf_thin_vertex
 
 Modified Files:
