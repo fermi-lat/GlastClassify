@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Wed Jul 27 09:19:14 PDT 2005
+GlastClassify/src/classify
+
+Modified Files:
+	ClassifyCore.cxx ClassifyGamma.cxx ClassifyGamma.h 
+	ClassifyVertex.h GlastClassify.cxx GlastClassify.h main.cxx 
+Log Message:
+oops.
+    *
+------------------------------------------------------------
 User: burnett  Wed Jul 27 09:16:00 PDT 2005
 GlastClassify/src/classify
 
