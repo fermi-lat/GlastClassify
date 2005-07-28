@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jul 28 09:36:40 PDT 2005
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+gcc fix #3; add some documentation
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r3p2, operation: add
 Package: GlastClassify
