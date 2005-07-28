@@ -1,10 +1,9 @@
 /**@file ClassifyGamma.h
 @brief 
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyGamma.h,v 1.3 2005/07/27 16:19:14 burnett Exp $
 
 */
-#pragma once
 #include "GlastClassify.h"
 
 #include <cmath>

@@ -1,11 +1,12 @@
 /**@file ClassifyVertex.h
 @brief 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.h,v 1.3 2005/07/27 16:19:14 burnett Exp $
 
 
 */
+#ifndef GlastClassify_ClassifyVertex_h
+#define GlastClassify_ClassifyVertex_h
 
-#pragma once
 #include "classifier/Classifier.h"
 #include "GlastClassify.h"
 
@@ -51,3 +52,5 @@ private:
     int m_tkrdirerr;
     bool m_isThin; 
 };
+
+#endif
