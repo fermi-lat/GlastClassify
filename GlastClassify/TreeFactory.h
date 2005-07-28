@@ -3,7 +3,7 @@
 @brief declaration of class TreeFactory
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.2 2005/07/04 00:50:11 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.1.1.1 2005/07/03 21:20:57 burnett Exp $
 */
 
 #ifndef GlastClassify_TreeFactory_h
@@ -14,7 +14,6 @@ class DecisionTree;
 
 #include <string>
 #include <vector>
-#include <utility>
 
 
 namespace GlastClassify {
@@ -32,10 +31,7 @@ namespace GlastClassify {
         class ILookupData {
         public:
             /// return pointer to data that will be filled by client later
-            //virtual const double * operator()(const std::string& name)=0;
-
-            // return pair; bool is true if pointer to a double, false if pointer to a float
-            virtual std::pair<bool, const void*> operator()(const std::string& name)=0;
+            virtual const double * operator()(const std::string& name)=0;
             /// a bit of a kluge for ROOT. The above might have to be cast to a float*
             virtual bool isFloat()const {return false;}  
         };

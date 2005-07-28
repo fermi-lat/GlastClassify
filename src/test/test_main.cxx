@@ -1,6 +1,6 @@
 /**@file main.cxx
 @brief main program for application to test GLAST classification trees
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/test/test_main.cxx,v 1.3 2005/07/04 00:50:11 burnett Exp $
+$Header$
 
 */
 
@@ -13,16 +13,14 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/test/test_main.cxx,v 1.3
 #include <vector>
 using namespace GlastClassify;
 
-static std::vector<std::pair<bool, const void *> > values;
-double value;
+static std::vector<double> values;
 class TestLookup : public TreeFactory::ILookupData {
 public:
     TestLookup(){}
-    std::pair<bool, const void *> operator()(const std::string& name){
+    const double * operator()(const std::string& name){
         std::cout << "Looking up: " << name << std::endl;
-        value = values.size(); // very klugy, just exercise logic
-        values.push_back(std::make_pair(false, &value));
-        return values.back();
+        values.push_back(values.size());
+        return &values.back();
     }
 };
 
@@ -40,7 +38,6 @@ public:
         log() << "Ask factory for a tree: " << std::endl;
         const TreeFactory::Tree& goodcal= factory(name);
         log() << "Tree's title: " << goodcal.title() << std::endl;
-        
 
         log() << name  << " value from the tree: " << goodcal() << std::endl;
     }
