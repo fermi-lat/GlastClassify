@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.1.1.1 2005/07/03 21:20:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.2 2005/07/03 22:38:38 burnett Exp $
 */
 
 #include "GlastClassify/TreeFactory.h"
@@ -15,28 +15,34 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.1.1.
 using namespace GlastClassify;
 
 /** @class GleamValues
-    @brief local definition of class which handles pointers to values
+@brief local definition of class which handles pointers to values
 */
 class TreeFactory::GleamValues : public DecisionTree::Values {
 public:
     GleamValues(const TrainingInfo::StringList & names,ILookupData& lookup)
     {
-        assert( ! lookup.isFloat());// protect me!
         for( TrainingInfo::StringList::const_iterator it = names.begin();
             it != names.end(); ++it)
         {
-            m_pval.push_back(lookup(*it));
+            std::pair<bool, const void*> entry = lookup(*it);
+            if( entry.second == 0 ){
+                throw std::invalid_argument("TreeFactory: did not find variable "+*it);
+            }
+
+            m_pval.push_back( entry);
         }
 
     }
     /// @brief callback from tree evaluation
-    
+
     double operator[](int index)const{
-        double v = *m_pval[index];
+        std::pair<bool, const void*> entry = m_pval[index];
+        // now dereference either as a float or a double
+        double v = entry.first? *(const float*)entry.second : *(const double*)entry.second;
         return v;
     }
 private:
-    std::vector<const double*>m_pval;
+    std::vector<std::pair<bool, const void*> >m_pval;
 };
 
 
