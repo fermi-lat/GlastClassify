@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Jul 28 06:47:01 PDT 2005
+GlastClassify/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+fix gcc errors, test program
+    *
+------------------------------------------------------------
+User: burnett  Thu Jul 28 06:47:01 PDT 2005
 GlastClassify/src/classify
 
 Modified Files:
