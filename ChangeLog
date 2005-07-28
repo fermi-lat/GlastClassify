@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Jul 27 19:21:52 PDT 2005
+GlastClassify/GlastClassify
+
+Modified Files:
+	TreeFactory.h 
+Log Message:
+adjust for mixture of float and double; tag
+    *
+------------------------------------------------------------
 User: burnett  Wed Jul 27 15:08:47 PDT 2005
 GlastClassify/data/gamma
 
