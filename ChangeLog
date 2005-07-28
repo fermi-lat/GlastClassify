@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Jul 27 19:21:52 PDT 2005
+GlastClassify/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+adjust for mixture of float and double; tag
+    *
+------------------------------------------------------------
+User: burnett  Wed Jul 27 19:21:52 PDT 2005
 GlastClassify/cmt
 
 Modified Files:
