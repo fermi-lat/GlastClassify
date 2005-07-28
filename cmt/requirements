@@ -1,8 +1,8 @@
 package GlastClassify
 
-version v0r3
+version v0r3p1
 author T. Burnett <tburnett@u.washington.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.6 2005/07/14 14:55:42 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.7 2005/07/28 02:21:52 burnett Exp $
 use GlastPolicy *
 
 apply_pattern package_include
