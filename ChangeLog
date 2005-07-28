@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jul 28 09:36:41 PDT 2005
+GlastClassify/src/classify
+
+Modified Files:
+	main.cxx 
+Log Message:
+gcc fix #3; add some documentation
+    *
+------------------------------------------------------------
 User: burnett  Thu Jul 28 09:36:40 PDT 2005
 GlastClassify/doc
 
