@@ -1,7 +1,7 @@
 /**@file GlastClassify.cxx
 @brief 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/GlastClassify.cxx,v 1.3 2005/07/27 16:19:14 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/GlastClassify.cxx,v 1.4 2005/07/28 13:47:01 burnett Exp $
 */
 
 #include "GlastClassify.h"
@@ -17,8 +17,8 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/GlastClassify.c
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <iterator>
 #include <cmath>
-#include <direct.h>
 #include <time.h>
 #include <stdio.h>
 
@@ -68,7 +68,7 @@ int GlastClassify::subdefine(std::vector<std::string>& all_names, const char *Fi
     return all_names.size()-1;
 }
 
-void GlastClassify::load( unsigned int max_events, Subset set)
+void GlastClassify::load( unsigned int max_events, Subset /*set*/)
 {
     std::vector<std::string> all_names(m_info.vars());
     std::cout << "Defining names" << std::endl;
@@ -132,7 +132,8 @@ void GlastClassify::classify()
     BackgroundVsEfficiency plot(tree);
     plot.print(log());
     log() << "Figure of merit sigma: " <<  plot.sigma() << std::endl;
-    plot.print(std::ofstream((m_info.filepath()+"/efficiencyplot.txt").c_str()));
+    std::ofstream plotfile((m_info.filepath()+"/efficiencyplot.txt").c_str());
+    plot.print(plotfile);
     
 
     // make simple tree and print it to a local file
