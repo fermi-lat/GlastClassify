@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: burnett  Thu Jul 28 07:55:57 PDT 2005
+GlastClassify/src/classify
+
+Modified Files:
+	ClassifyCal.h ClassifyCore.h ClassifyGamma.h ClassifyVertex.h 
+	GlastClassify.cxx 
+Log Message:
+gcc fixes
+    *
+------------------------------------------------------------
+User: burnett  Thu Jul 28 07:55:57 PDT 2005
 GlastClassify/doc
 
 Modified Files:
