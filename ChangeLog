@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Jul 29 14:58:01 PDT 2005
+GlastClassify/src/classify
+
+Modified Files:
+	GlastClassify.cxx 
+Log Message:
+protect against bad data
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r3p3, operation: add
 Package: GlastClassify
