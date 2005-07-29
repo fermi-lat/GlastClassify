@@ -1,5 +1,84 @@
 ------------------------------------------------------------
 TAG
+Tag name: v0r3p3, operation: add
+Package: GlastClassify
+User: burnett  Thu Jul 28 17:42:45 2005
+Files:
+  GlastClassify/.cvsignore  1.1.1.1
+  GlastClassify/ChangeLog  1.61
+  GlastClassify/GlastClassify/TreeFactory.h  1.3
+  GlastClassify/cmt/.cvsignore  1.1.1.1
+  GlastClassify/cmt/NMake  1.1.1.1
+  GlastClassify/cmt/requirements  1.10
+  GlastClassify/data/gamma/variables.txt  1.2
+  GlastClassify/data/gamma/dtree.txt  1.1
+  GlastClassify/data/gamma/log.txt  1.2
+  GlastClassify/data/gamma/efficiencyplot.txt  1.1
+  GlastClassify/data/gamma/title.txt  1.1
+  GlastClassify/data/gamma/files.txt  1.2
+  GlastClassify/data/goodcal/testlog.txt  1.1.1.1
+  GlastClassify/data/goodcal/variables.txt  1.2
+  GlastClassify/data/goodcal/dtree.txt  1.4
+  GlastClassify/data/goodcal/log.txt  1.4
+  GlastClassify/data/goodcal/efficiencyplot.txt  1.4
+  GlastClassify/data/goodcal/title.txt  1.1.1.1
+  GlastClassify/data/goodcal/files.txt  1.3
+  GlastClassify/data/psf_thick_track/variables.txt  1.2
+  GlastClassify/data/psf_thick_track/dtree.txt  1.3
+  GlastClassify/data/psf_thick_track/log.txt  1.3
+  GlastClassify/data/psf_thick_track/efficiencyplot.txt  1.3
+  GlastClassify/data/psf_thick_track/title.txt  1.2
+  GlastClassify/data/psf_thick_track/files.txt  1.3
+  GlastClassify/data/psf_thick_vertex/variables.txt  1.2
+  GlastClassify/data/psf_thick_vertex/dtree.txt  1.3
+  GlastClassify/data/psf_thick_vertex/log.txt  1.3
+  GlastClassify/data/psf_thick_vertex/efficiencyplot.txt  1.3
+  GlastClassify/data/psf_thick_vertex/title.txt  1.2
+  GlastClassify/data/psf_thick_vertex/files.txt  1.3
+  GlastClassify/data/psf_thin_track/variables.txt  1.2
+  GlastClassify/data/psf_thin_track/dtree.txt  1.3
+  GlastClassify/data/psf_thin_track/log.txt  1.3
+  GlastClassify/data/psf_thin_track/efficiencyplot.txt  1.3
+  GlastClassify/data/psf_thin_track/title.txt  1.2
+  GlastClassify/data/psf_thin_track/files.txt  1.3
+  GlastClassify/data/psf_thin_vertex/variables.txt  1.2
+  GlastClassify/data/psf_thin_vertex/dtree.txt  1.3
+  GlastClassify/data/psf_thin_vertex/log.txt  1.3
+  GlastClassify/data/psf_thin_vertex/efficiencyplot.txt  1.3
+  GlastClassify/data/psf_thin_vertex/title.txt  1.2
+  GlastClassify/data/psf_thin_vertex/files.txt  1.3
+  GlastClassify/data/vertex_thick/variables.txt  1.2
+  GlastClassify/data/vertex_thick/dtree.txt  1.3
+  GlastClassify/data/vertex_thick/log.txt  1.3
+  GlastClassify/data/vertex_thick/efficiencyplot.txt  1.3
+  GlastClassify/data/vertex_thick/title.txt  1.1.1.1
+  GlastClassify/data/vertex_thick/files.txt  1.3
+  GlastClassify/data/vertex_thin/testlog.txt  1.1.1.1
+  GlastClassify/data/vertex_thin/variables.txt  1.2
+  GlastClassify/data/vertex_thin/dtree.txt  1.3
+  GlastClassify/data/vertex_thin/log.txt  1.3
+  GlastClassify/data/vertex_thin/efficiencyplot.txt  1.3
+  GlastClassify/data/vertex_thin/title.txt  1.1.1.1
+  GlastClassify/data/vertex_thin/files.txt  1.3
+  GlastClassify/doc/release.notes  1.8
+  GlastClassify/src/mainpage.h  1.1
+  GlastClassify/src/TreeFactory.cxx  1.3
+  GlastClassify/src/classify/ClassifyVertex.h  1.4
+  GlastClassify/src/classify/main.cxx  1.4
+  GlastClassify/src/classify/ClassifyCal.cxx  1.1
+  GlastClassify/src/classify/GlastClassify.h  1.4
+  GlastClassify/src/classify/ClassifyVertex.cxx  1.1
+  GlastClassify/src/classify/ClassifyCal.h  1.2
+  GlastClassify/src/classify/ClassifyCore.h  1.2
+  GlastClassify/src/classify/ClassifyCore.cxx  1.3
+  GlastClassify/src/classify/GlastClassify.cxx  1.5
+  GlastClassify/src/classify/ClassifyGamma.cxx  1.3
+  GlastClassify/src/classify/ClassifyGamma.h  1.4
+  GlastClassify/src/test/test_main.cxx  1.4
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: v0r1p3, operation: add
 Package: GlastClassify
 User: burnett  Thu Jul 28 11:45:45 2005
