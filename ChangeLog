@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Jul 31 17:03:23 PDT 2005
+GlastClassify/src/classify
+
+Modified Files:
+	main.cxx 
+Log Message:
+improve interface, allow env vars to specify paths to data, tree info
+    *
+------------------------------------------------------------
 User: burnett  Sun Jul 31 17:01:19 PDT 2005
 GlastClassify/src/classify
 
