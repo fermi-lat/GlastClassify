@@ -1,6 +1,6 @@
 /**@file ClassifyVertex.h
 @brief 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.h,v 1.3 2005/07/27 16:19:14 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.h,v 1.4 2005/07/28 14:55:57 burnett Exp $
 
 
 */
@@ -20,16 +20,11 @@ public:
     ClassifyVertex(const std::string& info_path, layer isThin)
         : GlastClassify(info_path)
         , m_isThin(isThin)
-    {}
-
-    //functions to check or declare variables
-
-    virtual void define(std::vector<std::string>& all_names)
     {
-        m_vtxangleIndex = find_index("VtxAngle");
-        m_firstlayer = subdefine(all_names, "Tkr1FirstLayer");
-        m_direrr = subdefine(all_names, "McDirErr");
-        m_tkrdirerr = subdefine(all_names, "McTkr1DirErr");
+        m_vtxangleIndex = find_index( "VtxAngle");
+        m_firstlayer =     add_index( "Tkr1FirstLayer");
+        m_direrr =         add_index( "McDirErr");
+        m_tkrdirerr =      add_index( "McTkr1DirErr");
     }
 
     //function to generate good test
