@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Jul 31 17:07:58 PDT 2005
+GlastClassify/data/psf_thin_track
+
+Modified Files:
+	dtree.txt efficiencyplot.txt files.txt log.txt 
+Log Message:
+tagging after creating new trees.
+    *
+------------------------------------------------------------
 User: burnett  Sun Jul 31 17:07:57 PDT 2005
 GlastClassify/data/psf_thick_vertex
 
