@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Sun Jul 31 17:01:19 PDT 2005
+GlastClassify/src/classify
+
+Modified Files:
+	ClassifyCal.h ClassifyCore.h ClassifyGamma.h ClassifyVertex.h 
+	GlastClassify.cxx GlastClassify.h 
+Log Message:
+refactor a bit; fix up constants in the PSF guy.
+    *
+------------------------------------------------------------
 User: burnett  Sun Jul 31 16:59:26 PDT 2005
 GlastClassify/data/goodcal_med
 
