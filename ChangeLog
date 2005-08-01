@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Jul 31 20:37:27 PDT 2005
+GlastClassify/src/classify
+
+Modified Files:
+	ClassifyCore.h GlastClassify.h main.cxx 
+Log Message:
+gcc fixes
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r4p1, operation: add
 Package: GlastClassify
