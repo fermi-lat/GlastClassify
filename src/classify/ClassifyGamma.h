@@ -1,7 +1,7 @@
 /**@file ClassifyGamma.h
 @brief 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyGamma.h,v 1.3 2005/07/27 16:19:14 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyGamma.h,v 1.4 2005/07/28 14:55:57 burnett Exp $
 
 */
 #include "GlastClassify.h"
@@ -13,16 +13,12 @@ class ClassifyGamma : public GlastClassify
 public:
     ClassifyGamma(const std::string& info_path)
         : GlastClassify(info_path, false) // flag that not mixed.
-    {}
-
-    //functions to check or declare variables
-
-    virtual void define(std::vector<std::string>& all_names)
     {
-        m_acddocaindex = subdefine(all_names, "AcdDoca");
-        m_calEnergyIndex= find_index("CalEnergyRaw");
+        m_calEnergyIndex = find_index("CalEnergyRaw");
         m_CalTotRLnIndex = find_index("CalTotRLn");
-        m_FilterAlgStatus = subdefine(all_names, "FilterAlgStatus");
+
+        m_FilterAlgStatus=  add_index( "FilterAlgStatus");
+        m_acddocaindex   =  add_index( "AcdDoca");
     }
 
     //acceptance function, applied to background and signal
