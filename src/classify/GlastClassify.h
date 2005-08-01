@@ -1,6 +1,6 @@
 /**@file GlastClassify.h
 @brief 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/GlastClassify.h,v 1.4 2005/07/28 13:47:01 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/GlastClassify.h,v 1.5 2005/08/01 00:01:19 burnett Exp $
 
 */
 #ifndef GlastClassify_GlastClassify_h
@@ -74,8 +74,8 @@ private:
     TrainingInfo m_info;
     const std::vector<float>* m_row; ///< current row in interating thru tuple
     bool m_nobkgnd;
-    bool m_mixed;       ///< true in file has mixed good/bad: uses isGood() in this case
     std::vector<std::string> m_all_names;
+    bool m_mixed;       ///< true in file has mixed good/bad: uses isGood() in this case
 };
 
 #endif
