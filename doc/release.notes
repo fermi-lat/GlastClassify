@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.8 2005/07/28 16:36:40 burnett Exp $
+$Id: release.notes,v 1.9 2005/08/01 00:07:58 burnett Exp $
 @verbatim
+31-jul-05  v0r4p1 gcc fix
 31-jul-05  v0r4   back to 3 goodcal trees; new trees from HEAD1.612 runs
 28-jul-05  v0r3p1,2,3 gcc error fix
 27-jul-05  v0r3   add gamma tree
