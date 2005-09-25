@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Sep 25 15:36:35 PDT 2005
+GlastClassify/data/psf_thick_track
+
+Modified Files:
+	dtree.txt efficiencyplot.txt files.txt log.txt 
+Log Message:
+New classification trees and summareis using GR v7r0p2.
+    *
+------------------------------------------------------------
+User: burnett  Sun Sep 25 15:36:35 PDT 2005
 GlastClassify/data/goodcal_med
 
 Modified Files:
