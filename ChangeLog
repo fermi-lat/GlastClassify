@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Sep 27 09:24:16 PDT 2005
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+fix path for .txt files
+    *
+------------------------------------------------------------
 User: burnett  Sun Sep 25 15:36:36 PDT 2005
 GlastClassify/data/vertex_thin
 
