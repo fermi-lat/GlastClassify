@@ -1,6 +1,6 @@
 /**@file main.cxx
 @brief main program for application to create GLAST classification trees
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/main.cxx,v 1.7 2005/08/01 02:38:10 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/main.cxx,v 1.8 2005/08/01 03:37:27 burnett Exp $
 */
 
 #include "ClassifyCal.h"
@@ -27,9 +27,9 @@ int main(int argc , char * argv[])
 {
     int rc=0;
     std::string // defaults for development
-        rootpath("D:\\common\\DC2\\condor\\all_gamma-HEAD1.612"),
+        rootpath("D:\\common\\DC2\\"),
         treepath("..\\data"),
-        name("all");
+        name("gamma"); //"psf"); //goodcal_high");//"all");
     if( argc==1) {
         // no args: check env vars
         const char* env = ::getenv("ROOTPATH");
@@ -43,8 +43,8 @@ int main(int argc , char * argv[])
         if( argc>2) treepath=argv[2];
         if( argc>3) name   = argv[3];
     }
-    bool all =  name=="all"; 
-    bool psf = name=="psf";
+    bool all(name=="all"); 
+    bool psf(name=="psf");
 
     GlastClassify::setPaths(rootpath, treepath);
 
