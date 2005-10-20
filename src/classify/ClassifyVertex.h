@@ -1,6 +1,6 @@
 /**@file ClassifyVertex.h
 @brief 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.h,v 1.5 2005/08/01 00:01:19 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.h,v 1.6 2005/10/20 03:56:27 burnett Exp $
 
 
 */
@@ -24,6 +24,7 @@ public:
         , Tkr1FirstLayer( "Tkr1FirstLayer")
         , McDirErr      ( "McDirErr")
         , McTkr1DirErr  ( "McTkr1DirErr")
+        , CTgoodCal     ( "CTgoodCal")
     {
     }
 
@@ -36,6 +37,8 @@ public:
 
     virtual bool accept()
     {
+        if( CTgoodCal< 0.25) return false;
+
         bool thin(Tkr1FirstLayer > 5);
         return thin==m_isThin;
     }
@@ -45,6 +48,7 @@ private:
     Entry Tkr1FirstLayer;
     Entry McDirErr;
     Entry McTkr1DirErr;
+    Entry CTgoodCal;
 
     bool m_isThin; 
 };
