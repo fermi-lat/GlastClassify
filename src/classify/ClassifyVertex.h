@@ -1,6 +1,6 @@
 /**@file ClassifyVertex.h
 @brief 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.h,v 1.6 2005/10/20 03:56:27 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.h,v 1.7 2005/10/20 14:45:54 burnett Exp $
 
 
 */
@@ -32,12 +32,12 @@ public:
 
     virtual bool isgood()
     {
-        return VtxAngle > 0 && McDirErr < McTkr1DirErr;
+        return  McDirErr < McTkr1DirErr;
     }
 
     virtual bool accept()
     {
-        if( CTgoodCal< 0.25) return false;
+        if( CTgoodCal< 0.25 || VtxAngle==0) return false;
 
         bool thin(Tkr1FirstLayer > 5);
         return thin==m_isThin;
