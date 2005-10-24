@@ -1,6 +1,6 @@
 /**@file ClassifyVertex.h
 @brief 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.h,v 1.7 2005/10/20 14:45:54 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.h,v 1.8 2005/10/20 21:01:03 burnett Exp $
 
 
 */
@@ -15,11 +15,10 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyVertex.
 class ClassifyVertex : public GlastClassify
 {
 public:
-	typedef enum {THICK, THIN} layer;
 
-    ClassifyVertex(const std::string& info_path, layer isThin)
-        : GlastClassify(info_path)
-        , m_isThin(isThin)
+    ClassifyVertex(const std::string& info_path)
+        : GlastClassify ( info_path)
+        , m_isThin      ( info_path.find("thin")>0)
         , VtxAngle      ( "VtxAngle")
         , Tkr1FirstLayer( "Tkr1FirstLayer")
         , McDirErr      ( "McDirErr")
