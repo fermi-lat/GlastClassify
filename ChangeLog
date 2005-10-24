@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: burnett  Sun Oct 23 21:30:12 PDT 2005
+GlastClassify/src/classify
+
+Modified Files:
+	ClassifyCal.h ClassifyCore.h ClassifyVertex.h 
+	GlastClassify.cxx GlastClassify.h main.cxx 
+Added Files:
+	ParseOptions.h 
+Log Message:
+many changes to give more control, including boosting, selecting odd or even for train/test, combining train and test in one run ...
+    *
+------------------------------------------------------------
 User: burnett  Thu Oct 20 14:01:04 PDT 2005
 GlastClassify/src/classify
 
