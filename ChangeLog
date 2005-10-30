@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Sun Oct 30 15:10:51 PST 2005
+GlastClassify/src/classify
+
+Modified Files:
+	ClassifyCal.h ClassifyCore.h ClassifyVertex.h 
+	GlastClassify.cxx GlastClassify.h 
+Log Message:
+inplement use of the pre-filter capability for traning and running.
+    *
+------------------------------------------------------------
 User: burnett  Sun Oct 30 15:10:50 PST 2005
 GlastClassify/src
 
