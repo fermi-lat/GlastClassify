@@ -2,12 +2,14 @@
 
 @brief implementation of class TreeFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.2 2005/07/03 22:38:38 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.3 2005/07/28 02:21:52 burnett Exp $
 */
 
 #include "GlastClassify/TreeFactory.h"
 #include "classifier/DecisionTree.h"
 #include "classifier/TrainingInfo.h"
+#include "Classifier/Filter.h"
+
 #include <fstream>
 #include <cassert>
 #include <stdexcept>
@@ -26,7 +28,7 @@ public:
         {
             std::pair<bool, const void*> entry = lookup(*it);
             if( entry.second == 0 ){
-                throw std::invalid_argument("TreeFactory: did not find variable "+*it);
+                throw std::invalid_argument("TreeFactory::GleamValues: did not find variable "+*it);
             }
 
             m_pval.push_back( entry);
@@ -55,18 +57,41 @@ const TreeFactory::Tree& TreeFactory::operator()(const std::string& name)
 TreeFactory::Tree::Tree( const std::string& path, ILookupData& lookup)
 {
     TrainingInfo info(path);
+    TrainingInfo::StringList vars(info.vars()); // local copy to extend perhaps
 
+    // make sure can open the classification tree file
     std::string dtfile(path+"/dtree.txt");
     std::ifstream dtstream(dtfile.c_str());
     if(! dtstream.is_open()){
         throw std::runtime_error("failed to open file "+dtfile);
     }
-    m_dt=new DecisionTree(dtstream);
+    DecisionTree* theTree = new DecisionTree(dtstream);
 
-    const TrainingInfo::StringList& vars = info.vars();
+    // see if there is a filter
+
+    std::string filterfile(path+"/filter.txt");
+    std::ifstream filterstream(filterfile.c_str());
+    if( filterstream.is_open()){
+        filterstream.close();
+
+        // yes, create tree object with it-- note that vars may be extended   
+        DecisionTree* dt = new DecisionTree(info.title());
+        Filter filter(vars,*dt); 
+        filter.addCutsFrom(filterfile);
+        filter.close();
+
+        // and add the rest here
+        dt->addTree(theTree);
+        delete theTree; // done with this one
+        m_dt=dt;        // copy pointer: now it is const.
+
+    }else{
+
+        // no filter: this is it.
+        m_dt=theTree;
+    }
     m_vals = new GleamValues(vars, lookup);
 }
-
 
 double TreeFactory::Tree::operator()()const
 {
