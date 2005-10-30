@@ -1,6 +1,6 @@
 /**@file GlastClassify.h
 @brief 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/GlastClassify.h,v 1.7 2005/10/20 03:56:27 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/GlastClassify.h,v 1.8 2005/10/24 04:30:12 burnett Exp $
 
 */
 #ifndef GlastClassify_GlastClassify_h
@@ -100,7 +100,8 @@ private:
     std::vector<std::string> m_all_names;
     bool m_mixed;       ///< true in file has mixed good/bad: uses isGood() in this case
 
-    DecisionTree * m_dtree;
+    DecisionTree * m_dtree; ///< the tree to create
+    DecisionTree * m_filter; ///< may be used to select events
 
     unsigned m_total_good, m_total_bad;
 
