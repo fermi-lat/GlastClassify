@@ -1,6 +1,6 @@
 /**@file GlastClassify.h
 @brief 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/GlastClassify.h,v 1.8 2005/10/24 04:30:12 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/GlastClassify.h,v 1.9 2005/10/30 23:10:51 burnett Exp $
 
 */
 #ifndef GlastClassify_GlastClassify_h
@@ -68,7 +68,7 @@ protected:
 
     class Entry{
     public:
-        Entry( const std::string& name="");
+        Entry( const std::string& name="GlastClassify::Entry name not set!");
         operator double()const{ return m_cl->datum(m_index);}
     private:
         GlastClassify* m_cl;

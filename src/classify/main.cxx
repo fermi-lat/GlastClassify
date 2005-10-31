@@ -1,7 +1,7 @@
 /**@file main.cxx
 @brief main program for application to create GLAST classification trees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/main.cxx,v 1.12 2005/10/20 14:45:54 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/main.cxx,v 1.13 2005/10/24 04:30:12 burnett Exp $
 */
 
 #include "ClassifyCal.h"
@@ -10,6 +10,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/main.cxx,v 1.12
 #include "ClassifyGamma.h"
 #include "classifier/AdaBoost.h"
 #include "classifier/Classifier.h"
+#include "ClassifyEnergy.h"
 
 #include "ParseOptions.h"
 
@@ -45,9 +46,11 @@ int main(int argc , char * argv[])
 
 
         // the categories
-        if( name=="energy/low"      || all || energy) ClassifyCal("energy/low").run();
-        if( name=="energy/med"      || all || energy) ClassifyCal("energy/med").run();
-        if( name=="energy/high"     || all || energy) ClassifyCal("energy/high").run();
+
+        if( name=="energy/param"    || all || energy) ClassifyEnergy("energy/param").run();
+        if( name=="energy/lastlayer"|| all || energy) ClassifyEnergy("energy/lastlayer").run();
+        if( name=="energy/profile"  || all || energy) ClassifyEnergy("energy/profile").run();
+        if( name=="energy/tracker"  || all || energy) ClassifyEnergy("energy/tracker").run();
 
         if( name=="vertex/thin"     || all || vertex) ClassifyVertex("vertex/thin" ).run();
         if( name=="vertex/thick"    || all || vertex) ClassifyVertex("vertex/thick").run();
