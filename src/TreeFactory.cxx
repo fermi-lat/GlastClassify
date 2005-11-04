@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.4 2005/10/30 23:10:50 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.5 2005/11/04 18:10:48 burnett Exp $
 */
 
 #include "GlastClassify/TreeFactory.h"
@@ -21,7 +21,7 @@ using namespace GlastClassify;
 */
 class TreeFactory::GleamValues : public DecisionTree::Values {
 public:
-    GleamValues(const TrainingInfo::StringList & names,ILookupData& lookup)
+    GleamValues(const TrainingInfo::StringList & names, ITreeFactory::ILookupData& lookup)
     {
         for( TrainingInfo::StringList::const_iterator it = names.begin();
             it != names.end(); ++it)
@@ -50,7 +50,7 @@ private:
 
 double TreeFactory::evaluate(int i)const {return (*m_trees[i])();}
 
-const TreeFactory::Tree& TreeFactory::operator()(const std::string& name)
+const ITreeFactory::ITree& TreeFactory::operator()(const std::string& name)
 {
     m_trees.push_back(new Tree(m_path+"/"+name, m_lookup));
     return *m_trees.back();
