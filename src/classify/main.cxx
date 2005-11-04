@@ -1,7 +1,7 @@
 /**@file main.cxx
 @brief main program for application to create GLAST classification trees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/main.cxx,v 1.13 2005/10/24 04:30:12 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/main.cxx,v 1.14 2005/10/31 16:45:49 burnett Exp $
 */
 
 #include "ClassifyCal.h"
@@ -47,6 +47,9 @@ int main(int argc , char * argv[])
 
         // the categories
 
+        if( name=="energy/param/low" || all || energy) ClassifyEnergy("energy/param/low").run();
+        if( name=="energy/param/med" || all || energy) ClassifyEnergy("energy/param/med").run();
+        if( name=="energy/param/high"|| all || energy) ClassifyEnergy("energy/param/high").run();
         if( name=="energy/param"    || all || energy) ClassifyEnergy("energy/param").run();
         if( name=="energy/lastlayer"|| all || energy) ClassifyEnergy("energy/lastlayer").run();
         if( name=="energy/profile"  || all || energy) ClassifyEnergy("energy/profile").run();
