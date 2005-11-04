@@ -1,7 +1,7 @@
 /**@file ClassifyGamma.h
 @brief 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyGamma.h,v 1.5 2005/08/01 00:01:19 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyGamma.h,v 1.6 2005/10/20 03:56:27 burnett Exp $
 
 */
 #include "GlastClassify.h"
@@ -66,17 +66,10 @@ public:
         bool  keep=false;
         switch  (m_case)
         {
-        case 0: keep = vertex() && highcal()
-#if 0 
-                    && AcdActiveDist < -10 
-                    && CalTrackAngle < .5
-                    && CalTrackDoca > 40
-#endif
-                    ;
-                        break;
-        case 1: keep = vertex() && medcal(); break;
-        case 2: keep = vertex() && lowcal() && thin(); break;
-        case 3: keep = vertex() && lowcal() && !thin(); break; 
+        case 0: keep = vertex()  && highcal(); break;
+        case 1: keep = vertex()  && medcal(); break;
+        case 2: keep = vertex()  && lowcal() && thin(); break;
+        case 3: keep = vertex()  && lowcal() && !thin(); break; 
         case 4: keep = !vertex() && highcal(); break;
         case 5: keep = !vertex() && medcal(); break;
         case 6: keep = !vertex() && lowcal() && thin(); break;
