@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Nov  4 10:44:23 PST 2005
+GlastClassify/src/classify
+
+Modified Files:
+	ClassifyEnergy.h ClassifyGamma.h GlastClassify.cxx main.cxx 
+Log Message:
+implement possibility for diviiding the param energy estimator into three trees. (also fix bug :-()
+    *
+------------------------------------------------------------
 User: burnett  Fri Nov  4 10:10:48 PST 2005
 GlastClassify/src
 
