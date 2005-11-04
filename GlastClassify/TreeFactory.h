@@ -3,7 +3,7 @@
 @brief declaration of class TreeFactory
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.2 2005/07/04 00:50:11 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.3 2005/07/28 02:21:52 burnett Exp $
 */
 
 #ifndef GlastClassify_TreeFactory_h
@@ -68,7 +68,8 @@ namespace GlastClassify {
             std::string title()const;
 
         private:
-            const DecisionTree* m_dt;
+            const DecisionTree* m_filter_tree; ///< optional filter, or filter and local tree
+            std::vector<const TreeFactory::Tree*> m_exclusive_trees; ///< list of (assumed) exclusive trees to evaluate
             GleamValues* m_vals;
         };
 
@@ -80,7 +81,10 @@ namespace GlastClassify {
 
 
         /// @return value of Tree # i for current set of values
-        double evaluate(int i)const{return (*m_trees[i])();}
+        double evaluate(int i)const; 
+
+        /// index does the evaluate.
+        double operator[](int i)const{return evaluate(i);}
 
         ~TreeFactory();
 
