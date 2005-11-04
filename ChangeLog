@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Fri Nov  4 10:10:48 PST 2005
+GlastClassify/src
+
+Modified Files:
+	TreeFactory.cxx 
+Log Message:
+Most of implementation of multiple exclusive trees
+    *
+------------------------------------------------------------
+User: burnett  Fri Nov  4 10:10:48 PST 2005
 GlastClassify/GlastClassify
 
 Modified Files:
