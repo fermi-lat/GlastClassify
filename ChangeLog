@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: usher  Fri Nov  4 15:19:05 PST 2005
+GlastClassify/GlastClassify
+
+Modified Files:
+	TreeFactory.h 
+Added Files:
+	ITreeFactory.h xmlTreeFactory.h 
+Log Message:
+Initial import of interface to code which produces DecisionTrees from Insightful Miner imw files
+    *
+------------------------------------------------------------
 User: burnett  Fri Nov  4 10:44:23 PST 2005
 GlastClassify/src/classify
 
