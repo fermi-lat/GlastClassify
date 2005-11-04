@@ -3,16 +3,16 @@
 @brief declaration of class TreeFactory
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.3 2005/07/28 02:21:52 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.4 2005/11/04 18:10:48 burnett Exp $
 */
 
 #ifndef GlastClassify_TreeFactory_h
 #define GlastClassify_TreeFactory_h
 
+#include "GlastClassify/ITreeFactory.h"
+
 class DecisionTree;
 
-
-#include <string>
 #include <vector>
 #include <utility>
 
@@ -23,23 +23,8 @@ namespace GlastClassify {
     @brief A factory for accessing decision trees
 
     */
-    class TreeFactory {
+    class TreeFactory : virtual public ITreeFactory {
     public:
-
-        /** @class ILookupData
-        @brief nested class definition interface that must be implemented by client
-        */
-        class ILookupData {
-        public:
-            /// return pointer to data that will be filled by client later
-            //virtual const double * operator()(const std::string& name)=0;
-
-            // return pair; bool is true if pointer to a double, false if pointer to a float
-            virtual std::pair<bool, const void*> operator()(const std::string& name)=0;
-            /// a bit of a kluge for ROOT. The above might have to be cast to a float*
-            virtual bool isFloat()const {return false;}  
-        };
-
 
         // forward declaration
         class GleamValues;
@@ -51,7 +36,7 @@ namespace GlastClassify {
 
 
         */
-        TreeFactory(const std::string& path, ILookupData& lookup)
+        TreeFactory(const std::string& path, ITreeFactory::ILookupData& lookup)
             :m_path(path)
             ,m_lookup(lookup){};
 
@@ -59,7 +44,7 @@ namespace GlastClassify {
         @brief nested class definition
         This class wraps a DecisionTree object
         */
-        class Tree {
+        class Tree : virtual public ITreeFactory::ITree {
         public:
             Tree( const std::string& path, ILookupData& lookup);
             double operator()()const;
@@ -77,22 +62,22 @@ namespace GlastClassify {
         
          @return a reference to a new tree. See also the evaluate() method.
          */
-        const TreeFactory::Tree& operator()(const std::string& name);
+        const ITreeFactory::ITree& operator()(const std::string& name);
 
 
         /// @return value of Tree # i for current set of values
-        double evaluate(int i)const; 
+        virtual double evaluate(int i) const; 
 
         /// index does the evaluate.
-        double operator[](int i)const{return evaluate(i);}
+        virtual double operator[](int i) const{return evaluate(i);}
 
-        ~TreeFactory();
+        virtual ~TreeFactory();
 
 
     private:
 
         std::string m_path;
-        ILookupData& m_lookup;
+        ITreeFactory::ILookupData& m_lookup;
 
         std::vector<TreeFactory::Tree*> m_trees;
 
