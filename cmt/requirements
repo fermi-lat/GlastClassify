@@ -2,7 +2,7 @@ package GlastClassify
 
 version v1r0
 author T. Burnett <tburnett@u.washington.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.16 2005/10/24 04:33:32 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.17 2005/11/04 23:19:05 usher Exp $
 use GlastPolicy *
 
 apply_pattern package_include
@@ -13,7 +13,11 @@ apply_pattern package_stamps
 private
 #-----------------------------------------------------------------
 macro source "*.cxx " WIN32 "*.h *.cxx"
-library  GlastClassify -no_share  -s=../GlastClassify $(source) -s=../src $(source)
+library  GlastClassify -no_share  \
+                       -s=../GlastClassify $(source) \
+                       -s=../src $(source) \
+                       -s=../src/ImActivityNodes $(source) \
+                       -s=../src/xmlBuilders $(source)
 
 use classifier *
 use xmlBase v5r*
