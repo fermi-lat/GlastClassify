@@ -1,31 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Tue Nov  8 10:26:57 PST 2005
-GlastClassify/doc
-
-Modified Files:
-	release.notes 
-Log Message:
-unix fixes
-    *
-------------------------------------------------------------
-User: burnett  Tue Nov  8 10:26:57 PST 2005
-GlastClassify/cmt
-
-Modified Files:
-	requirements 
-Log Message:
-unix fixes
-    *
-------------------------------------------------------------
-User: burnett  Tue Nov  8 10:26:57 PST 2005
-GlastClassify/GlastClassify
-
-Modified Files:
-	ITupleInterface.h 
-Log Message:
-unix fixes
-    *
-------------------------------------------------------------
 TAG
 Tag name: v2r1p2, operation: add
 Package: GlastClassify
