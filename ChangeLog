@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Nov  8 12:48:22 PST 2005
+GlastClassify/src/classify
+
+Modified Files:
+	ParseOptions.h 
+Log Message:
+fix a few more warnings.
+    *
+------------------------------------------------------------
+User: burnett  Tue Nov  8 12:48:22 PST 2005
 GlastClassify/src/apply
 
 Modified Files:
