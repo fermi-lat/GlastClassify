@@ -1,8 +1,8 @@
 package GlastClassify
 
-version v2r0
+version v2r1
 author T. Burnett <tburnett@u.washington.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.18 2005/11/07 21:50:53 usher Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.19 2005/11/08 15:41:49 burnett Exp $
 use GlastPolicy *
 
 apply_pattern package_include
@@ -15,9 +15,11 @@ private
 macro source "*.cxx " WIN32 "*.h *.cxx"
 library  GlastClassify -no_share  \
                        -s=../GlastClassify $(source) \
-                       -s=../src $(source) \
-                       -s=../src/ImActivityNodes $(source) \
-                       -s=../src/xmlBuilders $(source)
+                       -s=../src $(source) 
+
+# enable for development
+#                       -s=../src/ImActivityNodes $(source) \
+#                       -s=../src/xmlBuilders $(source)
 
 use classifier *
 use xmlBase v5r*
