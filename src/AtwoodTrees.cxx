@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.1 2005/11/08 15:41:49 burnett Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
@@ -129,7 +129,7 @@ AtwoodTrees::AtwoodTrees(
         if( calenergy <5. || *m_CalTotRLn < 4.) return; // the "NoCAL" case that we cannot deal with
 
         double energymeasure[] = {*m_EvtEnergyCorr, *m_CalCfpEnergy, *m_CalLllEnergy, *m_CalTklEnergy};
-        double ctree_index[] = {ENERGY_PARAM, ENERGY_PROFILE, ENERGY_LASTLAYER, ENERGY_TRACKER};
+        int ctree_index[] = {ENERGY_PARAM, ENERGY_PROFILE, ENERGY_LASTLAYER, ENERGY_TRACKER};
         double bestprob(0);
         // ============> wire in only param here (for now) <===================
         for( int i =0; i<1; ++i){

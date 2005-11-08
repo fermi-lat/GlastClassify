@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.12 2005/09/27 17:28:54 burnett Exp $
+$Id: release.notes,v 1.13 2005/11/08 15:41:49 burnett Exp $
 @verbatim
+08-nov-05  v2r1p1 THB fixes for unix
 05-nov-05  v2r0   THB for TU add xml stuff for IM import
 05-nov-05  v1r0   new filter capability
 27-sep-05  v0r5   train with GR v7r0p2
