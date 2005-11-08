@@ -1,7 +1,7 @@
 /**@file main.cxx
 @brief main program for application to test GLAST classification trees
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/test/test_main.cxx,v 1.5 2005/11/08 15:41:49 burnett Exp $
 
 */
 
@@ -29,7 +29,6 @@ private:
 
 class TestTuple : public ITupleInterface{
 public:
-    TestLookup(){}
     const Item * getItem(const std::string& name)const
     {
         std::cout << "Looking up: " << name << std::endl;
@@ -38,6 +37,7 @@ public:
         const TestItem* item = new TestItem(&values.back());
         return item;
     }
+    void addItem(const std::string&, float & ){}
 };
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
