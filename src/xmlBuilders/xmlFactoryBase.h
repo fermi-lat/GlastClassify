@@ -3,7 +3,7 @@
 @brief declaration of class xmFactoryBase
 @author T. Usher
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/xmFactoryBase.h,v 1.1 2005/11/04 23:19:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFactoryBase.h,v 1.1 2005/11/07 21:50:54 usher Exp $
 */
 
 #ifndef xmlFactoryBase_h
@@ -44,6 +44,9 @@ public:
     DOMElement* getXTProperty(const DOMElement* element, const std::string& property)   const;
     DOMEvector  getXTSubPropVec(const DOMElement* element, const std::string& property) const;
 
+    void        parseExpression(StringList& parsedExpression, std::string& expression);
+    std::string trimBlanks(std::string& expression);
+
     std::string getNextWord(std::string &sList, int &iEnd);
     
     double getNextDouble(std::string &sList, int &iEnd);
@@ -56,6 +59,8 @@ public:
     const DOMElement* findXPath(const DOMElement* xmlParent, const std::vector<std::string>& nodeNames);
 
 private:
+
+    StringList    m_delimiters;
 
     std::ostream& m_log;         //! output to this stream
     int           m_outputLevel; //! output level (verbosity)

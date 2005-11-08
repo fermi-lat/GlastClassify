@@ -3,7 +3,7 @@
 @brief declaration of class xmlFilterRowsEngineFactory
 @author T. Usher
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/xmlFilterRowsEngineFactory.h,v 1.1 2005/11/04 23:19:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFilterRowsEngineFactory.h,v 1.1 2005/11/07 21:50:54 usher Exp $
 */
 
 #ifndef GlastClassify_xmlFilterRowsEngineFactory_h
@@ -40,8 +40,8 @@ public:
 
 private:
 
-    std::ostream&                m_log;         //! output to this stream
-    int                          m_outputLevel; //! output level (verbosity)
+    std::ostream& m_log;         //! output to this stream
+    int           m_outputLevel; //! output level (verbosity)
 
 };
 

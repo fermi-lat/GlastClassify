@@ -1,7 +1,7 @@
 /** @file ImSheetBuilder.cxx
  *    @brief implementation of classification::Tree; declaration and implementation or its private helper classification::ImSheetBuilder::Node
  *
- *    $Header: /nfs/slac/g/glast/ground/cvs/classifier/src/ImSheetBuilder.cxx,v 1.1 2005/11/04 23:17:01 usher Exp $
+ *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/ImSheetBuilder.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
  */
 
 #include "ImSheetBuilder.h"
@@ -140,17 +140,17 @@ int ImSheetBuilder::findAllActivityNodes(const DOMDocument* document)
     // Build map between types and implementation of that type
     std::map<std::string, IxmlEngineFactory*> nodeFactoryMap;
 
-    nodeFactoryMap["AppendEngineNode"]        = new xmlAppendEngineFactory(m_log, 1);
-    nodeFactoryMap["CreateColumnsEngineNode"] = new xmlCreateColumnsEngineFactory(m_log, 1);
-    nodeFactoryMap["FilterColumnsEngineNode"] = new xmlFilterColumnsEngineFactory(m_log, 1);
-    nodeFactoryMap["FilterRowsEngineNode"]    = new xmlFilterRowsEngineFactory(m_log, 1);
-    nodeFactoryMap["MissingValuesEngineNode"] = new xmlMissingValuesEngineFactory(m_log, 1);
-    nodeFactoryMap["ModifyColumnsEngineNode"] = new xmlModifyColumnsEngineFactory(m_log, 1);
-    nodeFactoryMap["PredictEngineNode"]       = new xmlPredictEngineFactory(m_log, 1);
-    nodeFactoryMap["ReadTextFileEngineNode"]  = new xmlReadTextFileEngineFactory(m_log, 1);
-    nodeFactoryMap["ShuffleEngineNode"]       = new xmlShuffleEngineFactory(m_log, 1);
-    nodeFactoryMap["SplitEngineNode"]         = new xmlSplitEngineFactory(m_log, 1);
-    nodeFactoryMap["WriteTextFileEngineNode"] = new xmlWriteTextFileEngineFactory(m_log, 1);
+    nodeFactoryMap["AppendEngineNode"]        = new xmlAppendEngineFactory(m_log, 0);
+    nodeFactoryMap["CreateColumnsEngineNode"] = new xmlCreateColumnsEngineFactory(m_log, 0);
+    nodeFactoryMap["FilterColumnsEngineNode"] = new xmlFilterColumnsEngineFactory(m_log, 0);
+    nodeFactoryMap["FilterRowsEngineNode"]    = new xmlFilterRowsEngineFactory(m_log, 0);
+    nodeFactoryMap["MissingValuesEngineNode"] = new xmlMissingValuesEngineFactory(m_log, 0);
+    nodeFactoryMap["ModifyColumnsEngineNode"] = new xmlModifyColumnsEngineFactory(m_log, 0);
+    nodeFactoryMap["PredictEngineNode"]       = new xmlPredictEngineFactory(m_log, 0);
+    nodeFactoryMap["ReadTextFileEngineNode"]  = new xmlReadTextFileEngineFactory(m_log, 0);
+    nodeFactoryMap["ShuffleEngineNode"]       = new xmlShuffleEngineFactory(m_log, 0);
+    nodeFactoryMap["SplitEngineNode"]         = new xmlSplitEngineFactory(m_log, 0);
+    nodeFactoryMap["WriteTextFileEngineNode"] = new xmlWriteTextFileEngineFactory(m_log, 0);
 
     // We now need to ensure that we're getting 
     // ActivityNode[@engineClass=='com.insightful.miner.PredictEngineNode']

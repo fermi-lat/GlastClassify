@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlSplitEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlSplitEngineFactory.cxx,v 1.1 2005/11/04 23:19:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlSplitEngineFactory.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
 */
 
 #include "xmlSplitEngineFactory.h"
@@ -49,20 +49,30 @@ IImActivityNode* xmlSplitEngineFactory::operator()(const DOMElement* xmlActivity
 
     DOMElement* xmlProperty = getXTProperty(xmlActivityNode, "testExpression");
 
+    std::string sExpression;
+
     try
     {
         DOMElement* xmlComplex = xmlBase::Dom::findFirstChildByName(xmlProperty, "Complex");
-        std::string sExpression = xmlBase::Dom::getTextContent(xmlComplex);
-
-        node->setExpression(sExpression);
+        sExpression = xmlBase::Dom::getTextContent(xmlComplex);
     }
     //catch(xmlBase::WrongNodeType& e)
     catch(...)
     {
-        std::string sExpression = xmlBase::Dom::getAttribute(xmlProperty, "value");
-
-        node->setExpression(sExpression);
+        sExpression = xmlBase::Dom::getAttribute(xmlProperty, "value");
     }
+
+    // Trim the blank spaces
+    sExpression = trimBlanks(sExpression);
+        
+    // Store
+    node->setExpression(sExpression);
+
+    // Parse
+    StringList parsedExpression;
+    parseExpression(parsedExpression, sExpression);
+
+    node->setParsedExpression(parsedExpression);
 
     return node;
 }
