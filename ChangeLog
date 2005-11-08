@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Nov  8 11:52:08 PST 2005
+GlastClassify/GlastClassify
+
+Modified Files:
+	ITupleInterface.h 
+Log Message:
+more fixes for linux
+    *
+------------------------------------------------------------
 User: usher  Tue Nov  8 11:45:22 PST 2005
 GlastClassify/src/xmlBuilders
 
