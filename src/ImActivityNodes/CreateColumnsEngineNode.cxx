@@ -1,7 +1,7 @@
 /** @file ImSheetBuilder.cxx
  *    @brief implementation of classification::Tree; declaration and implementation or its private helper classification::ImSheetBuilder::Node
  *
- *    $Header: /nfs/slac/g/glast/ground/cvs/classifier/src/ImSheetBuilder.cxx,v 1.1 2005/11/04 23:17:01 usher Exp $
+ *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/CreateColumnsEngineNode.cxx,v 1.1 2005/11/07 21:50:53 usher Exp $
  */
 
 #include "CreateColumnsEngineNode.h"
@@ -30,11 +30,20 @@ void CreateColumnsEngineNode::print(std::ostream& out, int depth) const
     out << indent(depth) << "ID: " << m_id << ", Type: " << m_type << ", Label: " << m_name << std::endl;
 
     // Output the variable names and expressions
-    StringList::const_iterator expIter = m_columnExpressions.begin();
+    std::vector<StringList>::const_iterator colExpIter = m_parsedColExps.begin();
 
     for(StringList::const_iterator nameIter = m_columnNames.begin(); nameIter != m_columnNames.end(); nameIter++)
     {
-        out << indent(depth) << indent(2) << *nameIter << " = " << *expIter++ << std::endl;
+        //out << indent(depth) << indent(2) << *nameIter << " = " << *expIter++ << std::endl;
+        out << indent(depth) << indent(2) << *nameIter << " = ";
+        
+        for(StringList::const_iterator expIter = (*colExpIter).begin(); expIter != (*colExpIter).end(); expIter++)
+        {
+            out << *expIter;
+        }
+        out << std::endl;
+
+        colExpIter++;
     }
 
     // What do we set depth to?
