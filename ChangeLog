@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Nov  8 10:26:58 PST 2005
+GlastClassify/src/classify
+
+Modified Files:
+	ClassifyCore.h GlastClassify.cxx ParseOptions.h 
+Log Message:
+unix fixes
+    *
+------------------------------------------------------------
+User: burnett  Tue Nov  8 10:26:58 PST 2005
 GlastClassify/src
 
 Modified Files:
