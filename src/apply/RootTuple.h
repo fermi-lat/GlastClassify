@@ -1,4 +1,4 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/merit/src/app/RootTuple.h,v 1.7 2003/11/26 21:00:26 burnett Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.h,v 1.1 2005/11/08 16:28:53 burnett Exp $
 // Original author T. Burnett (w/ help from H. Kelley)
 #ifndef ROOTTUPLE_H
 #define ROOTTUPLE_H
@@ -15,7 +15,7 @@ class RootTuple : public GlastClassify::ITupleInterface {
 
 public:
     ///
-    RootTuple::RootTuple(std::string title, std::string file, std::string treeName);
+    RootTuple::RootTuple( std::string file, std::string treeName);
     ~RootTuple(){};
 
     //! acccess to an item (interface to the leaf)
