@@ -1,12 +1,13 @@
 /**@file ClassifyGamma.h
 @brief 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyGamma.h,v 1.6 2005/10/20 03:56:27 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/classify/ClassifyGamma.h,v 1.7 2005/11/04 18:44:22 burnett Exp $
 
 */
 #include "GlastClassify.h"
 
 #include <cmath>
+#include <stdexcept>
 
 class ClassifyGamma : public GlastClassify
 {
