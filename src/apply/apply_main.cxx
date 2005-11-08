@@ -1,7 +1,7 @@
 /** @file apply_main.cxx 
 @brief Application that applies decision trees to a root tuple
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.1 2005/11/08 16:28:53 burnett Exp $
 */
 
 #include "RootTuple.h"
@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
         std::cerr << "Converting CT variables from: \"" << input_filename << "\" to\n\t\"" 
             << output_filename << "\"" << std::endl;
 
-        RootTuple tuple("unknown", input_filename, tree_name);
+        RootTuple tuple(input_filename, tree_name);
 
         std::stringstream title; 
         title << "gen(" << tuple.numEvents() << ")";

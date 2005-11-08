@@ -1,7 +1,7 @@
 /** @file RootTuple.cxx
     @brief implement class RootTuple
 
- $Header$
+ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.1 2005/11/08 16:28:53 burnett Exp $
   Original author T. Burnett (w/ help from H. Kelley)
 */
 #include "RootTuple.h"
@@ -76,7 +76,7 @@ private:
 } // anonymous namespace
 using namespace GlastClassify;
 
-RootTuple::RootTuple(std::string title, std::string file, std::string treeName)
+RootTuple::RootTuple( std::string file, std::string treeName)
 :  m_event(0) {
 
     // Initialize Root

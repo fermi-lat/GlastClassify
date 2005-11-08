@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlTreeFactory.cxx,v 1.1 2005/11/04 23:19:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlTreeFactory.cxx,v 1.2 2005/11/07 21:50:53 usher Exp $
 */
 
 #include "GlastClassify/xmlTreeFactory.h"
@@ -326,7 +326,7 @@ double xmlTreeFactory::LocalTupleValues::getValue(const std::string& name) const
     //TkrLATEdge
     else if (name == "TkrLATEdge")
     {
-        value = 740. - std::max(abs(*(m_tupleVals.find("Tkr1X0")->second)), abs(*(m_tupleVals.find("Tkr1Y0")->second)));
+        value = 740. - std::max(fabs(*(m_tupleVals.find("Tkr1X0")->second)), fabs(*(m_tupleVals.find("Tkr1Y0")->second)));
     }
 
     //PSFEneProbPrd
