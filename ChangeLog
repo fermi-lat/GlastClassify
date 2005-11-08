@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: burnett  Tue Nov  8 07:41:49 PST 2005
+GlastClassify/src
+
+Modified Files:
+	TreeFactory.cxx 
+Added Files:
+	AtwoodTrees.cxx 
+Log Message:
+finish restructuring code to implement Atwood-style trees.
+    *
+------------------------------------------------------------
+User: burnett  Tue Nov  8 07:41:49 PST 2005
 GlastClassify/doc
 
 Modified Files:
