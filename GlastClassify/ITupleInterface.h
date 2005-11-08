@@ -1,7 +1,7 @@
 /** @file ITupleInterface.h
 @brief  Declare abstract class ITupleInterface
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/ITupleInterface.h,v 1.1 2005/11/08 16:02:47 burnett Exp $
 */
 
 
@@ -19,7 +19,7 @@ namespace GlastClassify{
     */
     class Item {
     public:
-        Item(std::string name){};
+        virtual ~Item(){};
         virtual operator double()const = 0;
     protected:
         Item(){};
@@ -31,6 +31,8 @@ namespace GlastClassify{
     class ITupleInterface 
     {
     public:
+        virtual ~ITupleInterface(){}
+
         // set an object that evaluates at run-time to the current value of the item
         virtual const Item* getItem(const std::string& name)const=0;
 

@@ -2,13 +2,13 @@
 
 @brief implementation of class TreeFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.6 2005/11/04 23:19:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.7 2005/11/08 15:41:49 burnett Exp $
 */
 
 #include "GlastClassify/TreeFactory.h"
 #include "classifier/DecisionTree.h"
 #include "classifier/TrainingInfo.h"
-#include "Classifier/Filter.h"
+#include "classifier/Filter.h"
 
 #include <fstream>
 #include <cassert>
