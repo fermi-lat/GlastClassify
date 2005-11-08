@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Nov  8 08:28:53 PST 2005
+GlastClassify/src/apply
+
+Added Files:
+	RootTuple.cxx RootTuple.h apply_main.cxx 
+Log Message:
+stuff to apply trees
+    *
+------------------------------------------------------------
 User: burnett  Tue Nov  8 08:26:54 PST 2005
 GlastClassify/src/apply
 
