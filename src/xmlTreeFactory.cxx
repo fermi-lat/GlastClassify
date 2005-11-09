@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlTreeFactory.cxx,v 1.3 2005/11/08 20:48:22 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlTreeFactory.cxx,v 1.4 2005/11/09 00:04:36 usher Exp $
 */
 
 #include "GlastClassify/xmlTreeFactory.h"
@@ -140,9 +140,9 @@ xmlTreeFactory::xmlTreeFactory(const std::string& path, ITupleInterface& tuple)
     m_imSheet = new ImSheetBuilder(m_domDocument);
 
     //Testing...
-    std::ofstream outFile("IMsheetTest.txt");
-    m_imSheet->print(outFile);
-    outFile.close();
+    //std::ofstream outFile("IMsheetTest.txt");
+    //m_imSheet->print(outFile);
+    //outFile.close();
 
     // Make a map between the names Toby has for the trees, and Bill's names...
     m_TobyToBillMap.clear();
