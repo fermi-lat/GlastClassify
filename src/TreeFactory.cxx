@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.7 2005/11/08 15:41:49 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeFactory.cxx,v 1.8 2005/11/08 18:26:57 burnett Exp $
 */
 
 #include "GlastClassify/TreeFactory.h"
@@ -48,7 +48,7 @@ private:
 
 double TreeFactory::evaluate(int i)const {return (*m_trees[i])();}
 
-const TreeFactory::Tree& TreeFactory::operator()(const std::string& name)
+const ITreeFactory::ITree& TreeFactory::operator()(const std::string& name)
 {
     m_trees.push_back(new Tree(m_path+"/"+name, m_tuple));
     return *m_trees.back();

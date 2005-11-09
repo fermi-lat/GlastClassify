@@ -1,11 +1,12 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.1 2005/11/08 15:41:49 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.2 2005/11/08 18:26:57 burnett Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
-#include "GlastClassify/ITreeFactory.h"
+#include "GlastClassify/TreeFactory.h"
+#include "Glastclassify/xmlTreeFactory.h"
 
 #include "classifier/DecisionTree.h"
 
@@ -80,7 +81,7 @@ AtwoodTrees::AtwoodTrees(
      : m_log(log)
 {
     // these are used for preliminary cuts to select the tree to use
-     m_Tkr1FirstLayer = tuple.getItem("Tkr1FirstLayer");
+    m_Tkr1FirstLayer = tuple.getItem("Tkr1FirstLayer");
     m_CalEnergyRaw=tuple.getItem("CalEnergyRaw"     );
     m_CalTotRLn   =tuple.getItem("CalTotRLn"        );
     m_VtxAngle    =tuple.getItem("VtxAngle"         ); 
@@ -101,10 +102,16 @@ AtwoodTrees::AtwoodTrees(
     tuple.addItem("CTgammaType",m_gammaType);
     tuple.addItem("BestEnergy", m_BestEnergy);
 
-    m_factory = new GlastClassify::TreeFactory(treepath, tuple);
+    //m_factory = new GlastClassify::TreeFactory(treepath, tuple);
+    m_factory = new GlastClassify::xmlTreeFactory(treepath, tuple);
 
-    for( unsigned int i=0; i<NODE_COUNT; ++i){
-        (*m_factory)(imNodeInfo[i].name);
+    for( unsigned int i=0; i<NODE_COUNT; ++i)
+    {
+        const ITreeFactory::ITree& tree = (*m_factory)(imNodeInfo[i].name);
+
+        std::string sOutFileRoot = treepath + "/" + imNodeInfo[i].name;
+
+        dynamic_cast<const xmlTreeFactory::Tree&>(tree).printFile(sOutFileRoot);
     }
 }
 
