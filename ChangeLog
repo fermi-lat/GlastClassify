@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Nov  8 16:10:53 PST 2005
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx xmlTreeFactory.cxx 
+Log Message:
+Turn off xmlTreeFactory by default and writing of output
+    *
+------------------------------------------------------------
 User: usher  Tue Nov  8 16:04:36 PST 2005
 GlastClassify/src
 
