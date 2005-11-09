@@ -3,13 +3,14 @@
 @brief declaration of class xmlTreeFactory
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/xmlTreeFactory.h,v 1.3 2005/07/28 02:21:52 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/xmlTreeFactory.h,v 1.1 2005/11/04 23:19:05 usher Exp $
 */
 
 #ifndef GlastClassify_xmlTreeFactory_h
 #define GlastClassify_xmlTreeFactory_h
 
 #include "GlastClassify/ITreeFactory.h"
+#include "GlastClassify/ITupleInterface.h"
 #include <xercesc/util/XercesDefs.hpp>
 
 XERCES_CPP_NAMESPACE_BEGIN
@@ -42,7 +43,7 @@ namespace GlastClassify {
         @param lookup Instance of a class supplied to by user, which is called back 
         to find address of each variable
         */
-        xmlTreeFactory(const std::string& path, ITreeFactory::ILookupData& lookup);
+        xmlTreeFactory(const std::string& path, ITupleInterface& tuple);
 
         /** @param name a folder name completing the path to the folder containing the tree data
         
@@ -67,10 +68,10 @@ namespace GlastClassify {
         class LocalTupleValues
         {
         public:
-            typedef std::map<std::string, double>        localValsMap;
-            typedef std::map<std::string, const float*> nTupleVarsMap;
+            typedef std::map<std::string, double>      localValsMap;
+            typedef std::map<std::string, const GlastClassify::Item*> nTupleVarsMap;
 
-            LocalTupleValues(ITreeFactory::ILookupData& lookup);
+            LocalTupleValues(ITupleInterface& lookup);
             ~LocalTupleValues() {}
 
             bool isValue(const std::string& name) const 
@@ -94,6 +95,8 @@ namespace GlastClassify {
             ~Tree();
             /// @return the title
             std::string title()const;
+            /// @print out in "Toby" format
+            void printFile(std::string treeName) const;
 
         private:
             const DecisionTree* m_dt;
@@ -108,13 +111,15 @@ namespace GlastClassify {
         ImSheetBuilder*                    m_imSheet;
 
         // This looks up the values in the output ntuple
-        ITreeFactory::ILookupData&         m_lookup;
+        //ITreeFactory::ILookupData&         m_lookup;
+        ITupleInterface&                   m_lookup;
 
         // Our collection of Classification Trees
         std::vector<xmlTreeFactory::Tree*> m_trees;
 
         // Class needed to calcluate local variables used in CT's
         LocalTupleValues                   m_localVals;
+        //ITupleInterface&                   m_tuple;
 
         // Mapping between Toby's CT naming convention and Bill's
         std::map<std::string,std::string>  m_TobyToBillMap;
