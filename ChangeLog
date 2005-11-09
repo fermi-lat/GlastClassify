@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Tue Nov  8 16:04:36 PST 2005
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx TreeFactory.cxx xmlTreeFactory.cxx 
+Log Message:
+Modifications for new scheme implemented by Toby. Also update requirements to include xml related code again. PLEASE TELL ME IF FURTHER COMPILATION PROBLEMS! (they should be gone now)
+    *
+------------------------------------------------------------
+User: usher  Tue Nov  8 16:04:36 PST 2005
 GlastClassify/cmt
 
 Modified Files:
