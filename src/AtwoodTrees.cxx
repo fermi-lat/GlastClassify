@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.2 2005/11/08 18:26:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.3 2005/11/09 00:04:36 usher Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
@@ -102,16 +102,16 @@ AtwoodTrees::AtwoodTrees(
     tuple.addItem("CTgammaType",m_gammaType);
     tuple.addItem("BestEnergy", m_BestEnergy);
 
-    //m_factory = new GlastClassify::TreeFactory(treepath, tuple);
-    m_factory = new GlastClassify::xmlTreeFactory(treepath, tuple);
+    m_factory = new GlastClassify::TreeFactory(treepath, tuple);
+    //m_factory = new GlastClassify::xmlTreeFactory(treepath, tuple);
 
     for( unsigned int i=0; i<NODE_COUNT; ++i)
     {
         const ITreeFactory::ITree& tree = (*m_factory)(imNodeInfo[i].name);
 
-        std::string sOutFileRoot = treepath + "/" + imNodeInfo[i].name;
+        //std::string sOutFileRoot = treepath + "/" + imNodeInfo[i].name;
 
-        dynamic_cast<const xmlTreeFactory::Tree&>(tree).printFile(sOutFileRoot);
+        //dynamic_cast<const xmlTreeFactory::Tree&>(tree).printFile(sOutFileRoot);
     }
 }
 
