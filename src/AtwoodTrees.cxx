@@ -1,12 +1,12 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.3 2005/11/09 00:04:36 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.4 2005/11/09 00:10:53 usher Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
 #include "GlastClassify/TreeFactory.h"
-#include "Glastclassify/xmlTreeFactory.h"
+#include "GlastClassify/xmlTreeFactory.h"
 
 #include "classifier/DecisionTree.h"
 
@@ -102,8 +102,8 @@ AtwoodTrees::AtwoodTrees(
     tuple.addItem("CTgammaType",m_gammaType);
     tuple.addItem("BestEnergy", m_BestEnergy);
 
-    m_factory = new GlastClassify::TreeFactory(treepath, tuple);
-    //m_factory = new GlastClassify::xmlTreeFactory(treepath, tuple);
+    //m_factory = new GlastClassify::TreeFactory(treepath, tuple);
+    m_factory = new GlastClassify::xmlTreeFactory(treepath, tuple);
 
     for( unsigned int i=0; i<NODE_COUNT; ++i)
     {
