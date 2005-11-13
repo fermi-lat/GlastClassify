@@ -1,7 +1,7 @@
 /**@file main.cxx
 @brief main program for application to test GLAST classification trees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/test/test_main.cxx,v 1.5 2005/11/08 15:41:49 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/test/test_main.cxx,v 1.6 2005/11/08 19:52:09 burnett Exp $
 
 */
 
@@ -38,6 +38,7 @@ public:
         return item;
     }
     void addItem(const std::string&, float & ){}
+    void addItem(const std::string&, double & ){}
 };
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

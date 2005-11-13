@@ -1,7 +1,7 @@
 /** @file ITupleInterface.h
 @brief  Declare abstract class ITupleInterface
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/ITupleInterface.h,v 1.2 2005/11/08 18:26:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/ITupleInterface.h,v 1.3 2005/11/08 19:52:08 burnett Exp $
 */
 
 
@@ -38,6 +38,7 @@ namespace GlastClassify{
 
         /// create a new item (float only for now) in the tuple, which will take the given value
         virtual void addItem(const std::string& name, float & value)=0;
+        virtual void addItem(const std::string& name, double & value)=0;
     protected:
         ITupleInterface(){};
     };
