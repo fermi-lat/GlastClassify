@@ -1,4 +1,213 @@
 ------------------------------------------------------------
+User: burnett  Sun Nov 13 13:09:55 PST 2005
+GlastClassify/treeinfo
+
+Log Message:
+import boosted version
+
+
+Status:
+
+Vendor Tag:	THB
+Release Tags:	v4
+		
+U GlastClassify/treeinfo/allgamma_files.txt
+U GlastClassify/treeinfo/background_files.txt
+U GlastClassify/treeinfo/Command Prompt.lnk
+U GlastClassify/treeinfo/energy/files.txt
+U GlastClassify/treeinfo/energy/variables.txt
+U GlastClassify/treeinfo/energy/lastlayer/dtree.txt
+U GlastClassify/treeinfo/energy/lastlayer/files.txt
+U GlastClassify/treeinfo/energy/lastlayer/log.txt
+U GlastClassify/treeinfo/energy/lastlayer/test_efficiency.txt
+U GlastClassify/treeinfo/energy/lastlayer/title.txt
+U GlastClassify/treeinfo/energy/lastlayer/train_efficiency.txt
+U GlastClassify/treeinfo/energy/lastlayer/used_variables.txt
+U GlastClassify/treeinfo/energy/lastlayer/variables.txt
+U GlastClassify/treeinfo/energy/param/files.txt
+U GlastClassify/treeinfo/energy/param/filter.txt
+U GlastClassify/treeinfo/energy/param/log.txt
+N GlastClassify/treeinfo/energy/param/nested.txt
+U GlastClassify/treeinfo/energy/param/test_efficiency.txt
+U GlastClassify/treeinfo/energy/param/title.txt
+U GlastClassify/treeinfo/energy/param/train_efficiency.txt
+U GlastClassify/treeinfo/energy/param/used_variables.txt
+U GlastClassify/treeinfo/energy/param/variables.txt
+U GlastClassify/treeinfo/energy/param/high/dtree.txt
+U GlastClassify/treeinfo/energy/param/high/files.txt
+U GlastClassify/treeinfo/energy/param/high/filter.txt
+U GlastClassify/treeinfo/energy/param/high/log.txt
+U GlastClassify/treeinfo/energy/param/high/test_efficiency.txt
+U GlastClassify/treeinfo/energy/param/high/title.txt
+U GlastClassify/treeinfo/energy/param/high/train_efficiency.txt
+U GlastClassify/treeinfo/energy/param/high/used_variables.txt
+U GlastClassify/treeinfo/energy/param/high/variables.txt
+U GlastClassify/treeinfo/energy/param/low/dtree.txt
+U GlastClassify/treeinfo/energy/param/low/files.txt
+U GlastClassify/treeinfo/energy/param/low/filter.txt
+U GlastClassify/treeinfo/energy/param/low/log.txt
+U GlastClassify/treeinfo/energy/param/low/test_efficiency.txt
+U GlastClassify/treeinfo/energy/param/low/title.txt
+U GlastClassify/treeinfo/energy/param/low/train_efficiency.txt
+U GlastClassify/treeinfo/energy/param/low/used_variables.txt
+U GlastClassify/treeinfo/energy/param/low/variables.txt
+U GlastClassify/treeinfo/energy/param/med/dtree.txt
+U GlastClassify/treeinfo/energy/param/med/files.txt
+U GlastClassify/treeinfo/energy/param/med/filter.txt
+U GlastClassify/treeinfo/energy/param/med/log.txt
+U GlastClassify/treeinfo/energy/param/med/test_efficiency.txt
+U GlastClassify/treeinfo/energy/param/med/title.txt
+U GlastClassify/treeinfo/energy/param/med/train_efficiency.txt
+U GlastClassify/treeinfo/energy/param/med/used_variables.txt
+U GlastClassify/treeinfo/energy/param/med/variables.txt
+U GlastClassify/treeinfo/energy/profile/dtree.txt
+U GlastClassify/treeinfo/energy/profile/files.txt
+U GlastClassify/treeinfo/energy/profile/log.txt
+U GlastClassify/treeinfo/energy/profile/test_efficiency.txt
+U GlastClassify/treeinfo/energy/profile/title.txt
+U GlastClassify/treeinfo/energy/profile/train_efficiency.txt
+U GlastClassify/treeinfo/energy/profile/used_variables.txt
+U GlastClassify/treeinfo/energy/profile/variables.txt
+U GlastClassify/treeinfo/energy/tracker/dtree.txt
+U GlastClassify/treeinfo/energy/tracker/files.txt
+U GlastClassify/treeinfo/energy/tracker/log.txt
+U GlastClassify/treeinfo/energy/tracker/test_efficiency.txt
+U GlastClassify/treeinfo/energy/tracker/title.txt
+U GlastClassify/treeinfo/energy/tracker/train_efficiency.txt
+U GlastClassify/treeinfo/energy/tracker/used_variables.txt
+U GlastClassify/treeinfo/energy/tracker/variables.txt
+U GlastClassify/treeinfo/gamma/files.txt
+U GlastClassify/treeinfo/gamma/variables.txt
+U GlastClassify/treeinfo/gamma/track/highcal/dtree.txt
+U GlastClassify/treeinfo/gamma/track/highcal/files.txt
+U GlastClassify/treeinfo/gamma/track/highcal/filter.txt
+U GlastClassify/treeinfo/gamma/track/highcal/log.txt
+U GlastClassify/treeinfo/gamma/track/highcal/test_efficiency.txt
+U GlastClassify/treeinfo/gamma/track/highcal/title.txt
+U GlastClassify/treeinfo/gamma/track/highcal/train_efficiency.txt
+N GlastClassify/treeinfo/gamma/track/highcal/used_variables.txt
+U GlastClassify/treeinfo/gamma/track/highcal/variables.txt
+U GlastClassify/treeinfo/gamma/track/medcal/dtree.txt
+U GlastClassify/treeinfo/gamma/track/medcal/files.txt
+U GlastClassify/treeinfo/gamma/track/medcal/filter.txt
+U GlastClassify/treeinfo/gamma/track/medcal/log.txt
+U GlastClassify/treeinfo/gamma/track/medcal/test_efficiency.txt
+U GlastClassify/treeinfo/gamma/track/medcal/title.txt
+U GlastClassify/treeinfo/gamma/track/medcal/train_efficiency.txt
+U GlastClassify/treeinfo/gamma/track/medcal/used_variables.txt
+U GlastClassify/treeinfo/gamma/track/medcal/variables.txt
+U GlastClassify/treeinfo/gamma/track/thick/dtree.txt
+U GlastClassify/treeinfo/gamma/track/thick/files.txt
+U GlastClassify/treeinfo/gamma/track/thick/filter.txt
+U GlastClassify/treeinfo/gamma/track/thick/log.txt
+U GlastClassify/treeinfo/gamma/track/thick/test_efficiency.txt
+U GlastClassify/treeinfo/gamma/track/thick/title.txt
+U GlastClassify/treeinfo/gamma/track/thick/train_efficiency.txt
+N GlastClassify/treeinfo/gamma/track/thick/used_variables.txt
+U GlastClassify/treeinfo/gamma/track/thick/variables.txt
+U GlastClassify/treeinfo/gamma/track/thin/dtree.txt
+U GlastClassify/treeinfo/gamma/track/thin/files.txt
+U GlastClassify/treeinfo/gamma/track/thin/filter.txt
+U GlastClassify/treeinfo/gamma/track/thin/log.txt
+U GlastClassify/treeinfo/gamma/track/thin/test_efficiency.txt
+U GlastClassify/treeinfo/gamma/track/thin/title.txt
+U GlastClassify/treeinfo/gamma/track/thin/train_efficiency.txt
+N GlastClassify/treeinfo/gamma/track/thin/used_variables.txt
+U GlastClassify/treeinfo/gamma/track/thin/variables.txt
+U GlastClassify/treeinfo/gamma/vertex/highcal/dtree.txt
+U GlastClassify/treeinfo/gamma/vertex/highcal/files.txt
+U GlastClassify/treeinfo/gamma/vertex/highcal/filter.txt
+U GlastClassify/treeinfo/gamma/vertex/highcal/log.txt
+U GlastClassify/treeinfo/gamma/vertex/highcal/test_efficiency.txt
+U GlastClassify/treeinfo/gamma/vertex/highcal/title.txt
+U GlastClassify/treeinfo/gamma/vertex/highcal/train_efficiency.txt
+U GlastClassify/treeinfo/gamma/vertex/highcal/used_variables.txt
+U GlastClassify/treeinfo/gamma/vertex/highcal/variables.txt
+U GlastClassify/treeinfo/gamma/vertex/medcal/dtree.txt
+U GlastClassify/treeinfo/gamma/vertex/medcal/files.txt
+U GlastClassify/treeinfo/gamma/vertex/medcal/filter.txt
+U GlastClassify/treeinfo/gamma/vertex/medcal/log.txt
+U GlastClassify/treeinfo/gamma/vertex/medcal/test_efficiency.txt
+U GlastClassify/treeinfo/gamma/vertex/medcal/title.txt
+U GlastClassify/treeinfo/gamma/vertex/medcal/train_efficiency.txt
+N GlastClassify/treeinfo/gamma/vertex/medcal/used_variables.txt
+U GlastClassify/treeinfo/gamma/vertex/medcal/variables.txt
+U GlastClassify/treeinfo/gamma/vertex/thick/dtree.txt
+U GlastClassify/treeinfo/gamma/vertex/thick/files.txt
+U GlastClassify/treeinfo/gamma/vertex/thick/filter.txt
+U GlastClassify/treeinfo/gamma/vertex/thick/log.txt
+U GlastClassify/treeinfo/gamma/vertex/thick/test_efficiency.txt
+U GlastClassify/treeinfo/gamma/vertex/thick/title.txt
+U GlastClassify/treeinfo/gamma/vertex/thick/train_efficiency.txt
+N GlastClassify/treeinfo/gamma/vertex/thick/used_variables.txt
+U GlastClassify/treeinfo/gamma/vertex/thick/variables.txt
+U GlastClassify/treeinfo/gamma/vertex/thin/dtree.txt
+U GlastClassify/treeinfo/gamma/vertex/thin/files.txt
+U GlastClassify/treeinfo/gamma/vertex/thin/filter.txt
+U GlastClassify/treeinfo/gamma/vertex/thin/log.txt
+U GlastClassify/treeinfo/gamma/vertex/thin/test_efficiency.txt
+U GlastClassify/treeinfo/gamma/vertex/thin/title.txt
+U GlastClassify/treeinfo/gamma/vertex/thin/train_efficiency.txt
+N GlastClassify/treeinfo/gamma/vertex/thin/used_variables.txt
+U GlastClassify/treeinfo/gamma/vertex/thin/variables.txt
+U GlastClassify/treeinfo/psf/files.txt
+U GlastClassify/treeinfo/psf/track/thick/dtree.txt
+U GlastClassify/treeinfo/psf/track/thick/files.txt
+U GlastClassify/treeinfo/psf/track/thick/log.txt
+U GlastClassify/treeinfo/psf/track/thick/test_efficiency.txt
+U GlastClassify/treeinfo/psf/track/thick/title.txt
+U GlastClassify/treeinfo/psf/track/thick/train_efficiency.txt
+N GlastClassify/treeinfo/psf/track/thick/used_variables.txt
+U GlastClassify/treeinfo/psf/track/thick/variables.txt
+U GlastClassify/treeinfo/psf/track/thin/dtree.txt
+U GlastClassify/treeinfo/psf/track/thin/files.txt
+U GlastClassify/treeinfo/psf/track/thin/log.txt
+U GlastClassify/treeinfo/psf/track/thin/test_efficiency.txt
+U GlastClassify/treeinfo/psf/track/thin/title.txt
+U GlastClassify/treeinfo/psf/track/thin/train_efficiency.txt
+N GlastClassify/treeinfo/psf/track/thin/used_variables.txt
+U GlastClassify/treeinfo/psf/track/thin/variables.txt
+U GlastClassify/treeinfo/psf/vertex/thick/dtree.txt
+U GlastClassify/treeinfo/psf/vertex/thick/files.txt
+U GlastClassify/treeinfo/psf/vertex/thick/log.txt
+U GlastClassify/treeinfo/psf/vertex/thick/test_efficiency.txt
+U GlastClassify/treeinfo/psf/vertex/thick/title.txt
+U GlastClassify/treeinfo/psf/vertex/thick/train_efficiency.txt
+N GlastClassify/treeinfo/psf/vertex/thick/used_variables.txt
+U GlastClassify/treeinfo/psf/vertex/thick/variables.txt
+U GlastClassify/treeinfo/psf/vertex/thin/dtree.txt
+U GlastClassify/treeinfo/psf/vertex/thin/files.txt
+U GlastClassify/treeinfo/psf/vertex/thin/log.txt
+U GlastClassify/treeinfo/psf/vertex/thin/test_efficiency.txt
+U GlastClassify/treeinfo/psf/vertex/thin/title.txt
+U GlastClassify/treeinfo/psf/vertex/thin/train_efficiency.txt
+U GlastClassify/treeinfo/psf/vertex/thin/used_variables.txt
+U GlastClassify/treeinfo/psf/vertex/thin/variables.txt
+U GlastClassify/treeinfo/vertex/files.txt
+U GlastClassify/treeinfo/vertex/filter.txt
+U GlastClassify/treeinfo/vertex/thick/dtree.txt
+U GlastClassify/treeinfo/vertex/thick/files.txt
+U GlastClassify/treeinfo/vertex/thick/filter.txt
+U GlastClassify/treeinfo/vertex/thick/log.txt
+U GlastClassify/treeinfo/vertex/thick/test_efficiency.txt
+U GlastClassify/treeinfo/vertex/thick/title.txt
+U GlastClassify/treeinfo/vertex/thick/train_efficiency.txt
+N GlastClassify/treeinfo/vertex/thick/used_variables.txt
+U GlastClassify/treeinfo/vertex/thick/variables.txt
+U GlastClassify/treeinfo/vertex/thin/dtree.txt
+U GlastClassify/treeinfo/vertex/thin/files.txt
+U GlastClassify/treeinfo/vertex/thin/filter.txt
+U GlastClassify/treeinfo/vertex/thin/log.txt
+U GlastClassify/treeinfo/vertex/thin/test_efficiency.txt
+U GlastClassify/treeinfo/vertex/thin/title.txt
+U GlastClassify/treeinfo/vertex/thin/train_efficiency.txt
+U GlastClassify/treeinfo/vertex/thin/used_variables.txt
+U GlastClassify/treeinfo/vertex/thin/variables.txt
+
+No conflicts created by this import
+
+    *
+------------------------------------------------------------
 User: burnett  Sun Nov 13 13:05:10 PST 2005
 GlastClassify/src/test
 
