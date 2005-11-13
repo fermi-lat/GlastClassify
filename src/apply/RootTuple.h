@@ -1,4 +1,4 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.h,v 1.1 2005/11/08 16:28:53 burnett Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.h,v 1.2 2005/11/08 20:48:22 burnett Exp $
 // Original author T. Burnett (w/ help from H. Kelley)
 #ifndef ROOTTUPLE_H
 #define ROOTTUPLE_H
@@ -8,21 +8,21 @@
 #include <string>
 
 class TFile;
-class TNtuple;
 class TTree;
 
 class RootTuple : public GlastClassify::ITupleInterface {
 
 public:
-    ///
-    RootTuple::RootTuple( std::string file, std::string treeName);
-    ~RootTuple(){};
+    /// 
+    RootTuple::RootTuple( std::string inputfile, std::string treeName);
+    ~RootTuple();
 
     //! acccess to an item (interface to the leaf)
     const GlastClassify::Item* getItem(const std::string& name)const;
 
-    //! create new leaf
+    //! create new leaf (float only)
     void addItem(const std::string& name, float& value);
+    void addItem(const std::string& name, double& value);
 
     //! return false when no more events
     bool nextEvent();
@@ -32,10 +32,18 @@ public:
 
     int numEvents(){return m_numEvents;}
 
-    TTree * tree(){return m_tree;}
+    //! set the output file name: if set, will copy to it
+    void setOutputFile(const std::string& outputfilename);
+
+    //! set current event
+    void fill();
+
 private:
+    TTree * tree(){return m_tree;}
     TTree * m_tree;
+    TTree * m_output_tree;
     TFile * m_file;
+    TFile * m_output_file;
 
     int m_numEvents;
     int m_event;

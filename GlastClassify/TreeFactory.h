@@ -3,13 +3,15 @@
 @brief declaration of class TreeFactory
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.6 2005/11/08 15:41:49 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.7 2005/11/09 00:04:36 usher Exp $
 */
 
 #ifndef GlastClassify_TreeFactory_h
 #define GlastClassify_TreeFactory_h
 
+#if 0
 #include "GlastClassify/ITreeFactory.h"
+#endif
 #include "GlastClassify/ITupleInterface.h"
 
 class DecisionTree;
@@ -24,7 +26,11 @@ namespace GlastClassify {
     @brief A factory for accessing decision trees
 
     */
-    class TreeFactory : virtual public ITreeFactory {
+    class TreeFactory
+#if 0 // THB, to isolate new structure for now
+        : virtual public ITreeFactory 
+#endif
+    {
     public:
 
         // forward declaration
@@ -45,7 +51,8 @@ namespace GlastClassify {
         @brief nested class definition
         This class wraps a DecisionTree object
         */
-        class Tree : virtual public ITreeFactory::ITree  {
+        class Tree //: virtual public ITreeFactory::ITree  
+        {
         public:
             Tree( const std::string& path, ITupleInterface& tuple);
             double operator()()const;
@@ -63,7 +70,11 @@ namespace GlastClassify {
         
          @return a reference to a new tree. See also the evaluate() method.
          */
+#if 0
         const ITreeFactory::ITree& operator()(const std::string& name);
+#else
+        const TreeFactory::Tree& operator()(const std::string& name);
+#endif
 
 
         /// @return value of Tree # i for current set of values
@@ -79,8 +90,11 @@ namespace GlastClassify {
 
         std::string m_path;
         ITupleInterface& m_tuple;
-
+#if 0
         std::vector<ITreeFactory::ITree*> m_trees;
+#else
+        std::vector<TreeFactory::Tree*> m_trees;
+#endif
 
     };
 
