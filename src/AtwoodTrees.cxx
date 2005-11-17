@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.5 2005/11/10 21:12:37 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.6 2005/11/13 21:05:09 burnett Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
@@ -91,7 +91,8 @@ AtwoodTrees::AtwoodTrees(
     m_CalCfpEnergy=   tuple.getItem("CalCfpEnergy"   );
     m_CalLllEnergy =  tuple.getItem("CalLllEnergy"   );
     m_CalTklEnergy=   tuple.getItem("CalTklEnergy"   );
-    
+
+
 
     // New items to create or override
     // create new float TupleItem objects: will be automatically added to the overall tuple
@@ -146,6 +147,7 @@ AtwoodTrees::AtwoodTrees(
                 m_BestEnergy = energymeasure[i];
             }
         }
+
         // assign tuple items
         m_goodCalProb = bestprob;
 

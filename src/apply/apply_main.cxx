@@ -1,7 +1,7 @@
 /** @file apply_main.cxx 
 @brief Application that applies decision trees to a root tuple
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.2 2005/11/08 20:48:22 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.3 2005/11/13 21:05:09 burnett Exp $
 */
 
 #include "RootTuple.h"
@@ -63,7 +63,11 @@ int main(int argc, char* argv[])
 
         const char* ctree = ::getenv("CTREE_PATH");
         if (ctree==0){
+#if 1
             ctree = "D:\\common\\ctree\\GlastClassify\\v2r1\\treeinfo-v4";
+#else
+            ctree = "D:\\common\\ctree\\IMtreeinfo";
+#endif
             std::cout << "Setting CTREE_PATH to  " << ctree << std::endl;
         }else{
             std::cout << "CTREE_PATH: " << ctree << std::endl;
