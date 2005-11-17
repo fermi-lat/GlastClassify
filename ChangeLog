@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Nov 17 08:41:20 PST 2005
+GlastClassify/GlastClassify
+
+Modified Files:
+	AtwoodLikeTrees.h TreeFactory.h 
+Log Message:
+update to process the atwood trees themselves
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r2, operation: add
 Package: GlastClassify
