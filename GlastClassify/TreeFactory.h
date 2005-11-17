@@ -3,7 +3,7 @@
 @brief declaration of class TreeFactory
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.7 2005/11/09 00:04:36 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/TreeFactory.h,v 1.8 2005/11/13 21:05:08 burnett Exp $
 */
 
 #ifndef GlastClassify_TreeFactory_h
@@ -18,6 +18,8 @@ class DecisionTree;
 
 #include <vector>
 #include <utility>
+#include <string>
+#include <map>
 
 
 namespace GlastClassify {
@@ -33,6 +35,8 @@ namespace GlastClassify {
     {
     public:
 
+        typedef  std::map<std::string, const GlastClassify::Item*> LocalDictionary;
+
         // forward declaration
         class GleamValues;
 
@@ -43,9 +47,12 @@ namespace GlastClassify {
 
 
         */
-        TreeFactory(const std::string& path, ITupleInterface& tuple)
+        TreeFactory(const std::string& path, ITupleInterface& tuple, 
+            const LocalDictionary& localvars)
             :m_path(path)
-            ,m_tuple(tuple){};
+            ,m_tuple(tuple)
+            ,m_dict(localvars)
+        {};
 
         /** @class Tree
         @brief nested class definition
@@ -54,7 +61,7 @@ namespace GlastClassify {
         class Tree //: virtual public ITreeFactory::ITree  
         {
         public:
-            Tree( const std::string& path, ITupleInterface& tuple);
+            Tree( const std::string& path, ITupleInterface& tuple, const LocalDictionary& dict);
             double operator()()const;
             ~Tree();
             /// @return the title
@@ -90,6 +97,7 @@ namespace GlastClassify {
 
         std::string m_path;
         ITupleInterface& m_tuple;
+        const LocalDictionary& m_dict;
 #if 0
         std::vector<ITreeFactory::ITree*> m_trees;
 #else
