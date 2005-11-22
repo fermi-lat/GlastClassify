@@ -1,7 +1,7 @@
 /**@file main.cxx
 @brief main program for application to test GLAST classification trees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/test/test_main.cxx,v 1.7 2005/11/13 21:05:09 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/test/test_main.cxx,v 1.8 2005/11/17 16:41:21 burnett Exp $
 
 */
 
@@ -55,7 +55,7 @@ public:
         TreeFactory factory(info_path, tuple, dict);
 
         log() << "Ask factory for a tree: " << std::endl;
-        const TreeFactory::Tree& goodcal= factory(name);
+        const ITreeFactory::ITree& goodcal= factory(name);
         log() << "Tree's title: " << goodcal.title() << std::endl;
         
 

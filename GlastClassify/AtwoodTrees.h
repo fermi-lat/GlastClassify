@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.h
     @brief  Declare class AtwoodTrees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,v 1.1 2005/11/08 15:41:49 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,v 1.2 2005/11/09 00:04:36 usher Exp $
 */
 #ifndef GlastClassify_AtwoodTrees_h
 #define GlastClassify_AtwoodTrees_h
@@ -16,6 +16,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,
 namespace GlastClassify { 
     
     class ITupleInterface; 
+    class TreeAnalysis;
 
 /** @class AtwoodTrees
     @brief Manage Atwood-inspired classification trees, creating new tuple variables
@@ -30,44 +31,41 @@ public:
 
     Uses the tuple object to access current tuple items, and to create new ones.
     */
-    AtwoodTrees( 
-        ITupleInterface& tuple, 
-        std::ostream&    log       =std::cout, 
-        std::string      treepath  =""
-        );
+    AtwoodTrees( ITupleInterface& tuple, std::ostream& log=std::cout, std::string treepath  ="");
 
     /** run the prediction nodes on the current tuple instance
     */
-    void execute();  
+    bool execute();  
 
     ~AtwoodTrees();
 
 private:
 
-    //! true if the vertex measurment of the gamma direction is better than one-track
-    //! must be called after the execute method.
-    bool useVertex()const;
+    const Item*   m_TkrNumTracks;
+    const Item*   m_CalEnergyRaw  ;
+    const Item*   m_CalCsIRLn   ;  
+    const Item*   m_EvtEventId;
 
-    const Item * m_Tkr1FirstLayer;
-    const Item * m_CalEnergyRaw  ;
-    const Item * m_CalTotRLn   ;  
-    const Item * m_VtxAngle    ;  
-    const Item * m_EvtEnergyCorr; 
-    const Item * m_CalCfpEnergy;  
-    const Item * m_CalLllEnergy;  
-    const Item * m_CalTklEnergy;  
+    float         m_bestEnergyProb;
+    float         m_profileProb;
+    float         m_lastLayerProb;
+    float         m_trackerProb;
+    float         m_paramProb;
+    float         m_CTBestEnergy;
+    float         m_CTBdeltaEoE;
+    float         m_VTX;
+    float         m_CORE;
+    float         m_GAM;
 
-    // output quantities: corresponding tuple items
-    float m_goodCalProb; 
-    float m_goodPsfProb; 
-    float m_vtxProb; // vertex or track choice
-    float m_gammaProb;
-    float m_gammaType;
-    float m_BestEnergy;
+    int           m_executeTreeCnt;
+    int           m_goodVals;
+    int           m_caughtVals;
 
+    // stream for output (if any)
     std::ostream& m_log;
 
-    GlastClassify::ITreeFactory* m_factory;
+    // Pointer to the classification tree analysis
+    TreeAnalysis* m_treeAnalysis;
  };
 
 } // namespace GlastClassify

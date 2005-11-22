@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlAppendEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlAppendEngineFactory.cxx,v 1.1 2005/11/04 23:19:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlAppendEngineFactory.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
 */
 
 #include "xmlAppendEngineFactory.h"
@@ -30,9 +30,7 @@ namespace {
     double min_prob, max_prob;
 } // anonomous namespace
 
-xmlAppendEngineFactory::xmlAppendEngineFactory(std::ostream& log, int iVerbosity )
-                        : xmlFactoryBase(log,iVerbosity), 
-                          m_log(log), m_outputLevel(iVerbosity)
+xmlAppendEngineFactory::xmlAppendEngineFactory(XTExprsnParser& parser) : xmlFactoryBase(parser)
 {
 }
 
@@ -40,7 +38,7 @@ IImActivityNode* xmlAppendEngineFactory::operator()(const DOMElement* xmlActivit
 {
     // Retrieve name and node id
     DOMElement* displayInfo = xmlBase::Dom::findFirstChildByName(xmlActivityNode, "DisplayInfo");
-    std::string sType       = "PredictEngineNode";
+    std::string sType       = "AppendEngineNode";
     std::string sName       = xmlBase::Dom::getAttribute(displayInfo, "labelText");
     std::string sId         = xmlBase::Dom::getAttribute(xmlActivityNode, "id");
 

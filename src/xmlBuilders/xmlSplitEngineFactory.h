@@ -3,7 +3,7 @@
 @brief declaration of class xmlSplitEngineFactory
 @author T. Usher
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/xmlSplitEngineFactory.h,v 1.1 2005/11/04 23:19:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlSplitEngineFactory.h,v 1.1 2005/11/07 21:50:54 usher Exp $
 */
 
 #ifndef GlastClassify_xmlSplitEngineFactory_h
@@ -29,7 +29,7 @@ public:
     @param lookup Instance of a class supplied to by user, which is called back 
     to find address of each variable
     */
-    xmlSplitEngineFactory(std::ostream& log=std::cout, int iVerbosity=0);
+    xmlSplitEngineFactory(XTExprsnParser& parser);
 
     /** @param name a folder name completing the path to the folder containing the tree data   
      @return a reference to a new tree. See also the evaluate() method.
@@ -39,10 +39,6 @@ public:
     virtual ~xmlSplitEngineFactory();
 
 private:
-
-    std::ostream&                m_log;         //! output to this stream
-    int                          m_outputLevel; //! output level (verbosity)
-
 };
 
 

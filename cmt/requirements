@@ -2,7 +2,7 @@ package GlastClassify
 
 version v2r2
 author T. Burnett <tburnett@u.washington.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.23 2005/11/09 00:04:36 usher Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.24 2005/11/14 20:27:12 burnett Exp $
 use GlastPolicy *
 
 apply_pattern package_include
@@ -17,6 +17,7 @@ library  GlastClassify -no_share  \
                        -s=../GlastClassify $(source) \
                        -s=../src $(source) \
                        -s=../src/ImActivityNodes $(source) \
+                       -s=../src/XT $(source) \
                        -s=../src/xmlBuilders $(source)
 
 use classifier *

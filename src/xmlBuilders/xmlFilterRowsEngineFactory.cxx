@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlFilterRowsEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFilterRowsEngineFactory.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFilterRowsEngineFactory.cxx,v 1.2 2005/11/08 01:10:50 usher Exp $
 */
 
 #include "xmlFilterRowsEngineFactory.h"
@@ -30,9 +30,7 @@ namespace {
     double min_prob, max_prob;
 } // anonomous namespace
 
-xmlFilterRowsEngineFactory::xmlFilterRowsEngineFactory(std::ostream& log, int iVerbosity )
-                        : xmlFactoryBase(log,iVerbosity), 
-                          m_log(log), m_outputLevel(iVerbosity)
+xmlFilterRowsEngineFactory::xmlFilterRowsEngineFactory(XTExprsnParser& parser) : xmlFactoryBase(parser)
 {
 }
 
@@ -47,8 +45,8 @@ IImActivityNode* xmlFilterRowsEngineFactory::operator()(const DOMElement* xmlAct
     // Create the node
     FilterRowsEngineNode* node = new FilterRowsEngineNode(sType, sName, sId);
 
+    // Decode the expression
     DOMElement* xmlProperty = getXTProperty(xmlActivityNode, "testExpression");
-
     std::string sExpression;
 
     try
@@ -62,17 +60,22 @@ IImActivityNode* xmlFilterRowsEngineFactory::operator()(const DOMElement* xmlAct
         sExpression = xmlBase::Dom::getAttribute(xmlProperty, "value");
     }
 
-    // Trim the blank spaces
-    sExpression = trimBlanks(sExpression);
-
     // Store
     node->setExpression(sExpression);
 
     // Parse
-    StringList parsedExpression;
-    parseExpression(parsedExpression, sExpression);
+    IXTExprsnNode* xprsnNode = XprsnParser().parseExpression(sExpression);
 
-    node->setParsedExpression(parsedExpression);
+    // Save the executable parsed expression
+    node->setXTExprsnNode(xprsnNode);
+
+    // Ok, now determine if we are "including" or "excluding" 
+    xmlProperty = getXTProperty(xmlActivityNode, "includeRows");
+
+    sExpression = xmlBase::Dom::getAttribute(xmlProperty, "value");
+
+    bool keepRow = sExpression == "true";
+    node->setIncludeRows(keepRow);
 
     return node;
 }

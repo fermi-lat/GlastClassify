@@ -2,11 +2,11 @@
 
 @brief implementation of class xmlModifyColumnsEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlModifyColumnsEngineFactory.cxx,v 1.1 2005/11/04 23:19:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlModifyColumnsEngineFactory.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
 */
 
 #include "xmlModifyColumnsEngineFactory.h"
-#include "../ImActivityNodes/CreateColumnsEngineNode.h"
+#include "../ImActivityNodes/ModifyColumnsEngineNode.h"
 #include "xmlBase/XmlParser.h"
 #include "facilities/Util.h"
 #include <xercesc/dom/DOMElement.hpp>
@@ -30,9 +30,7 @@ namespace {
     double min_prob, max_prob;
 } // anonomous namespace
 
-xmlModifyColumnsEngineFactory::xmlModifyColumnsEngineFactory(std::ostream& log, int iVerbosity )
-                        : xmlFactoryBase(log,iVerbosity), 
-                          m_log(log), m_outputLevel(iVerbosity)
+xmlModifyColumnsEngineFactory::xmlModifyColumnsEngineFactory(XTExprsnParser& parser) : xmlFactoryBase(parser)
 {
 }
 
@@ -40,12 +38,12 @@ IImActivityNode* xmlModifyColumnsEngineFactory::operator()(const DOMElement* xml
 {
     // Retrieve name and node id
     DOMElement* displayInfo = xmlBase::Dom::findFirstChildByName(xmlActivityNode, "DisplayInfo");
-    std::string sType       = "PredictEngineNode";
+    std::string sType       = "ModifyColumnsEngineNode";
     std::string sName       = xmlBase::Dom::getAttribute(displayInfo, "labelText");
     std::string sId         = xmlBase::Dom::getAttribute(xmlActivityNode, "id");
 
     // Create the node
-    CreateColumnsEngineNode* node = new CreateColumnsEngineNode(sType, sName, sId);
+    ModifyColumnsEngineNode* node = new ModifyColumnsEngineNode(sType, sName, sId);
 
     return node;
 }

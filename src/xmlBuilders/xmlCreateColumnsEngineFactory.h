@@ -3,7 +3,7 @@
 @brief declaration of class xmlCreateColumnsEngineFactory
 @author T. Usher
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/xmlCreateColumnsEngineFactory.h,v 1.1 2005/11/04 23:19:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateColumnsEngineFactory.h,v 1.1 2005/11/07 21:50:54 usher Exp $
 */
 
 #ifndef GlastClassify_xmlCreateColumnsEngineFactory_h
@@ -11,7 +11,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/xmlCreateColum
 
 #include "xmlFactoryBase.h"
 #include "IxmlEngineFactory.h"
-#include "../ImActivityNodes/IImActivityNode.h"
+#include "src/ImActivityNodes/IImActivityNode.h"
 
 class DecisionTree;
 
@@ -27,7 +27,7 @@ public:
     @param lookup Instance of a class supplied to by user, which is called back 
     to find address of each variable
     */
-    xmlCreateColumnsEngineFactory(std::ostream& log=std::cout, int iVerbosity=0);
+    xmlCreateColumnsEngineFactory(XTExprsnParser& parser);
 
     /** @param name a folder name completing the path to the folder containing the tree data   
      @return a reference to a new tree. See also the evaluate() method.
@@ -37,10 +37,6 @@ public:
     virtual ~xmlCreateColumnsEngineFactory();
 
 private:
-
-    std::ostream&                m_log;         //! output to this stream
-    int                          m_outputLevel; //! output level (verbosity)
-
 };
 
 
