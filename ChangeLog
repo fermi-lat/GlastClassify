@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: usher  Tue Nov 22 13:36:55 PST 2005
+GlastClassify/GlastClassify
+
+Modified Files:
+	AtwoodTrees.h 
+Removed Files:
+	ITreeFactory.h xmlTreeFactory.h 
+Log Message:
+Remove now obsolete connection between IM-like analysis and classifier package, also ditch now useless ITreeFactory interface class
+    *
+------------------------------------------------------------
 User: usher  Tue Nov 22 13:19:37 PST 2005
 GlastClassify/src
 
