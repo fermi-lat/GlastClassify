@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: usher  Tue Nov 22 14:20:57 PST 2005
+GlastClassify/src/xmlBuilders
+
+Added Files:
+	xmlNewlPredictEngineFactory.cxx 
+Removed Files:
+	xmNewlPredictEngineFactory.cxx 
+Log Message:
+More compile warnings
+    *
+------------------------------------------------------------
+User: usher  Tue Nov 22 14:20:57 PST 2005
 GlastClassify/src/XT
 
 Modified Files:
