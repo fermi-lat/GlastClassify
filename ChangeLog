@@ -1,4 +1,29 @@
 ------------------------------------------------------------
+User: usher  Tue Nov 22 13:19:03 PST 2005
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	ImSheetBuilder.cxx ImSheetBuilder.h xmlAppendEngineFactory.cxx 
+	xmlAppendEngineFactory.h xmlCreateColumnsEngineFactory.cxx 
+	xmlCreateColumnsEngineFactory.h xmlFactoryBase.cxx 
+	xmlFactoryBase.h xmlFilterColumnsEngineFactory.cxx 
+	xmlFilterColumnsEngineFactory.h xmlFilterRowsEngineFactory.cxx 
+	xmlFilterRowsEngineFactory.h xmlMissingValuesEngineFactory.cxx 
+	xmlMissingValuesEngineFactory.h 
+	xmlModifyColumnsEngineFactory.cxx 
+	xmlModifyColumnsEngineFactory.h xmlPredictEngineFactory.h 
+	xmlPredictFactory.cxx xmlReadTextFileEngineFactory.cxx 
+	xmlReadTextFileEngineFactory.h xmlShuffleEngineFactory.cxx 
+	xmlShuffleEngineFactory.h xmlSplitEngineFactory.cxx 
+	xmlSplitEngineFactory.h xmlWriteTextFileEngineFactory.cxx 
+	xmlWriteTextFileEngineFactory.h 
+Added Files:
+	xmNewlPredictEngineFactory.cxx xmlNewPredictEngineFactory.h 
+	xmlTreeAnalysisFactory.cxx xmlTreeAnalysisFactory.h 
+Log Message:
+Initial import/update of code to read/parse/implement an xml IM-like analysis. This round of updating in order to get a version which builds and runs correctly on linux, expect some turmoil in next day...
+    *
+------------------------------------------------------------
 User: usher  Tue Nov 22 13:19:02 PST 2005
 GlastClassify/src/test
 
