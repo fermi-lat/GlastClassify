@@ -1,7 +1,7 @@
 /**@file XprsnTree.h
 @brief Contains class definitions for implementing a very basic Decision Tree
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.2 2005/11/22 22:02:52 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.3 2005/11/22 22:20:57 usher Exp $
 */
 
 #ifndef XprsnTree_h
@@ -289,7 +289,8 @@ public:
     virtual void printExp(std::ostream& out=std::cout, bool first=true) const
     {
         out << "Node: " << m_name << " ";
-        m_condNode.printExp(out, true);
+        m_condNode.printExp(out, first);
+        if (first) out << std::endl;
 
         bool condition = *(reinterpret_cast<const bool*>(m_condNode()));
         if (condition) m_ifNode.printExp(out,true);
