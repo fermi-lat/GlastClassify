@@ -1,13 +1,12 @@
 /** @file AtwoodTrees.h
     @brief  Declare class AtwoodTrees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,v 1.2 2005/11/09 00:04:36 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,v 1.3 2005/11/22 21:19:01 usher Exp $
 */
 #ifndef GlastClassify_AtwoodTrees_h
 #define GlastClassify_AtwoodTrees_h
 
 #include "GlastClassify/ITupleInterface.h"
-#include "GlastClassify/ITreeFactory.h"
 
 #include <string>
 #include <iostream>
