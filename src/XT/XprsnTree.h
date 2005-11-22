@@ -1,7 +1,7 @@
 /**@file XprsnTree.h
 @brief Contains class definitions for implementing a very basic Decision Tree
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/XprsnTree.h,v 1.2 2005/11/08 01:10:50 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.1 2005/11/22 21:19:03 usher Exp $
 */
 
 #ifndef XprsnTree_h
@@ -116,41 +116,41 @@ private:
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) +  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left +  rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) +  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* operator- (IXTExprsnNode& rhs) const 
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) -  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left - rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) -  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* operator* (IXTExprsnNode& rhs) const 
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) *  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left * rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) *  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* operator/ (IXTExprsnNode& rhs) const 
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) /  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left / rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) /  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* operator||(IXTExprsnNode& rhs) const 
     {
-        double left = *(reinterpret_cast<const double*>(m_left()));
-        double rght = *(reinterpret_cast<const double*>(rhs()));
         *m_value = *(reinterpret_cast<const bool*>(m_left())) ||  *(reinterpret_cast<const bool*>(rhs()));
         return m_value;
     }
     const T* operator&&(IXTExprsnNode& rhs) const 
     {
-        double left = *(reinterpret_cast<const double*>(m_left()));
-        double rght = *(reinterpret_cast<const double*>(rhs()));
         *m_value = *(reinterpret_cast<const bool*>(m_left())) &&  *(reinterpret_cast<const bool*>(rhs()));
         return m_value;
     }
@@ -158,49 +158,56 @@ private:
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) >  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left > rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) >  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* operator>=(IXTExprsnNode& rhs) const 
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) >=  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left >= rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) >=  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* operator< (IXTExprsnNode& rhs) const 
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) <  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left < rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) <  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* operator<=(IXTExprsnNode& rhs) const 
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) <=  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left <= rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) <=  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* operator==(IXTExprsnNode& rhs) const 
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) ==  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left == rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) ==  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* operator!=(IXTExprsnNode& rhs) const 
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = *(reinterpret_cast<const double*>(m_left())) !=  *(reinterpret_cast<const double*>(rhs()));
+        *m_value = left != rght;
+        //*m_value = *(reinterpret_cast<const double*>(m_left())) !=  *(reinterpret_cast<const double*>(rhs()));
         return m_value;
     }
     const T* pow(IXTExprsnNode& rhs) const 
     {
         double left = *(reinterpret_cast<const double*>(m_left()));
         double rght = *(reinterpret_cast<const double*>(rhs()));
-        *m_value = std::pow(*(reinterpret_cast<const double*>(m_left())),*(reinterpret_cast<const double*>(rhs())));
+        *m_value = std::pow(left,rght);
+        //*m_value = std::pow(*(reinterpret_cast<const double*>(m_left())),*(reinterpret_cast<const double*>(rhs())));
         return m_value;
     }
     
