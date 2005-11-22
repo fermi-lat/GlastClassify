@@ -1,5 +1,20 @@
 ------------------------------------------------------------
 User: usher  Tue Nov 22 14:02:52 PST 2005
+GlastClassify/src/ImActivityNodes
+
+Modified Files:
+	AppendEngineNode.h CreateColumnsEngineNode.h 
+	FilterColumnsEngineNode.h FilterRowsEngineNode.h 
+	MissingValuesEngineNode.h ModifyColumnsEngineNode.h 
+	PredictEngineNode.h ReadTextFileEngineNode.h 
+	ShuffleEngineNode.h SplitEngineNode.h 
+	WriteTextFileEngineNode.h newPredictEngineNode.cxx 
+	newPredictEngineNode.h 
+Log Message:
+First round of linux compiler error/warning fixes
+    *
+------------------------------------------------------------
+User: usher  Tue Nov 22 14:02:52 PST 2005
 GlastClassify/src
 
 Modified Files:
