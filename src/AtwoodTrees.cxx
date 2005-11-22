@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.7 2005/11/17 16:41:20 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.8 2005/11/22 21:19:01 usher Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
@@ -84,7 +84,7 @@ bool AtwoodTrees::execute()
     double tkrNumTracks = *m_TkrNumTracks;
     double calenergy    = *m_CalEnergyRaw;
     double calCsiRln    = *m_CalCsIRLn;
-    double eventId      = *m_EvtEventId;
+    //double eventId      = *m_EvtEventId;
 
     // These are the "standard" selection cuts
     if( calenergy <5. || calCsiRln < 4. || tkrNumTracks < 1) return false; 

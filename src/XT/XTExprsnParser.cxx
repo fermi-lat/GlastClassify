@@ -2,7 +2,7 @@
 
 @brief implementation of class XTExprsnParser
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/XTExprsnParser.cxx,v 1.2 2005/11/08 01:10:50 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.1 2005/11/22 21:19:03 usher Exp $
 */
 
 #include "XTExprsnParser.h"
@@ -54,8 +54,7 @@ IXTExprsnNode* XTExprsnParser::parseExpression(std::string& expression)
     // Can we get rid of the embedded special characters?
     for(int idx = 0; idx < 4; idx++)
     {
-        static const tabChar[]={0x9,0xA,0xC,0xD};
-        char theChar = tabChar[idx];
+        static const char tabChar[]={0x9,0xA,0xC,0xD};
         expression = trimCharacters(expression, tabChar[idx]);
     }
 
@@ -78,7 +77,6 @@ IXTExprsnNode* XTExprsnParser::parseNextExpression(std::string& expression)
     // Look for the next operator outside of enclosing parenthesis
     int strnLength  = expression.length();
     int startPos    = 0;
-    int skipNparens = 0; 
 
     // Search for the next delimiter
     DelimPair   fndDelimPr = findNextDelimiter(expression, startPos);
@@ -396,8 +394,6 @@ std::string XTExprsnParser::findEnclosingParens(const std::string& expression, i
 std::string XTExprsnParser::trimCharacters(std::string& expression, const char& charToTrim)
 {
     std::string trimmedString = expression;
-
-    int nPos     = trimmedString.size();
     int blankPos = trimmedString.find(charToTrim,0);
 
     if (blankPos > -1) 

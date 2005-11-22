@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeAnalysisFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlTreeAnalysisFactory.cxx,v 1.5 2005/11/09 00:10:53 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.1 2005/11/22 21:19:03 usher Exp $
 */
 
 #include "xmlTreeAnalysisFactory.h"
@@ -184,7 +184,6 @@ int GlastClassify::xmlTreeAnalysisFactory::linkActivityNodes(GlastClassify::Tree
         int         fromPort  = xmlBase::Dom::getIntAttribute(xmlLink, "fromPort");  
         std::string sToNode   = xmlBase::Dom::getAttribute(xmlLink, "toNode");
         std::string sToPort   = xmlBase::Dom::getAttribute(xmlLink, "toPort");
-        int         toPort    = xmlBase::Dom::getIntAttribute(xmlLink, "toPort");
 
         // Comment out for now... (fix in print statement?)
         //if (sFromPort == "1" && sToPort == "1") continue;

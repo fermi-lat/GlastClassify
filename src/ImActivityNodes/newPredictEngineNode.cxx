@@ -1,7 +1,7 @@
 /** @file ImSheetBuilder.cxx
  *    @brief implementation of classification::Tree; declaration and implementation or its private helper classification::ImSheetBuilder::Node
  *
- *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/newPredictEngineNode.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
+ *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/newPredictEngineNode.cxx,v 1.1 2005/11/22 21:19:02 usher Exp $
  */
 
 #include "newPredictEngineNode.h"
@@ -61,7 +61,7 @@ void newPredictEngineNode::execute()
     double weightSum   = 0.;
     double runningWght = 0.;
 
-    int treeNum = 0;
+    //int treeNum = 0;
 
     for(TreePairVector::iterator treeItr = m_trees.begin(); treeItr != m_trees.end(); treeItr++)
     {
@@ -69,7 +69,8 @@ void newPredictEngineNode::execute()
 
         double result = *(reinterpret_cast<const double*>((*tree)()));
 
-        const XTIfElseNode<double>& ifElseNode = dynamic_cast<const XTIfElseNode<double>& >(*tree);
+        // For printing during running, leaving here to remember how to do it
+        //const XTIfElseNode<double>& ifElseNode = dynamic_cast<const XTIfElseNode<double>& >(*tree);
         //std::cout << "Tree #" << treeNum++ << " evaluates to: " << result << std::endl;
         //ifElseNode.printExp(std::cout);
 
