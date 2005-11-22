@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Nov 22 14:02:52 PST 2005
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx 
+Log Message:
+First round of linux compiler error/warning fixes
+    *
+------------------------------------------------------------
 User: usher  Tue Nov 22 13:36:55 PST 2005
 GlastClassify/src/xmlBuilders
 
