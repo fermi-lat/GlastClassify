@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Tue Nov 22 13:19:02 PST 2005
+GlastClassify/src/apply
+
+Modified Files:
+	apply_main.cxx 
+Log Message:
+Initial import/update of code to read/parse/implement an xml IM-like analysis. This round of updating in order to get a version which builds and runs correctly on linux, expect some turmoil in next day...
+    *
+------------------------------------------------------------
+User: usher  Tue Nov 22 13:19:02 PST 2005
 GlastClassify/src/ImActivityNodes
 
 Modified Files:
