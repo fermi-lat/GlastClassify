@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Tue Nov 22 14:02:53 PST 2005
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlTreeAnalysisFactory.cxx 
+Log Message:
+First round of linux compiler error/warning fixes
+    *
+------------------------------------------------------------
+User: usher  Tue Nov 22 14:02:53 PST 2005
 GlastClassify/src/test
 
 Modified Files:
