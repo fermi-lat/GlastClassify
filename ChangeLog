@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Nov 22 17:47:40 PST 2005
+GlastClassify/src/XT
+
+Modified Files:
+	XTtupleVars.h XprsnTree.h 
+Log Message:
+Fix bulk of remaining compiler warnings on linux (thanks Johann!!)
+    *
+------------------------------------------------------------
 User: usher  Tue Nov 22 15:09:43 PST 2005
 GlastClassify/src/XT
 
