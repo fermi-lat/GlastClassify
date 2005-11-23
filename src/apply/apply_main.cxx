@@ -1,7 +1,7 @@
 /** @file apply_main.cxx 
 @brief Application that applies decision trees to a root tuple
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.4 2005/11/17 16:41:20 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.5 2005/11/22 21:19:02 usher Exp $
 */
 
 #include "RootTuple.h"
@@ -34,6 +34,8 @@ int main(int argc, char* argv[])
 
     int rc = 0;
     try {
+
+        bool keepAllRows = true; // Eventually provide ability to set this true/false...
 
         std::string  input_filename(""), output_filename(""), tree_name("MeritTuple");
         int n=0;
@@ -104,7 +106,7 @@ int main(int argc, char* argv[])
         {
             // Execute the tree analysis on this tuple row
             // If good result then also write out the new row
-            if (ctrees.execute())   // fill in the classification (testing here)
+            if (ctrees.execute() || keepAllRows)   // fill in the classification (testing here)
             {
                 tuple.fill();
                 numOutputRows++;
