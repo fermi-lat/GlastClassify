@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Wed Nov 23 09:32:25 PST 2005
+GlastClassify/src/apply
+
+Modified Files:
+	apply_main.cxx 
+Log Message:
+Include flag to write all rows - currently hardwired to "true" but hopefully set-able in the future
+    *
+------------------------------------------------------------
 User: usher  Tue Nov 22 17:47:40 PST 2005
 GlastClassify/src/XT
 
