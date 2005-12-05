@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Dec  4 18:19:57 PST 2005
+GlastClassify/src
+
+Modified Files:
+	TreeFactory.cxx 
+Log Message:
+code for nested trees
+    *
+------------------------------------------------------------
 User: usher  Wed Nov 23 09:32:25 PST 2005
 GlastClassify/src/apply
 
