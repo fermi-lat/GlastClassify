@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeAnalysisFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.1 2005/11/22 21:19:03 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.2 2005/11/22 22:02:53 usher Exp $
 */
 
 #include "xmlTreeAnalysisFactory.h"
@@ -51,7 +51,7 @@ typedef std::vector<DOMElement*> DOMEvector;
 GlastClassify::xmlTreeAnalysisFactory::xmlTreeAnalysisFactory(const std::string& path, ITupleInterface& tuple)
                                                             : m_lookup(tuple), m_log(std::cout)
 {
-    //std::string sFileName = path+"/"+"DC2_Analysis_v2r1.imw";
+    //std::string sFileName = path+"/"+"DC2_Analysis_v2r1.xml";
     std::string sFileName = path;
     
     xmlBase::XmlParser xmlParser;
@@ -156,6 +156,9 @@ int GlastClassify::xmlTreeAnalysisFactory::findAllActivityNodes(GlastClassify::T
         m_idToINodeMap[sId] = iActivityNode;
         m_typeToINodeVecMap[sNewType].push_back(iActivityNode);
     }
+
+    // Cross reference the local tuple variables to those in the input ntuple
+    tree->crossRefNtupleVars();
 
     //done
     return m_iNodeVec.size();

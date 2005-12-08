@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlNewPredictEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmNewlPredictEngineFactory.cxx,v 1.1 2005/11/22 21:19:03 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.1 2005/11/22 22:20:57 usher Exp $
 */
 
 #include "xmlNewPredictEngineFactory.h"
@@ -298,7 +298,8 @@ IXTExprsnNode* xmlNewPredictEngineFactory::parseNode(DOMElement* xmlElement)
         if (sOperator == "greaterOrEqual") sOperator = ">=";
         else                               sOperator = "<";
 
-        std::string expression = varname + " " + sOperator + " " + valname;
+        //std::string expression = varname + " " + sOperator + " " + valname;
+        std::string expression(varname + sOperator + valname);
 
         IXTExprsnNode* xprsnNode = XprsnParser().parseExpression(expression);
         IXTExprsnNode* ifNode    = parseNode(xmlNodeVec[0]);

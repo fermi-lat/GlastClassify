@@ -1,7 +1,7 @@
 /** @file RootTuple.cxx
     @brief implement class RootTuple
 
- $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.2 2005/11/08 20:48:22 burnett Exp $
+ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.3 2005/11/13 21:05:09 burnett Exp $
   Original author T. Burnett (w/ help from H. Kelley)
 */
 #include "RootTuple.h"
@@ -27,6 +27,7 @@
 #include <stdexcept>
 
 namespace {
+/*
     // convenient utility from Heather
 TTree* getTree(TFile *f) {
   // Create an iterator on the list of keys
@@ -63,7 +64,7 @@ TTree* getTree(TFile *f) {
   }
   return t;
 }
-
+*/
 class RootItem : public GlastClassify::Item {
 public:
     RootItem(TLeaf * leaf) : m_leaf(leaf){}
