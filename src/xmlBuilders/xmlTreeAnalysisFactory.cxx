@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeAnalysisFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.2 2005/11/22 22:02:53 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.3 2005/12/08 20:40:32 usher Exp $
 */
 
 #include "xmlTreeAnalysisFactory.h"
@@ -20,6 +20,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnaly
 #include "xmlReadTextFileEngineFactory.h"
 #include "xmlShuffleEngineFactory.h"
 #include "xmlSplitEngineFactory.h"
+#include "xmlTwoDimChartEngineFactory.h"
 #include "xmlWriteTextFileEngineFactory.h"
 
 #include <fstream>
@@ -111,6 +112,7 @@ int GlastClassify::xmlTreeAnalysisFactory::findAllActivityNodes(GlastClassify::T
     nodeFactoryMap["ReadTextFileEngineNode"]  = new xmlReadTextFileEngineFactory(parser);
     nodeFactoryMap["ShuffleEngineNode"]       = new xmlShuffleEngineFactory(parser);
     nodeFactoryMap["SplitEngineNode"]         = new xmlSplitEngineFactory(parser);
+    nodeFactoryMap["TwoDimChartEngineNode"]   = new xmlTwoDimChartEngineFactory(parser);
     nodeFactoryMap["WriteTextFileEngineNode"] = new xmlWriteTextFileEngineFactory(parser);
 
     // We now need to ensure that we're getting 
