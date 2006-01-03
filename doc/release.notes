@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.15 2005/11/14 20:27:12 burnett Exp $
+$Id: release.notes,v 1.16 2005/12/11 01:08:55 burnett Exp $
 @verbatim
+ 3-Jan-06  v3r1   TU  Incorporate updates for "new" style IM Analysis sheets
 10-dec-05  v3r0   THB, for TU; convert to Atwood trees only
 14-nov-05  v2r2   THB New trees, special AtwoodLikeTrees class for non-atwood trees
 08-nov-05  v2r1p1 THB fixes for unix
