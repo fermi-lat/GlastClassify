@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.h
     @brief  Declare class AtwoodTrees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,v 1.5 2005/12/08 20:40:31 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,v 1.6 2006/01/03 21:40:00 usher Exp $
 */
 #ifndef GlastClassify_AtwoodTrees_h
 #define GlastClassify_AtwoodTrees_h
@@ -58,6 +58,7 @@ private:
     float         m_bestDeltaEoE;
     float         m_bestEnergy;
     float         m_bestEnergyProb;
+    float         m_bestLogEnergy;
     float         m_CORE;
     float         m_calDocaAngle;        // Added 1/3/06
     float         m_calFrontBackRatio;
