@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Thu Jan  5 09:06:52 PST 2006
+GlastClassify/src/apply
+
+Modified Files:
+	apply_main.cxx 
+Log Message:
+Fix small problem with new naming convention in IM sheets
+    *
+------------------------------------------------------------
+User: usher  Thu Jan  5 09:06:52 PST 2006
 GlastClassify/src
 
 Modified Files:
