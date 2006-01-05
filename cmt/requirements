@@ -2,7 +2,7 @@ package GlastClassify
 
 version v3r1
 author T. Burnett <tburnett@u.washington.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.26 2005/12/11 01:08:54 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.27 2006/01/03 21:43:34 usher Exp $
 use GlastPolicy *
 
 apply_pattern package_include
@@ -31,6 +31,8 @@ macro_append ROOT_cppflags "" WIN32 " /wd4800 "
 # this app creates the classification trees
 macro txt "" WIN32 " *.txt"
 application classify -s=../src/classify $(source)
+
+set PRUNEROWS "false"
 
 application apply -s=../src/apply $(source)
 
