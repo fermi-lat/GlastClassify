@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.12 2006/01/05 17:06:52 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.13 2006/01/05 17:50:35 usher Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
@@ -142,8 +142,8 @@ bool AtwoodTrees::execute()
         m_bestZDir            = m_treeAnalysis->getTupleVal("Best.ZDir");
         m_bestDeltaEoE        = m_treeAnalysis->getTupleVal("BestDeltaEoE");
         m_bestEnergy          = m_treeAnalysis->getTupleVal("BestEnergy");
-        m_bestEnergyProb      = m_treeAnalysis->getTupleVal("CTBBestEnergyProb");
-        m_CORE                = m_treeAnalysis->getTupleVal("CTBCORE");
+        m_bestEnergyProb      = m_treeAnalysis->getTupleVal("BestEnergyProb");
+        m_CORE                = m_treeAnalysis->getTupleVal("CORE");
         m_calDocaAngle        = m_treeAnalysis->getTupleVal("CTBCalDocaAngle");        // Added 1/3/06
         m_calFrontBackRatio   = m_treeAnalysis->getTupleVal("CTBCalFrontBackRatio");
         m_calMaxXtalRatio     = m_treeAnalysis->getTupleVal("CTBCalMaxXtalRatio");
