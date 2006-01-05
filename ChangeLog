@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Jan  5 09:06:51 PST 2006
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Fix small problem with new naming convention in IM sheets
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r1, operation: add
 Package: GlastClassify
