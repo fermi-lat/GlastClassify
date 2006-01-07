@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Jan  6 18:26:55 PST 2006
+GlastClassify/xml
+
+Modified Files:
+	DC2_Analysis.xml 
+Log Message:
+add parens to some filters to help parsing of long expressions
+    *
+------------------------------------------------------------
 User: usher  Thu Jan  5 17:56:09 PST 2006
 GlastClassify/xml
 
