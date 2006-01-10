@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Jan 10 12:58:56 PST 2006
+GlastClassify/src/XT
+
+Modified Files:
+	XTExprsnParser.cxx 
+Log Message:
+First attempt to differentiate exponentiated numbers from arithmetic expressions...
+    *
+------------------------------------------------------------
 User: usher  Fri Jan  6 18:26:55 PST 2006
 GlastClassify/xml
 
