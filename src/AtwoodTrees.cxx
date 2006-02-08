@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.14 2006/01/05 18:20:19 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.15 2006/01/05 20:37:55 usher Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
@@ -27,7 +27,6 @@ AtwoodTrees::AtwoodTrees(ITupleInterface& tuple, std::ostream& log, std::string 
     m_TkrNumTracks    = tuple.getItem("TkrNumTracks");
     m_CalEnergyRaw    = tuple.getItem("CalEnergyRaw");
     m_CalCsIRLn       = tuple.getItem("CalCsIRLn");
-    m_EvtEventId      = tuple.getItem("EvtEventId");
     m_FilterStatus_HI = tuple.getItem("FilterStatus_HI");
 
     m_AcdActiveDist3D  = tuple.getItem("AcdActiveDist3D");
