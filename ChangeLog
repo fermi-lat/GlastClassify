@@ -1,31 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Wed Feb  8 11:13:08 PST 2006
-GlastClassify/cmt
-
-Modified Files:
-	requirements 
-Log Message:
-tagging
-    *
-------------------------------------------------------------
-User: burnett  Wed Feb  8 10:43:22 PST 2006
-GlastClassify/src
-
-Modified Files:
-	AtwoodTrees.cxx 
-Log Message:
-remove EvtEventId; change float/double detection
-    *
-------------------------------------------------------------
-User: burnett  Wed Feb  8 10:43:21 PST 2006
-GlastClassify/GlastClassify
-
-Modified Files:
-	AtwoodTrees.h 
-Log Message:
-remove EvtEventId; change float/double detection
-    *
-------------------------------------------------------------
 TAG
 Tag name: v3r2, operation: add
 Package: GlastClassify
