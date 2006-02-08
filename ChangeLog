@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Feb  8 10:43:22 PST 2006
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx 
+Log Message:
+remove EvtEventId; change float/double detection
+    *
+------------------------------------------------------------
 User: burnett  Wed Feb  8 10:43:21 PST 2006
 GlastClassify/GlastClassify
 
