@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.16 2006/02/08 18:43:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.17 2006/02/23 21:59:20 lsrea Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
@@ -131,9 +131,9 @@ AtwoodTrees::AtwoodTrees(ITupleInterface& tuple, std::ostream& log, std::string 
     m_treeAnalysis = treeFactory.buildTreeAnalysis();
 
     //Testing...
-    std::ofstream outFile("IMsheetTest.txt");
-    m_treeAnalysis->print(outFile);
-    outFile.close();
+    //std::ofstream outFile("IMsheetTest.txt");
+    //m_treeAnalysis->print(outFile);
+    //outFile.close();
 
     return;
 }
