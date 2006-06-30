@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlWriteTextFileEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlWriteTextFileEngineFactory.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlWriteTextFileEngineFactory.cxx,v 1.2 2005/11/22 21:19:03 usher Exp $
 */
 
 #include "xmlWriteTextFileEngineFactory.h"
@@ -46,12 +46,13 @@ IImActivityNode* xmlWriteTextFileEngineFactory::operator()(const DOMElement* xml
     WriteTextFileEngineNode* node = new WriteTextFileEngineNode(sType, sName, sId);
 
     // Set up to be able to output the ntuple
-    std::string sVarName = "WriteTupleRow";
-    XTcolumnVal<double>* xtColumnVal = XprsnParser().getXtTupleVars()[sVarName];
+    std::string          sVarName    = "WriteTupleRow";
+    XTcolumnValBase*     basePtr     = XprsnParser().getXtTupleVars()[sVarName];
+    XTcolumnVal<double>* xtColumnVal = dynamic_cast<XTcolumnVal<double>*>(basePtr);
 
     if (xtColumnVal == 0)
     {
-        new XTcolumnVal<double>(sVarName);
+        xtColumnVal = new XTcolumnVal<double>(sVarName);
         XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
     }
 

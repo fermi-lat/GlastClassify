@@ -3,7 +3,7 @@
 @brief declaration of class newPredictEngine
 @author T. Usher
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/newPredictEngine.h,v 1.1 2005/11/07 21:50:54 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewPredictEngineFactory.h,v 1.1 2005/11/22 21:19:03 usher Exp $
 */
 
 #ifndef GlastClassify_newPredictEngine_h
@@ -55,6 +55,7 @@ private:
 
     /// "specified category" name - for determining which "yprob" value to use
     std::string                  m_specCatName;
+    std::map<std::string,int>    m_catIndex;
 
     /// List of variable names used by this tree
     StringList                   m_varNames;

@@ -1,7 +1,7 @@
 /** @file apply_main.cxx 
 @brief Application that applies decision trees to a root tuple
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.7 2006/01/03 21:40:00 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.8 2006/01/05 17:06:52 usher Exp $
 */
 
 #include "RootTuple.h"
@@ -69,7 +69,7 @@ int main(int argc, char* argv[])
             std::string rootPath = ::getenv("GLASTCLASSIFYROOT");
             //facilities::Util::expandEnvVar(&rootPath);
 
-            CTFilePath = rootPath + "/xml/DC2_Analysis.xml";
+            CTFilePath = rootPath + "/xml/Pass4_Analysis_Energy_PSF.xml";
             std::cout << "Setting file to  " << CTFilePath << std::endl;
         }
         else

@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlReadTextFileEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlReadTextFileEngineFactory.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlReadTextFileEngineFactory.cxx,v 1.2 2005/11/22 21:19:03 usher Exp $
 */
 
 #include "xmlReadTextFileEngineFactory.h"
@@ -44,6 +44,35 @@ IImActivityNode* xmlReadTextFileEngineFactory::operator()(const DOMElement* xmlA
 
     // Create the node
     ReadTextFileEngineNode* node = new ReadTextFileEngineNode(sType, sName, sId);
+
+    // In this engine, we need to make the connection to any input ntuple variables so they can
+    // be accessed during the running of the analysis. 
+    DOMEvector xmlColumnsVec = getXTSubPropVec(xmlActivityNode, "columns");
+
+    // Loop through the "columns" 
+    for(DOMEvector::iterator colPropIter = xmlColumnsVec.begin(); colPropIter != xmlColumnsVec.end(); colPropIter++)
+    {
+        DOMElement* xmlColVar = *colPropIter;
+
+        DOMEvector xmlColVarVec;
+        xmlBase::Dom::getChildrenByTagName(xmlColVar, "Property", xmlColVarVec);
+
+        std::string sVarName = xmlBase::Dom::getAttribute(xmlColVar, "name");
+
+        // Let us check to see if the variable has already been set up (which should not be the case)
+        XTcolumnValBase*     xtColumnVal = 0;
+        XTtupleMap::iterator dataIter = XprsnParser().getXtTupleVars().find(sVarName);
+
+        // Not found means we create the entry
+        if (dataIter == XprsnParser().getXtTupleVars().end())
+        {
+            // For now we assume that all input variables are going to be "continuous" 
+            xtColumnVal = new XTcolumnVal<double>(sVarName);
+
+            // Add to the list...
+            XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
+        }
+    }
 
     // Create a flag for determining whether to keep a row in the end of processing
     // @TODO need to change this to a bool value (implement storage maps for bool and categorical vars)

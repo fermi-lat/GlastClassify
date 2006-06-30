@@ -1,7 +1,7 @@
 /** @file ImSheetBuilder.cxx
  *    @brief implementation of classification::Tree; declaration and implementation or its private helper classification::ImSheetBuilder::Node
  *
- *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/ReadTextFileEngineNode.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
+ *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/ReadTextFileEngineNode.cxx,v 1.2 2005/11/22 21:19:02 usher Exp $
  */
 
 #include "ReadTextFileEngineNode.h"
@@ -46,7 +46,8 @@ void ReadTextFileEngineNode::print(std::ostream& out, int depth) const
 void ReadTextFileEngineNode::execute()
 {
     // Reset the flag to determine whether to save this row
-    m_WriteTupleRow->setDataValue(0.);
+    XTcolumnVal<double>* colPtr = dynamic_cast<XTcolumnVal<double>*>(m_WriteTupleRow);
+    colPtr->setDataValue(0.);
 
     // Now follow through with all the daughter nodes we point to
     for(IImActivityNodeMap::const_iterator nodeIter = m_nodeMap.begin(); nodeIter != m_nodeMap.end(); nodeIter++)
