@@ -3,7 +3,7 @@
 @brief declaration of class xmlCreateColumnsEngineFactory
 @author T. Usher
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateColumnsEngineFactory.h,v 1.1 2005/11/07 21:50:54 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateColumnsEngineFactory.h,v 1.2 2005/11/22 21:19:02 usher Exp $
 */
 
 #ifndef GlastClassify_xmlCreateColumnsEngineFactory_h
@@ -12,8 +12,6 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateCol
 #include "xmlFactoryBase.h"
 #include "IxmlEngineFactory.h"
 #include "src/ImActivityNodes/IImActivityNode.h"
-
-class DecisionTree;
 
 /** @class xmlCreateColumnsEngineFactory
 @brief A factory for accessing decision trees

@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlPredictEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlPredictFactory.cxx,v 1.2 2005/11/10 21:12:18 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlPredictFactory.cxx,v 1.3 2005/11/22 21:19:03 usher Exp $
 */
 
 #include "xmlPredictEngineFactory.h"
@@ -69,9 +69,14 @@ IImActivityNode* xmlPredictEngineFactory::operator()(const DOMElement* xmlActivi
     // Get the tuple column value pointer
     //XTcolumnVal<double>* xtColumnVal = XprsnParser().getXtTupleVars().addNewDataItem(m_outVarName);
     XTcolumnVal<double>* xtColumnVal = 0;
-    XTcolumnVal<double>::XTtupleMap::iterator dataIter = XprsnParser().getXtTupleVars().find(m_outVarName);
+    XTtupleMap::iterator dataIter = XprsnParser().getXtTupleVars().find(m_outVarName);
             
-    if (dataIter != XprsnParser().getXtTupleVars().end()) xtColumnVal = dataIter->second;
+    if (dataIter != XprsnParser().getXtTupleVars().end())
+    {
+        XTcolumnValBase* basePtr = dataIter->second;
+        
+        if (basePtr->getType() == "continuous") xtColumnVal = dynamic_cast<XTcolumnVal<double>*>(basePtr);
+    }
     else
     {
         xtColumnVal = new XTcolumnVal<double>(m_outVarName);

@@ -1,7 +1,7 @@
 /** @file ImSheetBuilder.cxx
  *    @brief implementation of classification::Tree; declaration and implementation or its private helper classification::ImSheetBuilder::Node
  *
- *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/CreateColumnsEngineNode.cxx,v 1.2 2005/11/08 01:10:50 usher Exp $
+ *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/CreateColumnsEngineNode.cxx,v 1.3 2005/11/22 21:19:01 usher Exp $
  */
 
 #include "CreateColumnsEngineNode.h"
@@ -56,17 +56,25 @@ void CreateColumnsEngineNode::execute()
     // Iterate over the "action" nodes and execute them
     for(XprsnNodeMap::const_iterator nodeIter = m_xprsnNodeMap.begin(); nodeIter != m_xprsnNodeMap.end(); nodeIter++)
     {
-        XTcolumnVal<double>* xtTupleVal = nodeIter->first;
-        IXTExprsnNode*       xprsnNode  = nodeIter->second;
+        XTcolumnValBase* xtTuplBase = nodeIter->first;
+        IXTExprsnNode*   xprsnNode  = nodeIter->second;
 
-        double result = *(reinterpret_cast<const double*>((*xprsnNode)()));
+        if (xtTuplBase->getType() == "continuous")
+        {
+            XTcolumnVal<double>* xtTupleVal = dynamic_cast<XTcolumnVal<double>*>(xtTuplBase);
 
-        xtTupleVal->setDataValue(result);
+            double result = *(reinterpret_cast<const double*>((*xprsnNode)()));
 
-        //std::cout << "Value: " << xtTupleVal->getName() << " = ";
-        //xprsnNode->print(std::cout, false);
-        //std::cout << " = " << result << std::endl;
-        //double res2 = result*result;
+            xtTupleVal->setDataValue(result);
+        }
+        else
+        {
+            XTcolumnVal<std::string>* xtTupleVal = dynamic_cast<XTcolumnVal<std::string>*>(xtTuplBase);
+
+            std::string result = *(reinterpret_cast<const std::string*>((*xprsnNode)()));
+
+            xtTupleVal->setDataValue(result);
+        }
     }
 
     // Now follow through with all the daughter nodes we point to
