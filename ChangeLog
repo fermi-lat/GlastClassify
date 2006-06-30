@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Fri Jun 30 13:02:55 PDT 2006
+GlastClassify/src/apply
+
+Modified Files:
+	apply_main.cxx 
+Log Message:
+Minor modifications to preserve input CTB variables
+    *
+------------------------------------------------------------
+User: usher  Fri Jun 30 13:02:55 PDT 2006
 GlastClassify/src
 
 Modified Files:
