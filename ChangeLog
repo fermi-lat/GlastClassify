@@ -1,5 +1,20 @@
 ------------------------------------------------------------
 User: usher  Fri Jun 30 11:06:31 PDT 2006
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlCreateColumnsEngineFactory.cxx 
+	xmlCreateColumnsEngineFactory.h 
+	xmlModifyColumnsEngineFactory.cxx 
+	xmlModifyColumnsEngineFactory.h xmlNewPredictEngineFactory.h 
+	xmlNewlPredictEngineFactory.cxx xmlPredictFactory.cxx 
+	xmlReadTextFileEngineFactory.cxx 
+	xmlWriteTextFileEngineFactory.cxx 
+Log Message:
+Modifications necessary to be able to implement the "Pass 4" series of IM analysis spreadsheets provided by Bill Atwood. A significant change is the agreement that any IM variable prefixed by "CTB" will be included in the output ntuple - a change which may make documenting the ntuple difficult... other changes reflect new usage in the IM analysis, including the use of "categorical" variables (implemented as strings here)
+    *
+------------------------------------------------------------
+User: usher  Fri Jun 30 11:06:31 PDT 2006
 GlastClassify/src/apply
 
 Modified Files:
