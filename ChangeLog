@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Fri Jun 30 11:06:30 PDT 2006
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx TreeAnalysis.cxx TreeAnalysis.h 
+Log Message:
+Modifications necessary to be able to implement the "Pass 4" series of IM analysis spreadsheets provided by Bill Atwood. A significant change is the agreement that any IM variable prefixed by "CTB" will be included in the output ntuple - a change which may make documenting the ntuple difficult... other changes reflect new usage in the IM analysis, including the use of "categorical" variables (implemented as strings here)
+    *
+------------------------------------------------------------
+User: usher  Fri Jun 30 11:06:30 PDT 2006
 GlastClassify/GlastClassify
 
 Modified Files:
