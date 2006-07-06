@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jul  6 09:17:07 PDT 2006
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+remove old CT variable definitions, completing transition to the CTB only scheme.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r3p1, operation: add
 Package: GlastClassify
