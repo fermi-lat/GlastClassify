@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: burnett  Thu Jul  6 09:17:15 PDT 2006
+GlastClassify/treeinfo/vertex/thick
+
+Removed Files:
+	dtree.txt files.txt filter.txt log.txt temp.cxx 
+	test_efficiency.txt title.txt train_efficiency.txt 
+	used_variables.txt variables.txt 
+Log Message:
+remove old CT variable definitions, completing transition to the CTB only scheme.
+    *
+------------------------------------------------------------
+User: burnett  Thu Jul  6 09:17:15 PDT 2006
 GlastClassify/treeinfo/vertex
 
 Removed Files:
