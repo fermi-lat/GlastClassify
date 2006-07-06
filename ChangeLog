@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Jul  6 09:17:14 PDT 2006
+GlastClassify/treeinfo/psf
+
+Removed Files:
+	files.txt 
+Log Message:
+remove old CT variable definitions, completing transition to the CTB only scheme.
+    *
+------------------------------------------------------------
+User: burnett  Thu Jul  6 09:17:14 PDT 2006
 GlastClassify/treeinfo/gamma/vertex/thin
 
 Removed Files:
