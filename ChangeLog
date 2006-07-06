@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jul  6 09:17:10 PDT 2006
+GlastClassify/treeinfo/energy
+
+Removed Files:
+	files.txt variables.txt 
+Log Message:
+remove old CT variable definitions, completing transition to the CTB only scheme.
+    *
+------------------------------------------------------------
 User: burnett  Thu Jul  6 09:17:09 PDT 2006
 GlastClassify/treeinfo
 
