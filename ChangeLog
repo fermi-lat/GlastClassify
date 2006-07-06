@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Thu Jul  6 09:17:08 PDT 2006
+GlastClassify/data/goodcal_low
+
+Removed Files:
+	dtree.txt efficiencyplot.txt files.txt log.txt title.txt 
+	variables.txt 
+Log Message:
+remove old CT variable definitions, completing transition to the CTB only scheme.
+    *
+------------------------------------------------------------
 User: burnett  Thu Jul  6 09:17:07 PDT 2006
 GlastClassify/data/goodcal_high
 
