@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: burnett  Thu Jul  6 09:17:11 PDT 2006
+GlastClassify/treeinfo/energy/param/med
+
+Removed Files:
+	dtree.txt files.txt filter.txt log.txt test_efficiency.txt 
+	title.txt train_efficiency.txt used_variables.txt 
+	variables.txt 
+Log Message:
+remove old CT variable definitions, completing transition to the CTB only scheme.
+    *
+------------------------------------------------------------
+User: burnett  Thu Jul  6 09:17:11 PDT 2006
 GlastClassify/treeinfo/energy/param/low
 
 Removed Files:
