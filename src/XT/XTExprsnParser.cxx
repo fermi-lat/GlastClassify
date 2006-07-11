@@ -2,7 +2,7 @@
 
 @brief implementation of class XTExprsnParser
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.3 2006/01/10 20:58:55 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.4 2006/06/30 18:06:31 usher Exp $
 */
 
 #include "XTExprsnParser.h"
@@ -235,7 +235,7 @@ IXTExprsnNode* XTExprsnParser::parseFunction(std::string& expression)
     std::string operand = findEnclosingParens(expression, leftPos, rightPos);
 
     // Is there a possible function here?
-    if (leftPos > 0)
+    if (leftPos > 0 && rightPos > expression.size()-3)
     {
         std::string funcCand = expression.substr(0,leftPos);
 
@@ -291,7 +291,7 @@ IXTExprsnNode* XTExprsnParser::parseFunction(std::string& expression)
                 int firstPos = 0;
                 int commaPos = operand.find(",",firstPos);
 
-             if (commaPos > 0)
+                if (commaPos > 0)
                 {
                     std::string operand1 = operand.substr(firstPos, commaPos);
                     operandNode1 = parseNextExpression(operand1);
