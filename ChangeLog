@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Jul 11 14:10:48 PDT 2006
+GlastClassify/xml
+
+Added Files:
+	Pass4_Analysis_Complete_v3.xml 
+Log Message:
+Import the Pass 4 IMW file for DC2 analysis. I do not know if this file will run from gleam...
+    *
+------------------------------------------------------------
 User: usher  Tue Jul 11 14:07:36 PDT 2006
 GlastClassify/src/xmlBuilders
 
