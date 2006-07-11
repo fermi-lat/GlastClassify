@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlNewPredictEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.2 2005/12/08 20:40:32 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.3 2006/06/30 18:06:31 usher Exp $
 */
 
 #include "xmlNewPredictEngineFactory.h"
@@ -339,7 +339,8 @@ IXTExprsnNode* xmlNewPredictEngineFactory::parseNode(DOMElement* xmlElement)
             //*pValue = weight[m_yProbIndex];
 
             int         catIdx = m_catIndex[score];
-            double      yProb  = weight[catIdx];
+            //double      yProb  = weight[catIdx];
+            double      yProb  = weight[m_yProbIndex];
         
             //node = new XTExprsnValue<double>(sNodeId, pValue);
             CTOutPut* ctOutPut = new CTOutPut(id,score,rec,grp,dev,ent,ini,rsk,yProb); 
