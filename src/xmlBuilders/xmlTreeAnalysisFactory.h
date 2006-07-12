@@ -3,7 +3,7 @@
 @brief declaration of class xmlTreeAnalysisFactory
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/xmlTreeAnalysisFactory.h,v 1.2 2005/11/09 00:04:36 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.h,v 1.1 2005/11/22 21:19:03 usher Exp $
 */
 
 #ifndef xmlTreeAnalysisFactory_h
@@ -47,6 +47,8 @@ public:
                to it. 
     */
     GlastClassify::TreeAnalysis* buildTreeAnalysis();
+
+    int nodeCount()const{return m_iNodeVec.size();}
 
 private:
 

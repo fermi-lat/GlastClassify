@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.h
     @brief  Declare class AtwoodTrees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,v 1.8 2006/02/08 18:43:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,v 1.9 2006/06/30 18:06:30 usher Exp $
 */
 #ifndef GlastClassify_AtwoodTrees_h
 #define GlastClassify_AtwoodTrees_h
@@ -26,11 +26,11 @@ class AtwoodTrees
 public:
     /** set up the trees:
     * @param tuple -- abstract interface to a tuple that sets up access to tuple items, and creates new ones
-    * @param treepath -- file path to the root of the tree definitions
+    * @param imfile -- the Insightful Minor file created by W. B. Atwood. If empty, use the default
 
     Uses the tuple object to access current tuple items, and to create new ones.
     */
-    AtwoodTrees( ITupleInterface& tuple, std::ostream& log=std::cout, std::string treepath  ="");
+    AtwoodTrees( ITupleInterface& tuple, std::ostream& log=std::cout, std::string imfile  ="");
 
     /** run the prediction nodes on the current tuple instance
     */
