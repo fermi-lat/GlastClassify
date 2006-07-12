@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jul 11 19:00:11 PDT 2006
+GlastClassify/GlastClassify
+
+Modified Files:
+	AtwoodTrees.h 
+Log Message:
+implement use of default IM file, and wire in the path to the latest one.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r4, operation: add
 Package: GlastClassify
