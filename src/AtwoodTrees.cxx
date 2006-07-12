@@ -1,11 +1,10 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.19 2006/06/30 18:06:30 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.20 2006/07/11 21:07:35 usher Exp $
 
 */
 #include "GlastClassify/AtwoodTrees.h"
-#include "GlastClassify/TreeFactory.h"
 #include "TreeAnalysis.h"
 #include "src/xmlBuilders/xmlTreeAnalysisFactory.h"
 
