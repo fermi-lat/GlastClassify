@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Jul 11 19:00:12 PDT 2006
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlTreeAnalysisFactory.h 
+Log Message:
+implement use of default IM file, and wire in the path to the latest one.
+    *
+------------------------------------------------------------
+User: burnett  Tue Jul 11 19:00:12 PDT 2006
 GlastClassify/src
 
 Modified Files:
