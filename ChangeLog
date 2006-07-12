@@ -2,6 +2,14 @@
 TAG
 Tag name: v3r4, operation: add
 Package: GlastClassify
+User: burnett  Tue Jul 11 17:06:40 2006
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: v3r4, operation: add
+Package: GlastClassify
 User: burnett  Tue Jul 11 17:05:15 2006
 Files:
   GlastClassify/.cvsignore  1.1.1.1
