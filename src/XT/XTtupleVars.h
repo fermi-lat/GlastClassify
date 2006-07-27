@@ -1,7 +1,7 @@
 /**@file XTtupleVars.h
 @brief Contains class definitions for implementing a "local" ntuple  row
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTtupleVars.h,v 1.2 2005/11/23 01:47:40 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTtupleVars.h,v 1.3 2006/06/30 18:06:31 usher Exp $
 */
 
 #ifndef XTtupleVars_h
@@ -11,6 +11,8 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTtupleVars.h,v 1.2 2
 
 #include <iostream>
 #include <map>
+
+#include "ImPrecision.h"
 
 /** @class Exception 
     @brief hold a string

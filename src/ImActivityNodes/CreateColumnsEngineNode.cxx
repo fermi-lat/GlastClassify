@@ -1,7 +1,7 @@
 /** @file ImSheetBuilder.cxx
  *    @brief implementation of classification::Tree; declaration and implementation or its private helper classification::ImSheetBuilder::Node
  *
- *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/CreateColumnsEngineNode.cxx,v 1.3 2005/11/22 21:19:01 usher Exp $
+ *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/CreateColumnsEngineNode.cxx,v 1.4 2006/06/30 18:06:31 usher Exp $
  */
 
 #include "CreateColumnsEngineNode.h"
@@ -61,9 +61,9 @@ void CreateColumnsEngineNode::execute()
 
         if (xtTuplBase->getType() == "continuous")
         {
-            XTcolumnVal<double>* xtTupleVal = dynamic_cast<XTcolumnVal<double>*>(xtTuplBase);
+            XTcolumnVal<REALNUM>* xtTupleVal = dynamic_cast<XTcolumnVal<REALNUM>*>(xtTuplBase);
 
-            double result = *(reinterpret_cast<const double*>((*xprsnNode)()));
+            REALNUM result = *(reinterpret_cast<const REALNUM*>((*xprsnNode)()));
 
             xtTupleVal->setDataValue(result);
         }

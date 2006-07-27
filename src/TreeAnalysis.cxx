@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.4 2006/06/30 20:02:55 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.5 2006/07/11 21:07:35 usher Exp $
 */
 
 #include "TreeAnalysis.h"
@@ -12,6 +12,8 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.4 2
 #include <stdexcept>
 #include <algorithm>
 #include <cmath>  // for M_PI, among others
+
+#include <sstream>
 
 using namespace GlastClassify;
 
@@ -42,7 +44,7 @@ double TreeAnalysis::getTupleVal(const std::string& name)
     {
         XTcolumnValBase* basePtr = dataIter->second;
         
-        if (basePtr->getType() == "continuous") value = *(*(dynamic_cast<XTcolumnVal<double>*>(basePtr)))();
+        if (basePtr->getType() == "continuous") value = *(*(dynamic_cast<XTcolumnVal<REALNUM>*>(basePtr)))();
     }
 
     return value;
@@ -72,10 +74,27 @@ void TreeAnalysis::execute()
 
         if (basePtr->getType() != "continuous") continue;
 
-        XTcolumnVal<double>* valPtr = dynamic_cast<XTcolumnVal<double>*>(basePtr);
+        XTcolumnVal<REALNUM>* valPtr = dynamic_cast<XTcolumnVal<REALNUM>*>(basePtr);
 
         // If the cross reference exists, set the local value
-        if (nTupleIter != m_nTupleMap.end()) valPtr->setDataValue(*(nTupleIter->second));
+        //if (nTupleIter != m_nTupleMap.end()) valPtr->setDataValue(*(nTupleIter->second));
+        if (nTupleIter != m_nTupleMap.end()) 
+        {
+            // Test precision theory here
+            double tempRes = *(nTupleIter->second);
+
+            std::stringstream convString;
+
+            convString.setf(std::ios::fixed);
+            convString.precision(8);
+            convString << tempRes;
+
+            float tempRes2;
+
+            convString >> tempRes2;
+
+            valPtr->setDataValue(tempRes2);
+        }
         // Otherwise, no cross reference... set value to zero and set "valid" flag to false 
         else
         {
@@ -96,8 +115,8 @@ void TreeAnalysis::execute()
             // Currently only dealing with "continuous" variables
             if (dataIter->second->getType() == "continuous")
             {
-                XTcolumnVal<double>* colVal = dynamic_cast<XTcolumnVal<double>*>(dataIter->second);
-                double               result = 0.;
+                XTcolumnVal<REALNUM>* colVal = dynamic_cast<XTcolumnVal<REALNUM>*>(dataIter->second);
+                REALNUM               result = 0.;
 
                 if (colVal->dataIsValid()) result = *(*colVal)();
 
