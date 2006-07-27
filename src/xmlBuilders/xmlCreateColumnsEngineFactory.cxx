@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlCreateColumnsEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateColumnsEngineFactory.cxx,v 1.3 2005/11/22 21:19:02 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateColumnsEngineFactory.cxx,v 1.4 2006/06/30 18:06:31 usher Exp $
 */
 
 #include "xmlCreateColumnsEngineFactory.h"
@@ -100,7 +100,7 @@ IImActivityNode* xmlCreateColumnsEngineFactory::operator()(const DOMElement* xml
         }
         else
         {
-            if (sVarType == "continuous") xtColumnVal = new XTcolumnVal<double>(sVarName);
+            if (sVarType == "continuous") xtColumnVal = new XTcolumnVal<REALNUM>(sVarName);
             else                          xtColumnVal = new XTcolumnVal<std::string>(sVarName,"categorical");
 
             XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;

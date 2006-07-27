@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlReadTextFileEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlReadTextFileEngineFactory.cxx,v 1.2 2005/11/22 21:19:03 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlReadTextFileEngineFactory.cxx,v 1.3 2006/06/30 18:06:31 usher Exp $
 */
 
 #include "xmlReadTextFileEngineFactory.h"
@@ -67,7 +67,7 @@ IImActivityNode* xmlReadTextFileEngineFactory::operator()(const DOMElement* xmlA
         if (dataIter == XprsnParser().getXtTupleVars().end())
         {
             // For now we assume that all input variables are going to be "continuous" 
-            xtColumnVal = new XTcolumnVal<double>(sVarName);
+            xtColumnVal = new XTcolumnVal<REALNUM>(sVarName);
 
             // Add to the list...
             XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
@@ -77,7 +77,7 @@ IImActivityNode* xmlReadTextFileEngineFactory::operator()(const DOMElement* xmlA
     // Create a flag for determining whether to keep a row in the end of processing
     // @TODO need to change this to a bool value (implement storage maps for bool and categorical vars)
     std::string sVarName = "WriteTupleRow";
-    XTcolumnVal<double>* xtColumnVal = new XTcolumnVal<double>(sVarName);
+    XTcolumnVal<REALNUM>* xtColumnVal = new XTcolumnVal<REALNUM>(sVarName);
     XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
 
     node->setXtColumnVal(xtColumnVal);

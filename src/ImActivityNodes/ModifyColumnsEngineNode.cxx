@@ -1,7 +1,7 @@
 /** @file ImSheetBuilder.cxx
  *    @brief implementation of classification::Tree; declaration and implementation or its private helper classification::ImSheetBuilder::Node
  *
- *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/ModifyColumnsEngineNode.cxx,v 1.2 2005/11/22 21:19:02 usher Exp $
+ *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/ModifyColumnsEngineNode.cxx,v 1.3 2006/06/30 18:06:31 usher Exp $
  */
 
 #include "ModifyColumnsEngineNode.h"
@@ -58,8 +58,8 @@ void ModifyColumnsEngineNode::execute()
 
         if (newValue->getType() == "continuous")
         {
-            XTcolumnVal<double>* newValueCont = dynamic_cast<XTcolumnVal<double>*>(newValue);
-            XTcolumnVal<double>* oldValueCont = dynamic_cast<XTcolumnVal<double>*>(oldValue);
+            XTcolumnVal<REALNUM>* newValueCont = dynamic_cast<XTcolumnVal<REALNUM>*>(newValue);
+            XTcolumnVal<REALNUM>* oldValueCont = dynamic_cast<XTcolumnVal<REALNUM>*>(oldValue);
 
             newValueCont->setDataValue(oldValueCont->value());
         }
