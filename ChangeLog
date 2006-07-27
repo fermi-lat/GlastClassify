@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: usher  Thu Jul 27 13:19:51 PDT 2006
+GlastClassify/src/ImActivityNodes
+
+Modified Files:
+	CreateColumnsEngineNode.cxx IImActivityNode.h 
+	ModifyColumnsEngineNode.cxx PredictEngineNode.h 
+	ReadTextFileEngineNode.cxx WriteTextFileEngineNode.h 
+	newPredictEngineNode.h 
+Log Message:
+    *
+------------------------------------------------------------
+User: usher  Thu Jul 27 13:19:51 PDT 2006
 GlastClassify/src
 
 Modified Files:
