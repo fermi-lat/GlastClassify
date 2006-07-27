@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: usher  Thu Jul 27 13:19:52 PDT 2006
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlCreateColumnsEngineFactory.cxx 
+	xmlModifyColumnsEngineFactory.cxx 
+	xmlNewlPredictEngineFactory.cxx xmlPredictFactory.cxx 
+	xmlReadTextFileEngineFactory.cxx 
+	xmlWriteTextFileEngineFactory.cxx 
+Log Message:
+    *
+------------------------------------------------------------
+User: usher  Thu Jul 27 13:19:52 PDT 2006
 GlastClassify/src/apply
 
 Modified Files:
