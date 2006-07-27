@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Thu Jul 27 13:19:52 PDT 2006
+GlastClassify/src/XT
+
+Modified Files:
+	XTExprsnParser.cxx XTtupleVars.h XprsnTree.h 
+Added Files:
+	ImPrecision.h 
+Log Message:
+    *
+------------------------------------------------------------
 User: usher  Thu Jul 27 13:19:51 PDT 2006
 GlastClassify/src/ImActivityNodes
 
