@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Aug  3 09:21:41 PDT 2006
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx TreeAnalysis.cxx 
+Log Message:
+Apply fix to zero CTB variables before running IM analysis. This will fix Bill's current problem with CTBGAM > 0 on events that should have been rejected.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r4p2, operation: add
 Package: GlastClassify
