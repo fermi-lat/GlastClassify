@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Aug  4 13:47:46 PDT 2006
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Change way tuple output variables are initialized to try to "fix" the output problem in test runs
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r4p3, operation: add
 Package: GlastClassify
