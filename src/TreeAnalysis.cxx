@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.6 2006/07/27 20:19:51 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.7 2006/08/03 16:21:41 usher Exp $
 */
 
 #include "TreeAnalysis.h"
@@ -106,6 +106,42 @@ void TreeAnalysis::execute()
     // Execute the sheet
     m_headNode->execute();
 
+    // Done
+    return;
+}
+
+// Zero value of output CT variables
+void TreeAnalysis::zeroCTvals()
+{
+    // Transfer tuple variables to local tuple, if needed
+    for(XTtupleMap::iterator dataIter = m_xtTupleMap.begin(); dataIter != m_xtTupleMap.end(); dataIter++)
+    {
+        // Recover the variable name
+        const std::string& varName = dataIter->first;
+
+        // De-reference to continuous tuple type
+        XTcolumnValBase* basePtr = dataIter->second;
+
+        // Only continuous variables for now...
+        if (basePtr->getType() != "continuous") continue;
+
+        XTcolumnVal<REALNUM>* valPtr = dynamic_cast<XTcolumnVal<REALNUM>*>(basePtr);
+
+        // If the cross reference exists, set the local value
+        //if (nTupleIter != m_nTupleMap.end()) valPtr->setDataValue(*(nTupleIter->second));
+        if (varName.substr(0,3) == "CTB") 
+        {
+            valPtr->setDataValue(0.);
+            valPtr->clearValidFlag();
+        }
+    }
+
+    return;
+}
+
+// Copy CT output variables to the output ntuple
+void TreeAnalysis::storeCTvals()
+{
     // Copy calculated ctb values to the output ntuple
     for(XTtupleMap::iterator dataIter = m_xtTupleMap.begin(); dataIter != m_xtTupleMap.end(); dataIter++)
     {
@@ -129,9 +165,9 @@ void TreeAnalysis::execute()
         }
     }
 
-    // Done
     return;
 }
+
 
 /// Add new node to our collection
 void TreeAnalysis::addNewNode(IImActivityNode* node)
@@ -156,6 +192,9 @@ void TreeAnalysis::crossRefNtupleVars()
         {
             // Create a new data object and add to the vector
             float* newVar = new float;
+
+            // Initialize it to zero just to make sure
+            *newVar = 0.;
 
             m_ctbVarMap[varName] = newVar;
 
