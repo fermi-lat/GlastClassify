@@ -3,7 +3,7 @@
 @brief declaration of class TreeAnalysis
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.2 2005/12/08 20:40:32 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.3 2006/06/30 18:06:30 usher Exp $
 */
 
 #ifndef GlastClassify_TreeAnalysis_h
@@ -41,6 +41,14 @@ public:
     /** @brief This will execute the TreeAnalysis nodes with the current event
     */
     void execute();
+
+    /** @brief This will zero the IM analysis output variables
+    */
+    void zeroCTvals();
+
+    /** @brief This stores IM analysis output variables into output ntuple
+    */
+    void storeCTvals();
 
     /** @brief Look up the value of a variable stored in the local tuple
                This should be the "standard" method for retrieving information
