@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Aug 22 12:29:06 PDT 2006
+GlastClassify/src/XT
+
+Modified Files:
+	XTExprsnParser.cxx 
+Log Message:
+Hack to fix special case with embedded functions in "ifelse" clauses
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r6p0, operation: add
 Package: GlastClassify
