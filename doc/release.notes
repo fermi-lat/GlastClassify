@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.29 2006/08/04 20:48:57 usher Exp $
+$Id: release.notes,v 1.30 2006/08/04 21:55:25 usher Exp $
 @verbatim
+22-Aug-06  v3r6p0 TU  New Analysis sheet (v7), go to new naming convention for xml files
 04-Aug-06  v3r5p0 TU  Incorporate new IM analysis sheet: Pass4_Analysis_Complete_v5
 04-Aug-06  v3r4p4 TU  Change way CTB variables get initialized...
 03-Aug-06  v3r4p3 TU  Fix bug: zero out CTB variables before running analysis
