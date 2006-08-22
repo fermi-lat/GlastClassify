@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Aug 22 09:09:10 PDT 2006
+GlastClassify/xml
+
+Added Files:
+	Pass4_Analysis_Complete.xml 
+Log Message:
+This is Bill Atwood's Pass4 version 7 analysis sheet for the Classification Trees. This represents a new file naming convention for the GlastClassify package (since these files are rather large we will let cvs handle the versioning)
+    *
+------------------------------------------------------------
 User: usher  Tue Aug 22 09:07:01 PDT 2006
 GlastClassify/xml
 
