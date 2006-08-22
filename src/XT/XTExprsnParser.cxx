@@ -2,7 +2,7 @@
 
 @brief implementation of class XTExprsnParser
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.5 2006/07/11 21:07:35 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.6 2006/07/27 20:19:52 usher Exp $
 */
 
 #include "XTExprsnParser.h"
@@ -251,8 +251,28 @@ IXTExprsnNode* XTExprsnParser::parseFunction(std::string& expression)
             // operand will contain the conditional expression and the two results
             int firstPos   = 1;
             int operandLen = operand.length();
+            // hack for functions inserted into the expression...
+            int leftParen  = 0;
+            int rghtParen  = operandLen;
+            findEnclosingParens(operand, leftParen, rghtParen);
+
             int firstComma = operand.find(",", firstPos);
+
+            while (leftParen > -1 && firstComma > leftParen && firstComma < rghtParen)
+            {
+                firstComma = operand.find(",", rghtParen);
+                leftParen  = rghtParen;
+                findEnclosingParens(operand, leftParen, rghtParen);
+            }
+
             int secndComma = operand.find(",", firstComma+1);
+
+            while (leftParen > -1 && secndComma > leftParen && secndComma < rghtParen)
+            {
+                secndComma = operand.find(",", rghtParen);
+                leftParen  = rghtParen;
+                findEnclosingParens(operand, leftParen, rghtParen);
+            }
 
             std::string conExpression = operand.substr(0, firstComma);
             std::string ifResult      = operand.substr(firstComma+1,secndComma-firstComma-1);
