@@ -1,7 +1,7 @@
 /** @file RootTuple.cxx
     @brief implement class RootTuple
 
- $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.3 2005/11/13 21:05:09 burnett Exp $
+ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.4 2005/12/08 20:40:32 usher Exp $
   Original author T. Burnett (w/ help from H. Kelley)
 */
 #include "RootTuple.h"
@@ -65,6 +65,7 @@ TTree* getTree(TFile *f) {
   return t;
 }
 */
+
 class RootItem : public GlastClassify::Item {
 public:
     RootItem(TLeaf * leaf) : m_leaf(leaf){}
@@ -103,6 +104,11 @@ RootTuple::RootTuple( std::string file, std::string treeName)
         throw std::invalid_argument("Tree not found");
     }
     m_numEvents = m_tree->GetEntries();
+
+    // Use this to define max tree size (apparantly a "bazillion" is not really a number...)
+    Long64_t maxTreeSize=50000000000;
+
+    TTree::SetMaxTreeSize(maxTreeSize);
 }
 
 RootTuple::~RootTuple()

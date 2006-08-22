@@ -2,7 +2,7 @@ package GlastClassify
 
 version v3r5p0
 author T. Usher <tracy.usher@slac.stanford.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.42 2006/08/04 20:48:57 usher Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.43 2006/08/04 21:55:25 usher Exp $
 use GlastPolicy *
 
 apply_pattern package_include
@@ -33,7 +33,7 @@ macro txt "" WIN32 " *.txt"
 # application classify -s=../src/classify $(source)
 
 set PRUNEROWS "false"
-set MERIT_INPUT_FILE "C:/Glast/DC2DataSets/backgnd-GR-v9r9_002001_merit_merit.root"
+set MERIT_INPUT_FILE "C:/Glast/DC2DataSets/v9r9/backgnd-GR-v9r9_000001_merit_merit.root"
 set MERIT_OUTPUT_FILE "test.root"
 
 application apply -s=../src/apply $(source)
