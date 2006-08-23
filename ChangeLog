@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Wed Aug 23 13:48:14 PDT 2006
+GlastClassify/src/XT
+
+Modified Files:
+	XTExprsnParser.cxx XTExprsnParser.h 
+Log Message:
+More patching of parser to attempt to eat new files
+    *
+------------------------------------------------------------
+User: usher  Wed Aug 23 13:48:14 PDT 2006
 GlastClassify/cmt
 
 Modified Files:
