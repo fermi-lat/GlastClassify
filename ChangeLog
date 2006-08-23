@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Wed Aug 23 15:37:29 PDT 2006
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlFilterRowsEngineFactory.cxx 
+Log Message:
+Add exception handling to prevent crash at init
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r6p2, operation: add
 Package: GlastClassify
