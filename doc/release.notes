@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.32 2006/08/22 19:30:34 usher Exp $
+$Id: release.notes,v 1.33 2006/08/23 20:49:43 usher Exp $
 @verbatim
+23-Aug-06  v3r6p3 TU  Add exception handling to prevent crash at init
 23-Aug-06  v3r6p2 TU  More patches to try to get parser to eat new xml files
 22-Aug=06  v3r6p1 TU  Hack to get around functions embedded within ifelse statements
 22-Aug-06  v3r6p0 TU  New Analysis sheet (v7), go to new naming convention for xml files
