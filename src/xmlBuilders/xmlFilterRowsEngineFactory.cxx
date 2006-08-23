@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlFilterRowsEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFilterRowsEngineFactory.cxx,v 1.2 2005/11/08 01:10:50 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFilterRowsEngineFactory.cxx,v 1.3 2005/11/22 21:19:03 usher Exp $
 */
 
 #include "xmlFilterRowsEngineFactory.h"
@@ -52,6 +52,7 @@ IImActivityNode* xmlFilterRowsEngineFactory::operator()(const DOMElement* xmlAct
     try
     {
         DOMElement* xmlComplex  = xmlBase::Dom::findFirstChildByName(xmlProperty, "Complex");
+        if (xmlComplex == 0) throw XTENexception("xmlFilterRowsFactory finds zero pointer to xmlComplex");
         sExpression = xmlBase::Dom::getTextContent(xmlComplex);
     }
     //catch(xmlBase::WrongNodeType& e)
