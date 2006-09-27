@@ -1,28 +1,4 @@
 ------------------------------------------------------------
-User: usher  Tue Sep 26 18:09:05 PDT 2006
-GlastClassify/xml
-
-Modified Files:
-	Pass4_Analysis_Complete.xml 
-Log Message:
-    *
-------------------------------------------------------------
-User: usher  Tue Sep 26 18:09:05 PDT 2006
-GlastClassify/doc
-
-Modified Files:
-	release.notes 
-Log Message:
-    *
-------------------------------------------------------------
-User: usher  Tue Sep 26 18:09:05 PDT 2006
-GlastClassify/cmt
-
-Modified Files:
-	requirements 
-Log Message:
-    *
-------------------------------------------------------------
 TAG
 Tag name: v3r6p3, operation: add
 Package: GlastClassify
