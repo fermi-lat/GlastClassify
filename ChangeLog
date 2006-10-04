@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Wed Oct  4 13:02:09 PDT 2006
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlTreeAnalysisFactory.cxx xmlTreeAnalysisFactory.h 
+Log Message:
+Modify tree building to allow for two passes through xml file, first to find variables (with their type) and the second to build the analysis tree. Also, restructure the parser so it can more gracefully handle some special cases which began to appear with the latest analysis sheets.
+    *
+------------------------------------------------------------
+User: usher  Wed Oct  4 13:02:09 PDT 2006
 GlastClassify/src/XT
 
 Modified Files:
