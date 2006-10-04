@@ -3,7 +3,7 @@
 @brief declaration of class xmlTreeAnalysisFactory
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.h,v 1.1 2005/11/22 21:19:03 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.h,v 1.2 2006/07/12 02:00:12 burnett Exp $
 */
 
 #ifndef xmlTreeAnalysisFactory_h
@@ -57,6 +57,9 @@ private:
 
     // Mapping between the ActivityNode type and a vector of pointers to these nodes
     typedef std::map<std::string, std::vector<IImActivityNode*> > typeToINodeVecMap;
+
+    // Parse the file to find all output variables
+    int findAllOutputVars(GlastClassify::TreeAnalysis* tree);
 
     // Parse the file to find all Activity Nodes
     int findAllActivityNodes(GlastClassify::TreeAnalysis* tree);
