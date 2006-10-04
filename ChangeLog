@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Wed Oct  4 13:00:37 PDT 2006
+GlastClassify/src/xmlBuilders
+
+Added Files:
+	xmlFindOutputVars.cxx xmlFindOutputVars.h 
+Log Message:
+Add a class which will be used to find output variables in "create columns" nodes so they can be added to the variable list before the nodes are parsed (it can happen that a node appears in the xml file using a variable before it is defined in which case its type is not known, solution is to do two passes through file with the first to find the variables).
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r6p4, operation: add
 Package: GlastClassify
