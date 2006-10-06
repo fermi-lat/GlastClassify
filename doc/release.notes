@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.35 2006/09/27 01:09:05 usher Exp $
+$Id: release.notes,v 1.36 2006/10/05 16:42:47 usher Exp $
 @verbatim
+06-Oct-06  v3r6p6 TU  Tag for the Handoff Review processing
 05-Oct-06  v3r6p5 TU  Interim tag to check builds **NOT FOR RELEASE**
 26-Sep-06  v3r6p4 TU  Incorporate new IM analysis sheet: Pass4 Analysis_Complete_v8
 23-Aug-06  v3r6p3 TU  Add exception handling to prevent crash at init
