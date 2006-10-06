@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Oct  6 10:07:15 PDT 2006
+GlastClassify/xml
+
+Modified Files:
+	Pass4_Analysis_Complete.xml 
+Log Message:
+Patch to xml file: prepend "CTB" to three CTBGAM variables (SecondaryCTBGAM, etc.)
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r6p5, operation: add
 Package: GlastClassify
