@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: usher  Mon Oct 23 14:30:18 PDT 2006
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx TreeAnalysis.cxx TreeAnalysis.h 
+Added Files:
+	AtwoodTrees.h ClassifyAlg.cxx 
+Log Message:
+First round of check-in to make GlastClassify a Gaudi package and fix problem with ints
+    *
+------------------------------------------------------------
+User: usher  Mon Oct 23 14:30:18 PDT 2006
 GlastClassify/cmt
 
 Modified Files:
