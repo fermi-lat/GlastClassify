@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Oct 23 14:30:18 PDT 2006
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+First round of check-in to make GlastClassify a Gaudi package and fix problem with ints
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r6p6, operation: add
 Package: GlastClassify
