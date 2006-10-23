@@ -3,14 +3,14 @@
 @brief declaration of class xmlTreeAnalysisFactory
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.h,v 1.2 2006/07/12 02:00:12 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.h,v 1.3 2006/10/04 20:02:09 usher Exp $
 */
 
 #ifndef xmlTreeAnalysisFactory_h
 #define xmlTreeAnalysisFactory_h
 
 #include "GlastClassify/ITupleInterface.h"
-#include "src/ImActivityNodes/IImActivityNode.h"
+#include "../ImActivityNodes/IImActivityNode.h"
 
 #include <vector>
 #include <map>
