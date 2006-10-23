@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Oct 23 14:32:19 PDT 2006
+GlastClassify/src/Dll
+
+Added Files:
+	GlastClassify.cxx GlastClassify_dll.cxx 
+Log Message:
+files to make GlastClassify a Gaudi package
+    *
+------------------------------------------------------------
 User: usher  Mon Oct 23 14:30:41 PDT 2006
 GlastClassify/src/Dll
 
