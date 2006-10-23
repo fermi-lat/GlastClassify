@@ -2,11 +2,11 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.7 2006/08/03 16:21:41 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.8 2006/08/04 20:47:46 usher Exp $
 */
 
 #include "TreeAnalysis.h"
-#include "src/ImActivityNodes/IImActivityNode.h"
+#include "ImActivityNodes/IImActivityNode.h"
 #include <fstream>
 #include <cassert>
 #include <stdexcept>

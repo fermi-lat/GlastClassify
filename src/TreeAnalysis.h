@@ -3,7 +3,7 @@
 @brief declaration of class TreeAnalysis
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.3 2006/06/30 18:06:30 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.4 2006/08/04 20:47:46 usher Exp $
 */
 
 #ifndef GlastClassify_TreeAnalysis_h
@@ -17,7 +17,7 @@ class IImActivityNode;
 #include <utility>
 #include <map>
 
-#include "src/XT/XTtupleVars.h"
+#include "XT/XTtupleVars.h"
 
 namespace GlastClassify {
 
