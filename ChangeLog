@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Mon Oct 23 14:30:18 PDT 2006
+GlastClassify/src/apply
+
+Modified Files:
+	apply_main.cxx 
+Log Message:
+First round of check-in to make GlastClassify a Gaudi package and fix problem with ints
+    *
+------------------------------------------------------------
+User: usher  Mon Oct 23 14:30:18 PDT 2006
 GlastClassify/src
 
 Modified Files:
