@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Oct 23 21:25:56 PDT 2006
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+add linkopts to build both shareable and main program
+    *
+------------------------------------------------------------
 User: usher  Mon Oct 23 17:04:39 PDT 2006
 GlastClassify/src
 
