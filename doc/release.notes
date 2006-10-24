@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.37 2006/10/06 17:09:21 usher Exp $
+$Id: release.notes,v 1.38 2006/10/23 21:34:17 usher Exp $
 @verbatim
+23-Oct-06  v4r0p1 TU  Fix requirements to build shareable and apply_main
 23-Oct-06  v4r0p0 TU  Convert to a Gaudi package, including ClassifyAlg and fixes for int problem
 06-Oct-06  v3r6p6 TU  Tag for the Handoff Review processing
 05-Oct-06  v3r6p5 TU  Interim tag to check builds **NOT FOR RELEASE**
