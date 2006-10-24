@@ -2,7 +2,7 @@ package GlastClassify
 
 version v4r0p0
 author T. Usher <tracy.usher@slac.stanford.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.54 2006/10/23 21:34:16 usher Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.55 2006/10/24 00:04:39 usher Exp $
 use GlastPolicy *
 
 apply_pattern packageShr
@@ -34,7 +34,7 @@ library  ClassificationTree -no_share                    \
 
 library  GlastClassify      -s=Dll $(source)   
    
-macro_append GlastClassify_shlibflags "" \
+macro_append GlastClassify_linkopts "" \
              Linux " -L${GlastClassify_cmtpath}/lib  -lClassificationTree " \
              WIN32 " /libpath:${GLASTCLASSIFYROOT}/${BINDIR} ClassificationTree.lib "
 
