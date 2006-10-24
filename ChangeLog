@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Mon Oct 23 17:04:39 PDT 2006
+GlastClassify/src
+
+Modified Files:
+	ClassifyAlg.cxx 
+Log Message:
+Gets Gaudi shareable to build, still working on apply_main
+    *
+------------------------------------------------------------
+User: usher  Mon Oct 23 17:04:39 PDT 2006
 GlastClassify/cmt
 
 Modified Files:
