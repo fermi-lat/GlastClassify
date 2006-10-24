@@ -1,7 +1,7 @@
 /** @file ClassifyAlg.cxx
 @brief Declaration and implementation of Gaudi algorithm ClassifyAlg
 
-$Header: /nfs/slac/g/glast/ground/cvs/merit/src/meritAlg/Attic/ClassifyAlg.cxx,v 1.8 2006/07/12 02:01:33 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.1 2006/10/23 21:30:18 usher Exp $
 */
 
 #include "GaudiKernel/Algorithm.h"
@@ -24,7 +24,9 @@ public:
     
     virtual ~GleamItem<T>() {}
 
-    operator double()const {return (double)*m_pdata;}
+    operator double()const {
+        return (double)*m_pdata;
+    }
 private:
     T*   m_pdata;
     std::string m_name;
