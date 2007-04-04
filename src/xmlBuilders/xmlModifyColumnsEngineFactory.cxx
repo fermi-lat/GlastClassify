@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlModifyColumnsEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlModifyColumnsEngineFactory.cxx,v 1.3 2006/06/30 18:06:31 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlModifyColumnsEngineFactory.cxx,v 1.4 2006/07/27 20:19:52 usher Exp $
 */
 
 #include "xmlModifyColumnsEngineFactory.h"
@@ -99,10 +99,10 @@ IImActivityNode* xmlModifyColumnsEngineFactory::operator()(const DOMElement* xml
             std::string sVarType = xtOldValue->getType();
 
             // New type depends on the old type
-            if (sVarType == "continuous") xtColumnVal = new XTcolumnVal<REALNUM>(sVarName);
-            else                          xtColumnVal = new XTcolumnVal<std::string>(sVarName,"categorical");
+            if (sVarType == "continuous") xtColumnVal = new XTcolumnVal<REALNUM>(sNewName);
+            else                          xtColumnVal = new XTcolumnVal<std::string>(sNewName,"categorical");
 
-            XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
+            XprsnParser().getXtTupleVars()[sNewName] = xtColumnVal;
         }
 
         xprsnNodeMap[xtColumnVal] = xtOldValue;
