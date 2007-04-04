@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.h
     @brief  Declare class AtwoodTrees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/AtwoodTrees.h,v 1.11 2006/07/27 20:19:51 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.h,v 1.1 2006/10/23 21:30:18 usher Exp $
 */
 #ifndef GlastClassify_AtwoodTrees_h
 #define GlastClassify_AtwoodTrees_h
@@ -50,12 +50,9 @@ private:
 
     // These are variables to be output to the ntuple 
     // (in alphabetical order)
-    float         m_acdLowerTileCount;
-    float         m_acdUpperTileCount;
     float         m_bestEnergyProb;
     float         m_CORE;
     float         m_evtLogEnergyRaw;
-    float         m_tkrLATEdge;
 
     const Item*   m_AcdActiveDist3D;
     const Item*   m_AcdRibbonActDist;
@@ -65,6 +62,11 @@ private:
     int           m_executeTreeCnt;
     int           m_goodVals;
     int           m_caughtVals;
+
+    // Cut selections
+    float         m_calEnergyCut;
+    float         m_csiRadLenCut;
+    float         m_numTracksCut;
 
     // stream for output (if any)
     std::ostream& m_log;
