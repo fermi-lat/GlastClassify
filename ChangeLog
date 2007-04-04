@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Wed Apr  4 15:31:59 PDT 2007
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlModifyColumnsEngineFactory.cxx 
+Log Message:
+Modifications necessary to go to Pass 5 IM analysis
+    *
+------------------------------------------------------------
+User: usher  Wed Apr  4 15:31:59 PDT 2007
 GlastClassify/src/XT
 
 Modified Files:
