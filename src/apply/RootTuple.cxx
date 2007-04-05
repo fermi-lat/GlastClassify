@@ -1,7 +1,7 @@
 /** @file RootTuple.cxx
     @brief implement class RootTuple
 
- $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.5 2006/08/22 16:07:00 usher Exp $
+ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.6 2007/01/12 13:42:35 heather Exp $
   Original author T. Burnett (w/ help from H. Kelley)
 */
 #include "RootTuple.h"
@@ -24,6 +24,8 @@
 #include "TKey.h"
 #include "TIterator.h"
 #include "TString.h"
+
+#include <cassert>
 #include <stdexcept>
 #include <iostream>
 
