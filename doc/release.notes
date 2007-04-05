@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.39 2006/10/24 04:27:29 usher Exp $
+$Id: release.notes,v 1.40 2007/04/04 22:33:39 usher Exp $
 @verbatim
+ 5-Apr-07  v4r1p1 TU  Builds on both linux AND windows! Ship it!!
  4-Apr-07  v4r1   TU  Updates necessary for Pass 5 IM analysis
 23-Oct-06  v4r0p1 TU  Fix requirements to build shareable and apply_main
 23-Oct-06  v4r0p0 TU  Convert to a Gaudi package, including ClassifyAlg and fixes for int problem
