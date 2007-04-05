@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: usher  Thu Apr  5 14:01:22 PDT 2007
-GlastClassify/src/apply
-
-Modified Files:
-	RootTuple.cxx 
-Log Message:
-include cassert in RootTuple
-    *
-------------------------------------------------------------
 TAG
 Tag name: v4r1p1, operation: add
 Package: GlastClassify
