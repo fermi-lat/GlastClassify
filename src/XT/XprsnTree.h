@@ -1,13 +1,14 @@
 /**@file XprsnTree.h
 @brief Contains class definitions for implementing a very basic Decision Tree
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.9 2007/04/05 19:02:05 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.10 2007/04/05 19:45:27 usher Exp $
 */
 
 #ifndef XprsnTree_h
 #define XprsnTree_h
 
 #include <iostream>
+#include <cmath>
 #include "ImPrecision.h"
 
 /** @class Exception 
@@ -257,7 +258,7 @@ private:
 // Override the ostream << operator. Keeping here as an example....
 template <typename T1, typename T2> std::ostream& operator<<(std::ostream& stream, const XTExprsnNode<T1,T2>& node)
 {
-    node.printExp(out,false);
+    node.printExp(stream,false);
     return stream;
 }
 
