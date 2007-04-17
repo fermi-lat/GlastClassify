@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Apr 17 12:15:04 PDT 2007
+GlastClassify/src/XT
+
+Modified Files:
+	XprsnTree.h 
+Log Message:
+fixes for compiling with RHEL4
+    *
+------------------------------------------------------------
 TAG
 Tag name: v4r1p2, operation: add
 Package: GlastClassify
