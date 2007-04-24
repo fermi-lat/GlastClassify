@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.41 2007/04/05 19:48:30 usher Exp $
+$Id: release.notes,v 1.42 2007/04/05 21:02:38 usher Exp $
 @verbatim
+24-Apr-07  v4r1p3 TU  Patch to compile on RHEL4
  5-Apr-07  v4r1p2 TU  Get RootTuple to build with new Root version
  5-Apr-07  v4r1p1 TU  Builds on both linux AND windows! Ship it!!
  4-Apr-07  v4r1   TU  Updates necessary for Pass 5 IM analysis
