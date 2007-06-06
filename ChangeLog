@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: guiriec  Wed Jun  6 02:57:59 PDT 2007
+GlastClassify/xml
+
+Modified Files:
+	Pass4_Analysis_Complete.xml 
+Log Message:
+Add of three new MipFinder's variables in the MeritTuple file (CalMipErmc, CalMipDerr and CalMipBarDist)
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v4r1p3, operation: add
 Package: GlastClassify
