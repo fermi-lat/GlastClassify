@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlReadTextFileEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlReadTextFileEngineFactory.cxx,v 1.3 2006/06/30 18:06:31 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlReadTextFileEngineFactory.cxx,v 1.4 2006/07/27 20:19:52 usher Exp $
 */
 
 #include "xmlReadTextFileEngineFactory.h"
@@ -76,9 +76,15 @@ IImActivityNode* xmlReadTextFileEngineFactory::operator()(const DOMElement* xmlA
 
     // Create a flag for determining whether to keep a row in the end of processing
     // @TODO need to change this to a bool value (implement storage maps for bool and categorical vars)
-    std::string sVarName = "WriteTupleRow";
-    XTcolumnVal<REALNUM>* xtColumnVal = new XTcolumnVal<REALNUM>(sVarName);
-    XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
+    std::string           sVarName    = "WriteTupleRow";
+    XTcolumnValBase*      basePtr     = XprsnParser().getXtTupleVars()[sVarName];
+    XTcolumnVal<REALNUM>* xtColumnVal = dynamic_cast<XTcolumnVal<REALNUM>*>(basePtr);
+
+    if (xtColumnVal == 0)
+    {
+        xtColumnVal = new XTcolumnVal<REALNUM>(sVarName);
+        XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
+    }
 
     node->setXtColumnVal(xtColumnVal);
 
