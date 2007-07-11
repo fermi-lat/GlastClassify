@@ -3,7 +3,7 @@
 @brief declaration of class newPredictEngine
 @author T. Usher
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewPredictEngineFactory.h,v 1.1 2005/11/22 21:19:03 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewPredictEngineFactory.h,v 1.2 2006/06/30 18:06:31 usher Exp $
 */
 
 #ifndef GlastClassify_newPredictEngine_h
@@ -46,6 +46,8 @@ private:
     IXTExprsnNode* parseTree(DOMElement* xmlTreeModel);
 
     IXTExprsnNode* parseNode(DOMElement* xmlElement);
+
+    std::string    getPredicateExpression(DOMElement* xmlElement);
 
     /// Find output variable name for given Classification Tree
     std::string getCTOutputName(const DOMElement* xmlActivityNode);

@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlFactoryBase
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFactoryBase.cxx,v 1.2 2005/11/08 01:10:50 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFactoryBase.cxx,v 1.3 2005/11/22 21:19:02 usher Exp $
 */
 
 #include "xmlFactoryBase.h"
@@ -78,10 +78,12 @@ xmlFactoryBase::DOMEvector  xmlFactoryBase::getXTSubPropVec(const DOMElement* ac
 {
     DOMEvector elementVec;
 
+    elementVec.clear();
+
     DOMElement* xtProperty = getXTProperty(activityNode, property);
 
     // Now the vector of properties
-    xmlBase::Dom::getChildrenByTagName(xtProperty, "Property", elementVec);
+    if (xtProperty) xmlBase::Dom::getChildrenByTagName(xtProperty, "Property", elementVec);
 
     return elementVec;
 }
