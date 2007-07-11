@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: usher  Wed Jul 11 09:24:41 PDT 2007
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlFactoryBase.cxx xmlNewPredictEngineFactory.h 
+	xmlNewlPredictEngineFactory.cxx 
+	xmlReadTextFileEngineFactory.cxx xmlTreeAnalysisFactory.cxx 
+Log Message:
+Modifications necessary to update to Pass 5 IM analysis. Initial import of updates...
+    *
+------------------------------------------------------------
+User: usher  Wed Jul 11 09:24:41 PDT 2007
 GlastClassify/src/XT
 
 Modified Files:
