@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.h
     @brief  Declare class AtwoodTrees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.h,v 1.1 2006/10/23 21:30:18 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.h,v 1.2 2007/04/04 22:31:58 usher Exp $
 */
 #ifndef GlastClassify_AtwoodTrees_h
 #define GlastClassify_AtwoodTrees_h
@@ -47,6 +47,8 @@ private:
     const Item*   m_FilterStatus_HI;
     const Item*   m_eventId;
     const Item*   m_run;
+
+    const Item*   m_CTBBestEnergy;
 
     // These are variables to be output to the ntuple 
     // (in alphabetical order)
