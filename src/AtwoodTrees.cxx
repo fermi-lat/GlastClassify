@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.29 2006/10/23 21:30:18 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.30 2007/04/04 22:31:58 usher Exp $
 
 */
 #include "AtwoodTrees.h"
@@ -206,6 +206,7 @@ bool AtwoodTrees::execute()
         {
             // Retrieve the energy classification results (needed below)
             m_bestEnergyProb  = m_treeAnalysis->getTupleVal("CTBBestEnergyProb");
+            float bestEnergy  = m_treeAnalysis->getTupleVal("CTBBestEnergy");
             m_CORE            = m_treeAnalysis->getTupleVal("CTBCORE");
             m_evtLogEnergyRaw = m_treeAnalysis->getTupleVal("EvtLogEnergyRaw");
 
