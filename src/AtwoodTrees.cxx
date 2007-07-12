@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.30 2007/04/04 22:31:58 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.31 2007/07/12 18:49:47 usher Exp $
 
 */
 #include "AtwoodTrees.h"
@@ -41,6 +41,8 @@ AtwoodTrees::AtwoodTrees(ITupleInterface& tuple, std::ostream& log, std::string 
 
     m_eventId          = tuple.getItem("EvtEventId");
     m_run              = tuple.getItem("EvtRun");
+
+    m_CTBBestEnergy    = tuple.getItem("CTBBestEnergy");
 
     // Default values as of 4/5/2007 at request of Bill Atwood
     m_calEnergyCut     = 5.;
@@ -247,6 +249,14 @@ bool AtwoodTrees::execute()
 
     // Last step, always copy CTB back to ntuple
     m_treeAnalysis->storeCTvals();
+
+    float   bestEnergy  = m_treeAnalysis->getTupleVal("CTBBestEnergy");
+    double  beTuple     = *m_CTBBestEnergy;
+
+    if (bestEnergy != beTuple)
+    {
+        int k = 0;
+    }
 
     return writeTupleRow;
 }
