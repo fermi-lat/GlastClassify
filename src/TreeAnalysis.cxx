@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.9 2006/10/23 21:30:18 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.10 2007/07/11 16:24:37 usher Exp $
 */
 
 #include "TreeAnalysis.h"
@@ -78,7 +78,7 @@ void TreeAnalysis::execute()
 
         // If the cross reference exists, set the local value
         //if (nTupleIter != m_nTupleMap.end()) valPtr->setDataValue(*(nTupleIter->second));
-        if (nTupleIter != m_nTupleMap.end() ) // && varName.substr(0,3) != "CTB") 
+        if (nTupleIter != m_nTupleMap.end() && varName.substr(0,3) != "CTB") 
         {
             // Test precision theory here
             double tempRes = *(nTupleIter->second);
