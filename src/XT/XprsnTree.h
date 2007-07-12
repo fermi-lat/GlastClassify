@@ -1,7 +1,7 @@
 /**@file XprsnTree.h
 @brief Contains class definitions for implementing a very basic Decision Tree
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.11 2007/04/17 19:15:04 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.12 2007/07/12 14:55:43 usher Exp $
 */
 
 #ifndef XprsnTree_h
@@ -10,6 +10,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.11 20
 #include <iostream>
 #include <cmath>
 #include "ImPrecision.h"
+#include "XTtupleVars.h"
 
 /** @class Exception 
     @brief hold a string
