@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Jul 12 11:00:19 PDT 2007
+GlastClassify/src
+
+Modified Files:
+	TreeAnalysis.cxx 
+Log Message:
+Restore zeroing of CTB variables at event start
+    *
+------------------------------------------------------------
 User: usher  Thu Jul 12 08:16:45 PDT 2007
 GlastClassify/src/XT
 
