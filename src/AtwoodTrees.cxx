@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.31 2007/07/12 18:49:47 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.32 2007/07/12 19:21:38 usher Exp $
 
 */
 #include "AtwoodTrees.h"
@@ -250,13 +250,17 @@ bool AtwoodTrees::execute()
     // Last step, always copy CTB back to ntuple
     m_treeAnalysis->storeCTvals();
 
-    float   bestEnergy  = m_treeAnalysis->getTupleVal("CTBBestEnergy");
-    double  beTuple     = *m_CTBBestEnergy;
-
-    if (bestEnergy != beTuple)
+    try
     {
-        int k = 0;
+        float   bestEnergy  = m_treeAnalysis->getTupleVal("CTBBestEnergy");
+        double  beTuple     = *m_CTBBestEnergy;
+
+        if (bestEnergy != beTuple)
+        {
+            int k = 0;
+        }
     }
+    catch(...) {}
 
     return writeTupleRow;
 }

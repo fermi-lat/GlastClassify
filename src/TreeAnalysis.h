@@ -3,7 +3,7 @@
 @brief declaration of class TreeAnalysis
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.4 2006/08/04 20:47:46 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.5 2006/10/23 21:30:18 usher Exp $
 */
 
 #ifndef GlastClassify_TreeAnalysis_h
@@ -87,9 +87,6 @@ private:
 
     // This looks up the values in the output ntuple
     ITupleInterface&                   m_lookup;
-
-    // Vector to hold any CTB output variables
-    std::map<std::string, float*>      m_ctbVarMap;
 
     // Class needed to calcluate local variables used in CT's
     XTtupleMap    m_xtTupleMap;
