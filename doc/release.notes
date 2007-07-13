@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.42 2007/04/05 21:02:38 usher Exp $
+$Id: release.notes,v 1.43 2007/04/24 15:48:04 usher Exp $
 @verbatim
+13-Jul-07  v4r2   TU  Fix windows/linux problem, upgrades for Pass5 (but still Pass4 xml file)
 24-Apr-07  v4r1p3 TU  Patch to compile on RHEL4
  5-Apr-07  v4r1p2 TU  Get RootTuple to build with new Root version
  5-Apr-07  v4r1p1 TU  Builds on both linux AND windows! Ship it!!
