@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.11 2007/07/12 18:00:15 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.12 2007/07/13 18:33:23 usher Exp $
 */
 
 #include "TreeAnalysis.h"
@@ -71,7 +71,6 @@ void TreeAnalysis::execute()
         XTcolumnVal<REALNUM>* valPtr = dynamic_cast<XTcolumnVal<REALNUM>*>(basePtr);
 
         // If the cross reference exists, set the local value
-        //if (nTupleIter != m_nTupleMap.end()) valPtr->setDataValue(*(nTupleIter->second));
         if (nTupleIter != m_nTupleMap.end() && varName.substr(0,3) != "CTB") 
         {
             // Test precision theory here
@@ -151,8 +150,6 @@ void TreeAnalysis::storeCTvals()
                 if (colVal->dataIsValid()) result = *(*colVal)();
 
                 const_cast<GlastClassify::Item*>(m_nTupleMap[dataIter->first])->setDataValue(&result);
-
-                int checkit = 0;
             }
         }
     }
