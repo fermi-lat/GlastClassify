@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Jul 13 11:54:58 PDT 2007
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx AtwoodTrees.h TreeAnalysis.cxx 
+Log Message:
+Cleaning up before tagging, restoring xml file to Pass 4 complete.
+    *
+------------------------------------------------------------
 User: usher  Fri Jul 13 11:36:49 PDT 2007
 GlastClassify/GlastClassify
 
