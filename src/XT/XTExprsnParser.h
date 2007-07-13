@@ -1,7 +1,7 @@
 /**@file XTExprsnParser.h
 @brief Contains class definitions for implementing a "local" ntuple  row
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.h,v 1.4 2006/10/04 20:02:09 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.h,v 1.5 2007/07/12 14:55:43 usher Exp $
 */
 
 #ifndef XTExprsnParser_h
@@ -42,11 +42,11 @@ private:
     std::string    trimTrailing(std::string& expression); 
 
     // Function to evaluate a string which represents a "value"
-    IXTExprsnNode* parseNextExpression(std::string& expression, std::string type="");
-    IXTExprsnNode* parseOperator(std::string& expression, std::string type="");
-    IXTExprsnNode* parseValue(std::string& expression, std::string type="");
-    IXTExprsnNode* parseVariable(std::string& expression, std::string type="");
-    IXTExprsnNode* parseFunction(std::string& expression, std::string type="");
+    IXTExprsnNode* parseNextExpression(std::string& expression, std::string& type);
+    IXTExprsnNode* parseOperator(std::string& expression, std::string& type);
+    IXTExprsnNode* parseValue(std::string& expression, std::string& type);
+    IXTExprsnNode* parseVariable(std::string& expression, std::string& type);
+    IXTExprsnNode* parseFunction(std::string& expression, std::string& type);
 
     XTtupleMap&   m_tuple;
 

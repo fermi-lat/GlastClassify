@@ -1,7 +1,7 @@
 /**@file XprsnTree.h
 @brief Contains class definitions for implementing a very basic Decision Tree
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.12 2007/07/12 14:55:43 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.13 2007/07/12 15:16:45 usher Exp $
 */
 
 #ifndef XprsnTree_h
@@ -605,8 +605,6 @@ private:
     {
         REALNUM left = *(reinterpret_cast<const REALNUM*>(arg()));
         REALNUM temp = std::acos(left);
-        float  left2 = left;
-        float  temp2 = std::acos(left2);
         *m_value = temp;
         //*m_value = std::cos(*(reinterpret_cast<const double*>(arg())));
         return m_value;
