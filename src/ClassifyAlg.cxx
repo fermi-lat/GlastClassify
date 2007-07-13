@@ -1,7 +1,7 @@
 /** @file ClassifyAlg.cxx
 @brief Declaration and implementation of Gaudi algorithm ClassifyAlg
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.2 2006/10/24 00:04:39 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.3 2007/07/13 18:33:23 usher Exp $
 */
 
 #include "GaudiKernel/Algorithm.h"
@@ -20,7 +20,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.2 20
 template <class T> class GleamItem : public GlastClassify::Item {
 public:
     GleamItem<T>(const std::string& name, const std::string& type, T* data) :
-      m_name(name), m_type(type), m_pdata(data) {}
+      m_pdata(data), m_name(name), m_type(type) {}
     
     virtual ~GleamItem<T>() {}
 
@@ -52,7 +52,7 @@ public:
     }
 
 private:
-    T*   m_pdata;
+    T*          m_pdata;
     std::string m_name;
     std::string m_type;
 };
@@ -94,7 +94,7 @@ public:
         }
         else
         {
-            int j = 0;
+            throw std::invalid_argument("GleamTuple::getItem: attempting to set an unrecognized data type");
         }
 
         return item;
