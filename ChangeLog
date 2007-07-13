@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Jul 13 11:36:49 PDT 2007
+GlastClassify/GlastClassify
+
+Modified Files:
+	ITupleInterface.h 
+Log Message:
+Slight modification to the Item interface definition
+    *
+------------------------------------------------------------
 User: usher  Fri Jul 13 11:33:23 PDT 2007
 GlastClassify/src/apply
 
