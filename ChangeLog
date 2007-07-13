@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Jul 13 12:19:28 PDT 2007
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx ClassifyAlg.cxx 
+Log Message:
+Clean up of unnecessary code inserted for windows/linux comparisons
+    *
+------------------------------------------------------------
 User: usher  Fri Jul 13 11:54:59 PDT 2007
 GlastClassify/xml
 
