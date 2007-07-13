@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Fri Jul 13 11:33:23 PDT 2007
+GlastClassify/src/apply
+
+Modified Files:
+	RootTuple.cxx 
+Log Message:
+Modify ntuple interface to allow setting of values over existing ntuple memory locations.
+    *
+------------------------------------------------------------
+User: usher  Fri Jul 13 11:33:23 PDT 2007
 GlastClassify/src
 
 Modified Files:
