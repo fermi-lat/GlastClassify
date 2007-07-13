@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Fri Jul 13 12:19:28 PDT 2007
+GlastClassify/src/XT
+
+Modified Files:
+	XTExprsnParser.cxx XTExprsnParser.h XprsnTree.h 
+Log Message:
+Clean up of unnecessary code inserted for windows/linux comparisons
+    *
+------------------------------------------------------------
+User: usher  Fri Jul 13 12:19:28 PDT 2007
 GlastClassify/src
 
 Modified Files:
