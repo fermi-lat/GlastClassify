@@ -1,7 +1,7 @@
 /** @file ITupleInterface.h
 @brief  Declare abstract class ITupleInterface
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/ITupleInterface.h,v 1.3 2005/11/08 19:52:08 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/ITupleInterface.h,v 1.4 2005/11/13 21:05:07 burnett Exp $
 */
 
 
@@ -21,6 +21,7 @@ namespace GlastClassify{
     public:
         virtual ~Item(){};
         virtual operator double()const = 0;
+        virtual void setDataValue(void* data) = 0;
     protected:
         Item(){};
     };
