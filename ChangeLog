@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Fri Jul 13 11:33:23 PDT 2007
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx ClassifyAlg.cxx TreeAnalysis.cxx 
+	TreeAnalysis.h 
+Log Message:
+Modify ntuple interface to allow setting of values over existing ntuple memory locations.
+    *
+------------------------------------------------------------
 User: usher  Thu Jul 12 12:21:38 PDT 2007
 GlastClassify/src
 
