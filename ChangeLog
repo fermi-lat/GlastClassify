@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Jul 16 16:31:49 PDT 2007
+GlastClassify/src/XT
+
+Modified Files:
+	XTExprsnParser.cxx 
+Log Message:
+Remove quotes around variable...
+    *
+------------------------------------------------------------
 User: usher  Mon Jul 16 14:20:33 PDT 2007
 GlastClassify/src/XT
 
