@@ -2,7 +2,7 @@
 
 @brief implementation of class XTExprsnParser
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.14 2007/07/16 18:00:35 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.15 2007/07/16 21:20:33 usher Exp $
 */
 
 #include "XTExprsnParser.h"
@@ -182,7 +182,7 @@ IXTExprsnNode* XTExprsnParser::parseOperator(std::string& expression, std::strin
             {
                 pNode = new XTExprsnNode<bool,bool>(fndDelim, pNodeL, pNodeR);
             }
-            else if ( (pos = inputType.find("XTExprsnTypes::categoricalType",0)) > -1)
+            else if ( (pos = inputType.find(XTExprsnTypes::categoricalType,0)) > -1)
             {
                 pNode = new XTExprsnNode<bool,std::string>(fndDelim, pNodeL, pNodeR);
             }
