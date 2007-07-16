@@ -2,11 +2,24 @@
 
 @brief implementation of class XTExprsnParser
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.13 2007/07/13 19:19:28 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.14 2007/07/16 18:00:35 usher Exp $
 */
 
 #include "XTExprsnParser.h"
 #include "facilities/Util.h"
+
+/** @brief Define some hopefully platform independent strings for type checking
+**/
+namespace XTExprsnTypes
+{
+    std::string boolType        = typeid(bool).name();
+    std::string floatType       = typeid(float).name();
+    std::string stringType      = typeid(std::string).name();
+    std::string doubleType      = typeid(double).name();
+
+    std::string categoricalType = "categorical";
+    std::string continuousType  = "continuous";
+};
     
 XTExprsnParser::XTExprsnParser(XTtupleMap& tuple) : m_tuple(tuple) 
 {
@@ -163,13 +176,13 @@ IXTExprsnNode* XTExprsnParser::parseOperator(std::string& expression, std::strin
         // Logical operation node, input type: bool or double, output type: bool
         if (opType == "B")
         {
-            int pos = inputType.find("bool",0);
+            int pos = inputType.find(XTExprsnTypes::boolType,0);
 
             if ( pos > -1 )
             {
                 pNode = new XTExprsnNode<bool,bool>(fndDelim, pNodeL, pNodeR);
             }
-            else if ( (pos = inputType.find("categorical",0)) > -1)
+            else if ( (pos = inputType.find("XTExprsnTypes::categoricalType",0)) > -1)
             {
                 pNode = new XTExprsnNode<bool,std::string>(fndDelim, pNodeL, pNodeR);
             }
