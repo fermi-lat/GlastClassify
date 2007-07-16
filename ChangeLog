@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Jul 16 14:20:33 PDT 2007
+GlastClassify/src/XT
+
+Modified Files:
+	XTExprsnParser.cxx 
+Log Message:
+Windows vs Linux - mods for handling results of typeid function
+    *
+------------------------------------------------------------
 User: usher  Mon Jul 16 11:00:35 PDT 2007
 GlastClassify/src/XT
 
