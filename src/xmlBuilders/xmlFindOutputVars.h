@@ -3,7 +3,7 @@
 @brief declaration of class xmlFindOutputVars
 @author T. Usher
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFindOutputVars.h,v 1.3 2006/06/30 18:06:31 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFindOutputVars.h,v 1.1 2006/10/04 20:00:37 usher Exp $
 */
 
 #ifndef GlastClassify_xmlFindOutputVars_h
@@ -35,6 +35,13 @@ public:
     virtual ~xmlFindOutputVars();
 
 private:
+    /** @brief finds variables defined in createColumnsEngineNodes
+    */
+    int numCreateColumnsVars(const DOMElement* element);
+
+    /** @brief finds variables output from predictEngineNodes
+    */
+    int numPredictEngineVars(const DOMElement* element);
 };
 
 
