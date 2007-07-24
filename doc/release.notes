@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.43 2007/04/24 15:48:04 usher Exp $
+$Id: release.notes,v 1.44 2007/07/13 19:21:31 usher Exp $
 @verbatim
+24-Jul-07  v4r2   TU  Updates to enable use of the "ParticleSeparator" im analysis sheet
 13-Jul-07  v4r2   TU  Fix windows/linux problem, upgrades for Pass5 (but still Pass4 xml file)
 24-Apr-07  v4r1p3 TU  Patch to compile on RHEL4
  5-Apr-07  v4r1p2 TU  Get RootTuple to build with new Root version
