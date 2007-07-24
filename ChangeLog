@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Tue Jul 24 11:57:24 PDT 2007
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlFindOutputVars.cxx xmlFindOutputVars.h 
+	xmlTreeAnalysisFactory.cxx 
+Log Message:
+Modifications which enable the "ParticleSeparator" IM sheet to work
+    *
+------------------------------------------------------------
 User: usher  Mon Jul 16 16:31:49 PDT 2007
 GlastClassify/src/XT
 
