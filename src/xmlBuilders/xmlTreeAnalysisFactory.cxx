@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeAnalysisFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.5 2006/10/04 20:02:09 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.6 2007/07/11 16:24:41 usher Exp $
 */
 
 #include "xmlTreeAnalysisFactory.h"
@@ -131,10 +131,10 @@ int GlastClassify::xmlTreeAnalysisFactory::findAllOutputVars(GlastClassify::Tree
         }
 
         // Do we have the right node?
-        if (sNewType == "CreateColumnsEngineNode")
-        {
+//        if (sNewType == "CreateColumnsEngineNode")
+//        {
             numVars += varFinder(xmlActivityNode);
-        }
+//        }
     }
 
     //done
