@@ -1,33 +1,4 @@
 ------------------------------------------------------------
-User: usher  Thu Aug  9 10:29:33 PDT 2007
-GlastClassify/doc
-
-Modified Files:
-	release.notes 
-Log Message:
-Preparing to tag v5r0
-    *
-------------------------------------------------------------
-User: usher  Thu Aug  9 10:29:33 PDT 2007
-GlastClassify/cmt
-
-Modified Files:
-	requirements 
-Log Message:
-Preparing to tag v5r0
-    *
-------------------------------------------------------------
-User: usher  Thu Aug  9 10:28:06 PDT 2007
-GlastClassify/xml
-
-Added Files:
-	Pass5_Analysis_Complete_4_PSep.xml 
-Removed Files:
-	Pass4_Analysis_Complete.xml Pass5_Analysis_Complete_4.xml 
-Log Message:
-Updating to go to Bill's Pass 5 analysis with the particle classification scheme included
-    *
-------------------------------------------------------------
 TAG
 Tag name: v4r3, operation: add
 Package: GlastClassify
