@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.12 2007/07/13 18:33:23 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.13 2007/07/13 18:54:58 usher Exp $
 */
 
 #include "TreeAnalysis.h"
@@ -245,7 +245,7 @@ void TreeAnalysis::print(std::ostream& out) const
     int depth = 0;
 
     // Begin with the head node and output the nodes in their order:
-    if (m_headNode) m_headNode->print(out, depth);
+ //   if (m_headNode) m_headNode->print(out, depth);
 
     return;
 }

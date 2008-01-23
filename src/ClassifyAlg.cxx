@@ -1,7 +1,7 @@
 /** @file ClassifyAlg.cxx
 @brief Declaration and implementation of Gaudi algorithm ClassifyAlg
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.3 2007/07/13 18:33:23 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.4 2007/07/13 19:19:28 usher Exp $
 */
 
 #include "GaudiKernel/Algorithm.h"
@@ -137,7 +137,8 @@ private:
 
     /// this guy does the work!
     GlastClassify::AtwoodTrees * m_ctree;
-    GleamTuple* m_tuple;
+    GleamTuple*                  m_tuple;
+    bool                         m_treeInfo;
 
     int m_events;
 };
@@ -154,8 +155,9 @@ ClassifyAlg::ClassifyAlg(const std::string& name, ISvcLocator* pSvcLocator)
 ,  m_events(0)
 
 {
-    declareProperty("TreeName",    m_treename="MeritTuple");
-    declareProperty("xmlFileName", m_xmlFileName="");
+    declareProperty("TreeName",      m_treename="MeritTuple");
+    declareProperty("xmlFileName",   m_xmlFileName="");
+    declareProperty("PrintTreeInfo", m_treeInfo=false);
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 StatusCode ClassifyAlg::initialize()
@@ -182,7 +184,7 @@ StatusCode ClassifyAlg::initialize()
     try { 
         std::string path( m_xmlFileName.value()); 
         log << MSG::INFO;
-        m_ctree = new  GlastClassify::AtwoodTrees(*m_tuple, log.stream(), path);
+        m_ctree = new  GlastClassify::AtwoodTrees(*m_tuple, log.stream(), path, m_treeInfo);
         log << endreq;
         
     }catch ( std::exception& e){
