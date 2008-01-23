@@ -1,4 +1,12 @@
 ------------------------------------------------------------
+User: usher  Wed Jan 23 13:30:30 PST 2008
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx AtwoodTrees.h ClassifyAlg.cxx TreeAnalysis.cxx 
+Log Message:
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r0p0, operation: add
 Package: GlastClassify
