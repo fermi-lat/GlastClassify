@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.h
     @brief  Declare class AtwoodTrees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.h,v 1.3 2007/07/12 19:21:38 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.h,v 1.4 2007/07/13 18:54:58 usher Exp $
 */
 #ifndef GlastClassify_AtwoodTrees_h
 #define GlastClassify_AtwoodTrees_h
@@ -30,7 +30,7 @@ public:
 
     Uses the tuple object to access current tuple items, and to create new ones.
     */
-    AtwoodTrees( ITupleInterface& tuple, std::ostream& log=std::cout, std::string imfile  ="");
+    AtwoodTrees( ITupleInterface& tuple, std::ostream& log=std::cout, std::string imfile  ="", bool printTreeInfo=false);
 
     /** run the prediction nodes on the current tuple instance
     */
