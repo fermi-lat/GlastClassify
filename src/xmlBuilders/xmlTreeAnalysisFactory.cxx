@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeAnalysisFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.6 2007/07/11 16:24:41 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.7 2007/07/24 18:57:23 usher Exp $
 */
 
 #include "xmlTreeAnalysisFactory.h"
@@ -11,6 +11,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnaly
 #include "src/XT/XTExprsnParser.h"
 
 #include "xmlAppendEngineFactory.h"
+#include "xmlClassificationAgreementEngineFactory.h"
 #include "xmlCreateColumnsEngineFactory.h"
 #include "xmlFilterColumnsEngineFactory.h"
 #include "xmlFilterRowsEngineFactory.h"
@@ -20,6 +21,8 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnaly
 #include "xmlReadTextFileEngineFactory.h"
 #include "xmlShuffleEngineFactory.h"
 #include "xmlSplitEngineFactory.h"
+#include "xmlSplusGraphEngineFactory.h"
+#include "xmlSplusScriptEngineFactory.h"
 #include "xmlTwoDimChartEngineFactory.h"
 #include "xmlWriteTextFileEngineFactory.h"
 
@@ -152,18 +155,21 @@ int GlastClassify::xmlTreeAnalysisFactory::findAllActivityNodes(GlastClassify::T
 
     XTExprsnParser parser(tree->xtTupleMap());
 
-    nodeFactoryMap["AppendEngineNode"]        = new xmlAppendEngineFactory(parser);
-    nodeFactoryMap["CreateColumnsEngineNode"] = new xmlCreateColumnsEngineFactory(parser);
-    nodeFactoryMap["FilterColumnsEngineNode"] = new xmlFilterColumnsEngineFactory(parser);
-    nodeFactoryMap["FilterRowsEngineNode"]    = new xmlFilterRowsEngineFactory(parser);
-    nodeFactoryMap["MissingValuesEngineNode"] = new xmlMissingValuesEngineFactory(parser);
-    nodeFactoryMap["ModifyColumnsEngineNode"] = new xmlModifyColumnsEngineFactory(parser);
-    nodeFactoryMap["PredictEngineNode"]       = new xmlNewPredictEngineFactory(parser);
-    nodeFactoryMap["ReadTextFileEngineNode"]  = new xmlReadTextFileEngineFactory(parser);
-    nodeFactoryMap["ShuffleEngineNode"]       = new xmlShuffleEngineFactory(parser);
-    nodeFactoryMap["SplitEngineNode"]         = new xmlSplitEngineFactory(parser);
-    nodeFactoryMap["TwoDimChartEngineNode"]   = new xmlTwoDimChartEngineFactory(parser);
-    nodeFactoryMap["WriteTextFileEngineNode"] = new xmlWriteTextFileEngineFactory(parser);
+    nodeFactoryMap["AppendEngineNode"]                  = new xmlAppendEngineFactory(parser);
+    nodeFactoryMap["ClassificationAgreementEngineNode"] = new xmlClassificationAgreementEngineFactory(parser);
+    nodeFactoryMap["CreateColumnsEngineNode"]           = new xmlCreateColumnsEngineFactory(parser);
+    nodeFactoryMap["FilterColumnsEngineNode"]           = new xmlFilterColumnsEngineFactory(parser);
+    nodeFactoryMap["FilterRowsEngineNode"]              = new xmlFilterRowsEngineFactory(parser);
+    nodeFactoryMap["MissingValuesEngineNode"]           = new xmlMissingValuesEngineFactory(parser);
+    nodeFactoryMap["ModifyColumnsEngineNode"]           = new xmlModifyColumnsEngineFactory(parser);
+    nodeFactoryMap["PredictEngineNode"]                 = new xmlNewPredictEngineFactory(parser);
+    nodeFactoryMap["ReadTextFileEngineNode"]            = new xmlReadTextFileEngineFactory(parser);
+    nodeFactoryMap["ShuffleEngineNode"]                 = new xmlShuffleEngineFactory(parser);
+    nodeFactoryMap["SplitEngineNode"]                   = new xmlSplitEngineFactory(parser);
+    nodeFactoryMap["SplusGraphEngineNode"]              = new xmlSplusGraphEngineFactory(parser);
+    nodeFactoryMap["SplusScriptEngineNode"]             = new xmlSplusScriptEngineFactory(parser);
+    nodeFactoryMap["TwoDimChartEngineNode"]             = new xmlTwoDimChartEngineFactory(parser);
+    nodeFactoryMap["WriteTextFileEngineNode"]           = new xmlWriteTextFileEngineFactory(parser);
 
     // We now need to ensure that we're getting 
     // ActivityNode[@engineClass=='com.insightful.miner.PredictEngineNode']
@@ -234,6 +240,16 @@ int GlastClassify::xmlTreeAnalysisFactory::linkActivityNodes(GlastClassify::Tree
     {
         DOMElement* xmlLink = *linkIter;
 
+        // Check for case of a "collapsed node" which would point to nowhere...
+        std::vector<DOMElement *> xmlSubLinkVec;
+        xmlBase::Dom::getDescendantsByTagName(xmlLink, "LinkHistory", xmlSubLinkVec);
+
+        if (!xmlSubLinkVec.empty())
+        {
+            xmlLink = xmlSubLinkVec.front();
+        }
+
+        // Extract the from - to information
         std::string sFromNode = xmlBase::Dom::getAttribute(xmlLink, "fromNode");  
         std::string sFromPort = xmlBase::Dom::getAttribute(xmlLink, "fromPort");  
         int         fromPort  = xmlBase::Dom::getIntAttribute(xmlLink, "fromPort");  

@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlNewPredictEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.5 2006/07/27 20:19:52 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.6 2007/07/11 16:24:41 usher Exp $
 */
 
 #include "xmlNewPredictEngineFactory.h"
@@ -387,12 +387,22 @@ std::string xmlNewPredictEngineFactory::getPredicateExpression(DOMElement* xmlPr
 
         if (xmlPredicateVec.size() > 2)
         {
-            throw Exception("PredictEngineFactory found simple predicate vector > 2 elements");
+            // Can happen legitimately
+            int j = 0;
+            //throw Exception("PredictEngineFactory found simple predicate vector > 2 elements");
         }
 
-        expression = getPredicateExpression(xmlPredicateVec[0]) 
+        std::vector<DOMElement *>::iterator xmlPredicateVecIter = xmlPredicateVec.begin();
+
+        expression = getPredicateExpression(*xmlPredicateVecIter++) 
                    + compoundOperator  
-                   + getPredicateExpression(xmlPredicateVec[1]);
+                   + getPredicateExpression(*xmlPredicateVecIter++);
+
+        // Pick up any more expressions there might be
+        while (xmlPredicateVecIter != xmlPredicateVec.end())
+        {
+            expression += compoundOperator + getPredicateExpression(*xmlPredicateVecIter++);
+        }
     }
     else
     {
