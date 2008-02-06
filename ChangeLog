@@ -1,5 +1,19 @@
 ------------------------------------------------------------
 User: usher  Tue Feb  5 21:21:54 PST 2008
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlNewlPredictEngineFactory.cxx xmlTreeAnalysisFactory.cxx 
+Added Files:
+	xmlClassificationAgreementEngineFactory.cxx 
+	xmlClassificationAgreementEngineFactory.h 
+	xmlSplusGraphEngineFactory.cxx xmlSplusGraphEngineFactory.h 
+	xmlSplusScriptEngineFactory.cxx xmlSplusScriptEngineFactory.h 
+Log Message:
+Modifications for Pass 6, initial import for testing
+    *
+------------------------------------------------------------
+User: usher  Tue Feb  5 21:21:54 PST 2008
 GlastClassify/src/XT
 
 Modified Files:
