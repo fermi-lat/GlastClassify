@@ -1,4 +1,4 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.h,v 1.2 2005/11/08 20:48:22 burnett Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.h,v 1.3 2005/11/13 21:05:09 burnett Exp $
 // Original author T. Burnett (w/ help from H. Kelley)
 #ifndef ROOTTUPLE_H
 #define ROOTTUPLE_H
@@ -8,6 +8,7 @@
 #include <string>
 
 class TFile;
+class TChain;
 class TTree;
 
 class RootTuple : public GlastClassify::ITupleInterface {
@@ -39,11 +40,12 @@ public:
     void fill();
 
 private:
-    TTree * tree(){return m_tree;}
-    TTree * m_tree;
-    TTree * m_output_tree;
-    TFile * m_file;
-    TFile * m_output_file;
+    TTree*  tree(){return m_tree;}
+    TTree*  m_tree;
+    TTree*  m_output_tree;
+    TFile*  m_file;
+    TChain* m_inChain;
+    TFile*  m_output_file;
 
     int m_numEvents;
     int m_event;
