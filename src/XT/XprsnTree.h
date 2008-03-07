@@ -1,7 +1,7 @@
 /**@file XprsnTree.h
 @brief Contains class definitions for implementing a very basic Decision Tree
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.14 2007/07/13 19:19:28 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.15 2007/07/16 18:00:35 usher Exp $
 */
 
 #ifndef XprsnTree_h
@@ -155,14 +155,14 @@ private:
     // The allowed operations:
     const T1* operator+ (IXTExprsnNode* rhs) const 
     {
-        REALNUM left   = *(reinterpret_cast<const REALNUM*>((*m_left)()));
+        REALNUM left   = m_left ? *(reinterpret_cast<const REALNUM*>((*m_left)())) : 0;
         REALNUM rght   = *(reinterpret_cast<const REALNUM*>((*rhs)()));
         *m_value  = left + rght;
         return m_value;
     }
     const T1* operator- (IXTExprsnNode* rhs) const 
     {
-        REALNUM left = *(reinterpret_cast<const REALNUM*>((*m_left)()));
+        REALNUM left = m_left ? *(reinterpret_cast<const REALNUM*>((*m_left)())) : 0;
         REALNUM rght = *(reinterpret_cast<const REALNUM*>((*rhs)()));
         *m_value = left - rght;
         return m_value;

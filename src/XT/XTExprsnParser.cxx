@@ -2,7 +2,7 @@
 
 @brief implementation of class XTExprsnParser
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.16 2007/07/16 23:31:49 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.cxx,v 1.17 2008/02/06 05:21:54 usher Exp $
 */
 
 #include "XTExprsnParser.h"
@@ -130,7 +130,7 @@ IXTExprsnNode* XTExprsnParser::parseOperator(std::string& expression, std::strin
     DelimPair   fndDelimPr = findNextDelimiter(expression, delimPos);
     std::string fndDelim   = fndDelimPr.first;
 
-    // Delimiter found, process the expression
+    // Delimiter found, as long as not unary, process the expression
     if (delimPos < strnLength && fndDelim != "")
     {
         IXTExprsnNode* pNodeL    = 0;
@@ -441,6 +441,9 @@ XTExprsnParser::DelimPair XTExprsnParser::findNextDelimiter(const std::string& i
     // the end of the string... 
     else if (startPos < stringLen)
     {
+        bool      unaryOpFound = false;
+        DelimPair unaryOp;
+
         for(DelimVector::iterator delIter = m_delimiters.begin(); delIter != m_delimiters.end(); delIter++)
         {
             const DelimPair& delimOp = *delIter;
@@ -449,7 +452,11 @@ XTExprsnParser::DelimPair XTExprsnParser::findNextDelimiter(const std::string& i
 
             // Attempt to catch special case of unary + or - operator
             if (subStrPos == 0 && checkUnary && (delimOp.first == "-" || delimOp.first == "+"))
-                subStrPos = inString.find(delimOp.first, startPos+1);
+            {
+                unaryOpFound = true;
+                unaryOp      = delimOp;
+                subStrPos    = inString.find(delimOp.first, startPos+1);
+            }
 
             // position in string > -1 if we have a match
             if (subStrPos > -1)
@@ -483,6 +490,13 @@ XTExprsnParser::DelimPair XTExprsnParser::findNextDelimiter(const std::string& i
                 startPos = subStrPos;
                 break;
             }
+        }
+
+        // Check to see if only operator was a unary operator
+        if (unaryOpFound && startPos == 0)
+        {
+            fndDelim = unaryOp;
+            startPos = 0;
         }
     }
 
