@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Fri Mar  7 14:11:18 PST 2008
+GlastClassify/src/XT
+
+Modified Files:
+	XTExprsnParser.cxx XprsnTree.h 
+Log Message:
+Fixing potential problem with unary operators
+    *
+------------------------------------------------------------
+User: usher  Fri Mar  7 14:11:18 PST 2008
 GlastClassify/src
 
 Modified Files:
