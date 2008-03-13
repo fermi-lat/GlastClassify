@@ -1,33 +1,4 @@
 ------------------------------------------------------------
-User: usher  Thu Mar 13 14:05:13 PDT 2008
-GlastClassify/doc
-
-Modified Files:
-	release.notes 
-Log Message:
-Preparing to tag v6r1p1
-    *
-------------------------------------------------------------
-User: usher  Thu Mar 13 14:05:13 PDT 2008
-GlastClassify/cmt
-
-Modified Files:
-	requirements 
-Log Message:
-Preparing to tag v6r1p1
-    *
-------------------------------------------------------------
-User: usher  Thu Mar 13 13:36:08 PDT 2008
-GlastClassify/xml
-
-Added Files:
-	Pass6_Analysis_Complete_PSep_5.xml 
-Removed Files:
-	Pass6_Analysis_Complete_PSep_3.xml 
-Log Message:
-Updating the analysis file
-    *
-------------------------------------------------------------
 User: usher  Fri Mar  7 14:11:18 PST 2008
 GlastClassify/src/XT
 
