@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Mar 17 10:19:59 PDT 2008
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Preparing to tag v6r1p3 with Pass6_Analysis_Complete_RRmod_2.xml
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-01-02, operation: add
 Package: GlastClassify
