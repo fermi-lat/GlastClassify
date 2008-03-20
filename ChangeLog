@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Mar 20 08:38:20 PDT 2008
+GlastClassify/xml
+
+Modified Files:
+	Pass6_Analysis_Complete_RRmod_2_NB.xml 
+Log Message:
+Change "LkHd" to "Likelihood" in node 1640
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-01-04, operation: add
 Package: GlastClassify
