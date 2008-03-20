@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.53 2008/03/17 17:19:59 usher Exp $
+$Id: release.notes,v 1.54 2008/03/19 01:04:59 usher Exp $
 @verbatim
+19-Mar-09  v6r1p5 TU  Fix xml file: "LkHd" to "LikeliHood" in node 1640
 18-Mar-09  v6r1p4 TU  Pass6_Analysis_Complete_RRmod_2_NB.xml
 17-Mar-08  v6r1p3 TU  Tag with Pass6_Analysis_Complete_RRmod_2.xml
 17-Mar-08  v6r1p2 TU  Tag with Pass6_Analysis_Complete_PSep_6.xml 
