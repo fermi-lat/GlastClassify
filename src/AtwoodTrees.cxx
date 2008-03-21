@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.42 2008/03/17 17:19:59 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.43 2008/03/19 00:54:57 usher Exp $
 
 */
 #include "AtwoodTrees.h"
@@ -17,7 +17,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.42 2
 
 namespace {
     // This should be changed each time there is a new file, to make it defautl
-    std::string default_xml("$(GLASTCLASSIFYROOT)/xml/Pass6_Analysis_Complete_RRmod_2_NB.xml");
+    std::string default_xml("$(GLASTCLASSIFYROOT)/xml/Pass6_Analysis_Complete_RRmod_3_NB.xml");
 }
 /* 
 */
