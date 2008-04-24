@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Thu Apr 24 12:42:14 PDT 2008
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Fix to im worksheet: acos(-X-Y-Z) -> 3.14159265358979-acos(X+Y+Z)
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-01-07, operation: add
 Package: GlastClassify
