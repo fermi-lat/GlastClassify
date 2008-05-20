@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.44 2008/03/21 22:19:26 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.45 2008/05/20 21:28:24 lsrea Exp $
 
 */
 #include "AtwoodTrees.h"
@@ -25,7 +25,7 @@ using namespace GlastClassify;
 
 //_________________________________________________________________________
 
-/** @page meritTuple_CTB_variables
+/** @page merittuple
 @section ctbVars CTB Variables
 This list of CTB variables is up-to-date as of GlastClassify v6r2p1, April 30, 2008.
 We will <em>attempt</em> to keep it that way, but it's not yet guaranteed, since the
