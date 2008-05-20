@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: lsrea  Tue May 20 16:15:21 PDT 2008
+GlastClassify/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+revert page name to 'merittuple' so that the workbook link doesn't break
+
+    *
+------------------------------------------------------------
+User: lsrea  Tue May 20 16:15:21 PDT 2008
 GlastClassify/cmt
 
 Modified Files:
