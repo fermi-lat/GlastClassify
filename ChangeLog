@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Tue May 20 16:15:22 PDT 2008
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx 
+Log Message:
+revert page name to 'merittuple' so that the workbook link doesn't break
+
+    *
+------------------------------------------------------------
 User: lsrea  Tue May 20 16:15:21 PDT 2008
 GlastClassify/doc
 
