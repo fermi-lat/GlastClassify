@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Tue May 20 16:15:21 PDT 2008
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+revert page name to 'merittuple' so that the workbook link doesn't break
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-02-02, operation: add
 Package: GlastClassify
