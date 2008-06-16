@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Jun 16 14:57:10 PDT 2008
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx AtwoodTrees.h 
+Log Message:
+Removing references to FilterStatus_HI
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-02-03, operation: add
 Package: GlastClassify
