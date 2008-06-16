@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.h
     @brief  Declare class AtwoodTrees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.h,v 1.4 2007/07/13 18:54:58 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.h,v 1.5 2008/01/23 21:30:29 usher Exp $
 */
 #ifndef GlastClassify_AtwoodTrees_h
 #define GlastClassify_AtwoodTrees_h
@@ -44,7 +44,7 @@ private:
     const Item*   m_TkrNumTracks;
     const Item*   m_CalEnergyRaw  ;
     const Item*   m_CalCsIRLn   ;  
-    const Item*   m_FilterStatus_HI;
+    const Item*   m_obfGamStatus;
     const Item*   m_eventId;
     const Item*   m_run;
 
