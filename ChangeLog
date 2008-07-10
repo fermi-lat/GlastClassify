@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Thu Jul 10 11:25:46 PDT 2008
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Edit xml to fix exception for CTBCalPSFErr in real data
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-02-04, operation: add
 Package: GlastClassify
