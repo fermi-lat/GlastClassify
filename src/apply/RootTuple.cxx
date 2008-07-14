@@ -1,7 +1,7 @@
 /** @file RootTuple.cxx
     @brief implement class RootTuple
 
- $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.10 2008/02/08 21:18:12 usher Exp $
+ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.11 2008/03/19 00:54:57 usher Exp $
   Original author T. Burnett (w/ help from H. Kelley)
 */
 #include "RootTuple.h"
@@ -47,6 +47,7 @@ public:
         void* tempPtr = m_leaf->GetValuePointer();
 
         // If it is not the same then we update.
+// LSR 14-Jul-08 code for ntuple types
         if (m_pdata != tempPtr)
         {
             m_pdata = tempPtr;
@@ -55,6 +56,10 @@ public:
         if (m_type == "UInt_t")
         {
             *(reinterpret_cast<int*>(m_pdata)) = *(reinterpret_cast<int*>(data));
+        }
+        if (m_type == "ULong64_t")
+        {
+            *(reinterpret_cast<int*>(m_pdata)) = *(reinterpret_cast<unsigned long long*>(data));
         }
         else if (m_type == "Float_t")
         {

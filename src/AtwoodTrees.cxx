@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.46 2008/05/20 23:15:22 lsrea Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.47 2008/06/16 21:57:10 usher Exp $
 
 */
 #include "AtwoodTrees.h"
@@ -202,8 +202,10 @@ bool AtwoodTrees::execute()
     double calenergy    = *m_CalEnergyRaw;
     double calCsiRln    = *m_CalCsIRLn;
 
-    int    eventId      = *m_eventId;
-    int    run          = *m_run;
+// LSR 14-Jul-08 code for ntuple types; potential changes here!
+
+    unsigned long long eventId = *m_eventId;
+    int                run     = *m_run;
 
     // Always zero the CTB output values in case cuts below fail
     m_treeAnalysis->zeroCTvals();
