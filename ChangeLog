@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Mon Jul 14 16:39:00 PDT 2008
+GlastClassify/GlastClassify
+
+Modified Files:
+	ITupleInterface.h 
+Log Message:
+Mods for unsigned long long (EvtEventId)
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-02-05, operation: add
 Package: GlastClassify
