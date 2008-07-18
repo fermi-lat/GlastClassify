@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Jul 18 09:27:42 PDT 2008
+GlastClassify/xml
+
+Removed Files:
+	Pass6_Analysis_Complete_RRmod_3_NB.xml 
+Log Message:
+Remove CalEnergy, CsiRadLen and TkrNumTracks pre-filter from AtwoodTrees.cxx, no done in the xml file. Also remove the "old" Pass 6 analysis in favor of the update one with the prefilter included in it.
+    *
+------------------------------------------------------------
 User: usher  Fri Jul 18 09:27:41 PDT 2008
 GlastClassify/src
 
