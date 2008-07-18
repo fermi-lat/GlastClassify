@@ -1,7 +1,7 @@
 /** @file RootTuple.cxx
     @brief implement class RootTuple
 
- $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.11 2008/03/19 00:54:57 usher Exp $
+ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.12 2008/07/14 23:39:01 lsrea Exp $
   Original author T. Burnett (w/ help from H. Kelley)
 */
 #include "RootTuple.h"
@@ -180,6 +180,20 @@ void RootTuple::addItem(const std::string& name, double& value)
         leaf->SetAddress(&value);
     }else {
         m_tree->Branch(name.c_str(), (void*)&value, (name+"/D").c_str());
+    }
+}
+
+void RootTuple::addItem(const std::string& name, unsigned long long& value)
+{
+    TLeaf* leaf = m_tree->GetLeaf(name.c_str());
+    if( leaf!=0) {
+        std::cout << "Adding item "<< name << ", which already exists" << std::endl;
+        if( std::string(leaf->GetTypeName()) !="ULong64_t") {
+            throw std::invalid_argument("RootTuple::addItem replacing wrong type");
+        }
+        leaf->SetAddress(&value);
+    }else {
+        m_tree->Branch(name.c_str(), (void*)&value, (name+"/l").c_str());
     }
 }
 
