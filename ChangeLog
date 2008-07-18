@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Thu Jul 17 21:09:43 PDT 2008
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+patch RootTuple to include addItem method for unsigned long long
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-03-01, operation: add
 Package: GlastClassify
