@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Jul 18 09:24:38 PDT 2008
+GlastClassify/xml
+
+Added Files:
+	Pass6_Analysis_Protected.xml 
+Log Message:
+This is Pass6_Analysis_Complete_RRmod_3_NB.xml with the CalEnergy, CsiRadLen and TkrNumTracks pre filter that was in AtwoodTrees.cxx moved into the analysis. This allows variables like CTBClassLevel to get their correct initialization
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-03-02, operation: add
 Package: GlastClassify
