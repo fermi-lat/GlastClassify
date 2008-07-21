@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Mon Jul 21 08:17:29 PDT 2008
+GlastRelease-scons/GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Removed dependency on CMT env variables
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-04-00, operation: add
 Package: GlastClassify
