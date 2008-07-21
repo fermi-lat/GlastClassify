@@ -1,11 +1,12 @@
 /**@file main.cxx
 @brief main program for application to test GLAST classification trees
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/test/test_main.cxx,v 1.9 2005/11/22 21:19:02 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/src/test/test_main.cxx,v 1.10 2005/11/22 22:02:53 usher Exp $
 
 */
 
 #include "GlastClassify/TreeFactory.h"
+#include "facilities/commonUtilities.h"
 #include <stdexcept>
 #include <iostream>
 
@@ -71,13 +72,14 @@ private:
 
 int main(int, char ** )
 {
+    facilities::commonUtilities::setupEnvironment();
     int rc=0;
     std::string name("goodcal");
     try {
         std::cout << "Gleam classification test:\n\ttree:\t"
             << name << std::endl;
         const char * root= ::getenv("GLASTCLASSIFYROOT");
-        std::string tree_path( std::string(root)+"/data");
+	std::string tree_path = facilities::commonUtilities::getDataPath("GlastClassify");
 
         std::cout << "\tpath:\t" << tree_path << std::endl;
 
