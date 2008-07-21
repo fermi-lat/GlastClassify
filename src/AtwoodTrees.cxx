@@ -1,7 +1,7 @@
 /** @file AtwoodTrees.cxx
 @brief Implement tree definition and evaluation 
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/src/AtwoodTrees.cxx,v 1.49 2008/07/18 16:27:41 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/AtwoodTrees.cxx,v 1.50 2008/07/21 15:17:30 glastrm Exp $
 
 */
 #include "AtwoodTrees.h"
@@ -142,7 +142,7 @@ AtwoodTrees::AtwoodTrees(ITupleInterface& tuple, std::ostream& log, std::string 
     m_AcdCornerDoca    = tuple.getItem("AcdCornerDoca");
     m_Tkr1SSDVeto      = tuple.getItem("Tkr1SSDVeto");
 
-    m_eventId          = tuple.getItem("EvtEventId");
+    m_eventId          = tuple.getItem("EvtEventId64");
     m_run              = tuple.getItem("EvtRun");
 
     // Default values as of 4/5/2007 at request of Bill Atwood
