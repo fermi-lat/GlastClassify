@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: lsrea  Mon Jul 21 14:31:28 PDT 2008
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx 
+Log Message:
+change EvtEventId to EvtEventId64
+
+    *
+------------------------------------------------------------
+User: lsrea  Mon Jul 21 14:31:28 PDT 2008
 GlastClassify/doc
 
 Modified Files:
