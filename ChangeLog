@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: glastrm  Mon Jul 21 08:17:30 PDT 2008
+GlastRelease-scons/GlastClassify/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+Removed dependency on CMT env variables
+    *
+------------------------------------------------------------
+User: glastrm  Mon Jul 21 08:17:30 PDT 2008
 GlastRelease-scons/GlastClassify/src/apply
 
 Modified Files:
