@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Mon Jul 21 08:17:30 PDT 2008
+GlastRelease-scons/GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx 
+Log Message:
+Removed dependency on CMT env variables
+    *
+------------------------------------------------------------
 User: glastrm  Mon Jul 21 08:17:29 PDT 2008
 GlastRelease-scons/GlastClassify/cmt
 
