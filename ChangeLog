@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Mon Jul 21 14:31:28 PDT 2008
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+change EvtEventId to EvtEventId64
+
+    *
+------------------------------------------------------------
 User: glastrm  Mon Jul 21 08:17:30 PDT 2008
 GlastRelease-scons/GlastClassify/src/test
 
