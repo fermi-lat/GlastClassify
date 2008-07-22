@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Mon Jul 21 21:19:17 PDT 2008
+GlastRelease-scons/GlastClassify/src/apply
+
+Modified Files:
+	apply_main.cxx 
+Log Message:
+Added missing includes of commonUtilities
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r4p0gr0, operation: add
 Package: GlastClassify
