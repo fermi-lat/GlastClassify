@@ -1,13 +1,14 @@
 /** @file apply_main.cxx 
 @brief Application that applies decision trees to a root tuple
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/src/apply/apply_main.cxx,v 1.15 2006/10/23 21:30:18 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/src/apply/apply_main.cxx,v 1.16 2008/07/21 15:17:30 glastrm Exp $
 */
 
 #include "RootTuple.h"
 
 #include "../AtwoodTrees.h"
 #include "facilities/Util.h"
+#include "facilities/commonUtilities.h"
 
 #include <iostream>
 #include <string>
