@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Mon Jul 21 20:39:06 PDT 2008
+GlastClassify/src
+
+Modified Files:
+      Tag: GlastReleasev15r28
+	AtwoodTrees.cxx 
+Log Message:
+merge Leon's update onto branch to avoid CMT env var removal
+    *
+------------------------------------------------------------
+User: heather  Mon Jul 21 20:39:06 PDT 2008
 GlastClassify/doc
 
 Modified Files:
