@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Mon Jul 21 20:39:05 PDT 2008
+GlastClassify/cmt
+
+Modified Files:
+      Tag: GlastReleasev15r28
+	requirements 
+Log Message:
+merge Leon's update onto branch to avoid CMT env var removal
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-04-01, operation: add
 Package: GlastClassify
