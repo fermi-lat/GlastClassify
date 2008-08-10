@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: lsrea  Sat Aug  9 21:25:43 PDT 2008
+GlastClassify/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+Protect CTBCalPSFErr... this was fixed in the previous version of the Pass6 xml
+
+    *
+------------------------------------------------------------
+User: lsrea  Sat Aug  9 21:25:43 PDT 2008
 GlastClassify/cmt
 
 Modified Files:
