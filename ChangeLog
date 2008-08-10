@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Sat Aug  9 21:25:43 PDT 2008
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Protect CTBCalPSFErr... this was fixed in the previous version of the Pass6 xml
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-05-01, operation: add
 Package: GlastClassify
