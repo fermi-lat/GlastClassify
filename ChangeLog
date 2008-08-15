@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: ecephas  Fri Aug 15 14:22:42 PDT 2008
+GlastRelease-scons/GlastClassify
+
+Added Files:
+	SConscript 
+Log Message:
+Added SConscript files for packages
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-05-02, operation: add
 Package: GlastClassify
