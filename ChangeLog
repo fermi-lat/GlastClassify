@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: ecephas  Wed Aug 20 11:22:29 PDT 2008
+GlastRelease-scons/GlastClassify
+
+Modified Files:
+	SConscript 
+Log Message:
+
+Added 'src/XT/*cxx' to the source file list of ClassificationTree library.
+
+    *
+------------------------------------------------------------
 User: ecephas  Fri Aug 15 14:42:35 PDT 2008
 GlastRelease-scons/GlastClassify
 
