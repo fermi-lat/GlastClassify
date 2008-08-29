@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: ecephas  Fri Aug 29 16:24:21 PDT 2008
+GlastRelease-scons/GlastClassify
+
+Modified Files:
+	SConscript 
+Log Message:
+Added progEnv.Tool('addLibrary', library = ['ClassificationTree'])
+
+    *
+------------------------------------------------------------
 User: ecephas  Wed Aug 20 11:22:29 PDT 2008
 GlastRelease-scons/GlastClassify
 
