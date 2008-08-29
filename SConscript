@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/SConscript,v 1.1 2008/08/15 21:22:42 ecephas Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/SConscript,v 1.2 2008/08/20 18:22:29 ecephas Exp $
 # Authors: Tracy Usher <usher@slac.stanford.edu>
 # Version: GlastClassify-06-05-01
 
@@ -20,6 +20,7 @@ ClassificationTree = libEnv.StaticLibrary('ClassificationTree', listFiles(['src/
 GlastClassify = libEnv.SharedLibrary('GlastClassify', listFiles(['src/Dll/*.cxx']))
 
 progEnv.Tool('GlastClassifyLib')
+progEnv.Tool('addLibrary', library = ['ClassificationTree'])
 apply = progEnv.Program('apply', listFiles(['src/apply/*.cxx']))
 progEnv.Tool('registerObjects', package = 'GlastClassify', 
 	libraries = [ClassificationTree, GlastClassify], 
