@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+TAG
+Tag name: GlastClassify-06-05-02, operation: add
+Package: GlastClassify
+User: ecephas  Mon Dec  8 13:40:00 2008
+Files:
+  GlastClassify/SConscript  1.4
+  GlastClassify/SConscript  1.4
+
+    *
+------------------------------------------------------------
 User: ecephas  Mon Dec  8 13:39:54 PST 2008
 GlastRelease-scons/GlastClassify
 
