@@ -1,5 +1,13 @@
 ------------------------------------------------------------
 User: usher  Thu Jan 22 12:44:21 PST 2009
+GlastClassify/src/XT
+
+Modified Files:
+	XTExprsnParser.cxx XTExprsnParser.h XTtupleVars.h 
+Log Message:
+    *
+------------------------------------------------------------
+User: usher  Thu Jan 22 12:44:21 PST 2009
 GlastClassify/src/ImActivityNodes
 
 Modified Files:
