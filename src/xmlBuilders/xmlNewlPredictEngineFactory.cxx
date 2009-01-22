@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlNewPredictEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.6 2007/07/11 16:24:41 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.7 2008/02/06 05:21:54 usher Exp $
 */
 
 #include "xmlNewPredictEngineFactory.h"
@@ -93,6 +93,7 @@ IImActivityNode* xmlNewPredictEngineFactory::operator()(const DOMElement* xmlAct
     else
     {
         predict = new XTcolumnVal<std::string>(predClass, "categorical");
+        predict->setDataValue("");
         XprsnParser().getXtTupleVars()[predClass] = predict;
     }
 

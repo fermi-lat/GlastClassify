@@ -1,7 +1,7 @@
 /** @file ImSheetBuilder.cxx
  *    @brief implementation of classification::Tree; declaration and implementation or its private helper classification::ImSheetBuilder::Node
  *
- *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/newPredictEngineNode.cxx,v 1.3 2006/06/30 18:06:31 usher Exp $
+ *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/newPredictEngineNode.cxx,v 1.4 2006/07/11 21:07:35 usher Exp $
  */
 
 #include "newPredictEngineNode.h"
@@ -91,11 +91,7 @@ typedef std::map<std::string,PredNodeInfo>::iterator PredNodeMapItr;
 void newPredictEngineNode::execute()
 {
     // Loop through the forest evaluating the trees
-    //double weightSum   = 0.;
-    //double runningWght = 0.;
-
-    //int treeNum = 0;
-    std::string predict;
+    std::string predict = "";
 
     PredNodeMap predNodeMap;
 
