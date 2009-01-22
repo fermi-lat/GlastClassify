@@ -1,7 +1,7 @@
 /**@file XTtupleVars.h
 @brief Contains class definitions for implementing a "local" ntuple  row
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTtupleVars.h,v 1.3 2006/06/30 18:06:31 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTtupleVars.h,v 1.4 2006/07/27 20:19:52 usher Exp $
 */
 
 #ifndef XTtupleVars_h
@@ -77,7 +77,7 @@ public:
         return m_data;
     }
 
-    void setDataValue(const T data) {m_data = data; setValidFlag();}
+    void setDataValue(const T& data) {m_data = data; setValidFlag();}
 private:
     T           m_data;
 

@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlCreateColumnsEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateColumnsEngineFactory.cxx,v 1.4 2006/06/30 18:06:31 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateColumnsEngineFactory.cxx,v 1.5 2006/07/27 20:19:52 usher Exp $
 */
 
 #include "xmlCreateColumnsEngineFactory.h"
@@ -88,7 +88,7 @@ IImActivityNode* xmlCreateColumnsEngineFactory::operator()(const DOMElement* xml
         }
             
         // Pointer to expression node
-        IXTExprsnNode* xprsn = XprsnParser().parseExpression(sExpression);
+        IXTExprsnNode* xprsn = XprsnParser().parseExpression(sExpression, sVarType);
 
         // Get the tuple column value pointer
         XTcolumnValBase*     xtColumnVal = 0;

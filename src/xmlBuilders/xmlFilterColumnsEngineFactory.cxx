@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlFilterColumnsEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFilterColumnsEngineFactory.cxx,v 1.1 2005/11/07 21:50:54 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFilterColumnsEngineFactory.cxx,v 1.2 2005/11/22 21:19:03 usher Exp $
 */
 
 #include "xmlFilterColumnsEngineFactory.h"
@@ -45,10 +45,21 @@ IImActivityNode* xmlFilterColumnsEngineFactory::operator()(const DOMElement* xml
     // Create the node
     FilterColumnsEngineNode* node = new FilterColumnsEngineNode(sType, sName, sId);
 
-    DOMElement* xmlProperty   = getXTProperty(xmlActivityNode, "excludeColumns");
-    DOMElement* xmlExpression = xmlBase::Dom::findFirstChildByName(xmlProperty,  "Property");
+    // expression string
+    std::string sExpression = "";
 
-    std::string sExpression = xmlBase::Dom::getAttribute(xmlExpression, "name");
+    // Enclose in a try-catch because some nodes are no-ops
+    try
+    {
+        DOMElement* xmlProperty   = getXTProperty(xmlActivityNode, "excludeColumns");
+        DOMElement* xmlExpression = xmlProperty ? xmlBase::Dom::findFirstChildByName(xmlProperty,  "Property") : 0;
+
+        sExpression = xmlExpression ? xmlBase::Dom::getAttribute(xmlExpression, "name") : "";
+    }
+    catch(...)
+    {
+        sExpression = "";
+    }
 
     node->setExpression(sExpression);
 
