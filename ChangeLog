@@ -2,6 +2,14 @@
 TAG
 Tag name: v6r5p2, operation: mov
 Package: GlastClassify
+User: glastrm  Thu Jan 22 17:12:51 2009
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: v6r5p2, operation: mov
+Package: GlastClassify
 User: glastrm  Thu Jan 22 17:02:33 2009
 Files:
   GlastClassify/SConscript  1.6
