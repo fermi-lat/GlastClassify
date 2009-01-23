@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: ecephas  Thu Jan 22 16:21:11 PST 2009
+GlastRelease-scons/GlastClassify
+
+Modified Files:
+	GlastClassifyLib.py 
+Log Message:
+Check in for GlastRelease-15-49-00
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-00-00, operation: add
 Package: GlastClassify
