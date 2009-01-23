@@ -1,7 +1,7 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/SConscript,v 1.4 2008/12/08 21:39:54 ecephas Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/SConscript,v 1.3 2008/08/29 23:24:21 ecephas Exp $
 # Authors: Tracy Usher <usher@slac.stanford.edu>
-# Version: GlastClassify-07-00-00
+# Version: GlastClassify-06-05-02
 Import('baseEnv')
 Import('listFiles')
 Import('packages')
@@ -25,6 +25,7 @@ progEnv.Tool('registerObjects', package = 'GlastClassify',
 	libraries = [ClassificationTree, GlastClassify], 
 	binaries = [apply], 
 	includes = listFiles(['GlastClassify/*.h']))
+
 
 
 
