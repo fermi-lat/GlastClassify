@@ -1,5 +1,13 @@
 ------------------------------------------------------------
 TAG
+Tag name: v6r5p2, operation: add
+Package: GlastClassify
+User: glastrm  Thu Jan 22 17:02:19 2009
+Files:
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: GlastClassify-06-05-02, operation: mov
 Package: GlastClassify
 User: glastrm  Thu Jan 22 17:01:57 2009
