@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 TAG
+Tag name: v6r5p2, operation: mov
+Package: GlastClassify
+User: glastrm  Thu Jan 22 17:02:33 2009
+Files:
+  GlastClassify/SConscript  1.6
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: v6r5p2, operation: add
 Package: GlastClassify
 User: glastrm  Thu Jan 22 17:02:19 2009
