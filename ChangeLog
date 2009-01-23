@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: GlastClassify-06-05-02, operation: mov
+Package: GlastClassify
+User: glastrm  Thu Jan 22 17:01:57 2009
+Files:
+  GlastClassify/SConscript  1.6
+
+    *
+------------------------------------------------------------
 User: ecephas  Thu Jan 22 16:54:45 PST 2009
 GlastRelease-scons/GlastClassify
 
