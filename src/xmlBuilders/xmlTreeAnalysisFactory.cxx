@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeAnalysisFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.8 2008/02/06 05:21:54 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.9 2009/01/22 20:44:21 usher Exp $
 */
 
 #include "xmlTreeAnalysisFactory.h"
@@ -137,10 +137,18 @@ int GlastClassify::xmlTreeAnalysisFactory::findAllOutputVars(GlastClassify::Tree
     }
 
     // Output of Prediction nodes is PREDICT.class
-    std::string               predClass = "PREDICT.class";
-    XTcolumnVal<std::string>* predict   = new XTcolumnVal<std::string>(predClass, "categorical");
-    predict->setDataValue("");
-    parser.getXtTupleVars()[predClass] = predict;
+    std::string predClass = "PREDICT.class";
+    
+    // But make sure it doesn't already exist!
+    XTtupleMap::iterator dataIter = parser.getXtTupleVars().find(predClass);
+  
+    // Doesn't exist, add it
+    if (dataIter == parser.getXtTupleVars().end())
+    {
+        XTcolumnVal<std::string>* predict   = new XTcolumnVal<std::string>(predClass, "categorical");
+        predict->setDataValue("");
+        parser.getXtTupleVars()[predClass] = predict;
+    }
 
     //done
     return numVars;
