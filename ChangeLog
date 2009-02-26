@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: v7r0p1, operation: mov
+Package: GlastClassify
+User: glastrm  Thu Feb 26 12:33:46 2009
+Files:
+  GlastClassify/SConscript  1.7
+
+    *
+------------------------------------------------------------
 User: glastrm  Thu Feb 26 12:30:32 PST 2009
 GlastClassify
 
