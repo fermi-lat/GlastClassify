@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlFindOutputVars
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFindOutputVars.cxx,v 1.1 2006/10/04 20:00:37 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlFindOutputVars.cxx,v 1.2 2007/07/24 18:57:23 usher Exp $
 */
 
 #include "xmlFindOutputVars.h"
@@ -142,12 +142,19 @@ int xmlFindOutputVars::numPredictEngineVars(const DOMElement* xmlActivityNode)
                 if (propertyName == "specifiedCategory")
                 {
                     std::string sName = xmlBase::Dom::getAttribute(xmlProperty, "value");
+    
+                    // But make sure it doesn't already exist!
+                    XTtupleMap::iterator dataIter = XprsnParser().getXtTupleVars().find(sName);
+  
+                    // Doesn't exist, add it
+                    if (dataIter == XprsnParser().getXtTupleVars().end())
+                    {
+                        XTcolumnValBase* xtColumnVal = new XTcolumnVal<REALNUM>(sName);
 
-                    XTcolumnValBase* xtColumnVal = new XTcolumnVal<REALNUM>(sName);
+                        XprsnParser().getXtTupleVars()[sName] = xtColumnVal;
 
-                    XprsnParser().getXtTupleVars()[sName] = xtColumnVal;
-
-                    numVars++;
+                        numVars++;
+                    }
                 }
             }
 
