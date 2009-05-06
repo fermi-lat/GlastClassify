@@ -1,7 +1,7 @@
 /** @file apply_main.cxx 
 @brief Application that applies decision trees to a root tuple
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.17 2008/07/22 04:19:17 glastrm Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.18 2008/07/23 04:37:34 heather Exp $
 */
 
 #include "RootTuple.h"
@@ -85,6 +85,9 @@ int main(int argc, char* argv[])
         // create the ct: pass in the tuple.
         AtwoodTrees ctrees(tuple, std::cout, CTFilePath);
 
+        // set up the output Root file, branch
+        tuple.setOutputFile(output_filename);
+
         // Are we pruning as well?
         bool keepAllRows = true; // Eventually provide ability to set this true/false...
 
@@ -95,9 +98,6 @@ int main(int argc, char* argv[])
 
             if (pruneEm == "true") keepAllRows = false;
         }
-
-        // set up the output Root file, branch
-        tuple.setOutputFile(output_filename);
 
         int numInputRows  = 0;
         int numOutputRows = 0;

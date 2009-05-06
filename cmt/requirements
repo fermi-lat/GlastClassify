@@ -2,7 +2,7 @@ package GlastClassify
 
 version v7r0p1
 author T. Usher <tracy.usher@slac.stanford.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.95 2009/01/22 21:40:10 usher Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.96 2009/02/26 20:27:21 usher Exp $
 use GlastPolicy *
 use facilities *
 
@@ -44,7 +44,7 @@ macro txt "" WIN32 " *.txt"
 # application classify -s=../src/classify $(source)
 
 set PRUNEROWS "false"
-set MERIT_INPUT_FILE "C:/Glast/data/AllGammav17r3lownoise_merit.root"
+set MERIT_INPUT_FILE "C:/Glast/data/AllGammav17r3Overlay_merit.root"
 #set MERIT_INPUT_FILE "root://glast-rdr//glast/mc/ServiceChallenge/allGamma-GR-v13r9p3-Lyon/merit/allGamma-GR-v13r9p3-Lyon-000000-merit.root"
 set MERIT_OUTPUT_FILE "test.root"
 set CTREE_PATH "${GLASTCLASSIFYROOT}/xml/Pass6_Analysis_Protected.xml"

@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlReadTextFileEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlReadTextFileEngineFactory.cxx,v 1.4 2006/07/27 20:19:52 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlReadTextFileEngineFactory.cxx,v 1.5 2007/07/11 16:24:41 usher Exp $
 */
 
 #include "xmlReadTextFileEngineFactory.h"
@@ -66,11 +66,14 @@ IImActivityNode* xmlReadTextFileEngineFactory::operator()(const DOMElement* xmlA
         // Not found means we create the entry
         if (dataIter == XprsnParser().getXtTupleVars().end())
         {
+            // May 6, 2009 - Bill Atwood asks that we not create new variables in this node
+            //               in order to not include now obsolete CTB variables
+
             // For now we assume that all input variables are going to be "continuous" 
-            xtColumnVal = new XTcolumnVal<REALNUM>(sVarName);
+            //xtColumnVal = new XTcolumnVal<REALNUM>(sVarName);
 
             // Add to the list...
-            XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
+            //XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
         }
     }
 

@@ -1,7 +1,7 @@
 /** @file ClassifyAlg.cxx
 @brief Declaration and implementation of Gaudi algorithm ClassifyAlg
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.5 2008/01/23 21:30:29 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.6 2008/07/14 23:39:01 lsrea Exp $
 */
 
 #include "GaudiKernel/Algorithm.h"
@@ -50,7 +50,13 @@ public:
         }
         else if (m_type == "UChar_t")
         {
-            *m_pdata = *((reinterpret_cast<std::string*>(data))->data());
+            memset(m_pdata, ' ', 80);
+            strcpy(reinterpret_cast<char*>(m_pdata), reinterpret_cast<char*>(data));
+        }
+        else if (m_type == "Char_t")
+        {
+            memset(m_pdata, ' ', 80);
+            strcpy(reinterpret_cast<char*>(m_pdata), reinterpret_cast<char*>(data));
         }
         else
         {
@@ -106,6 +112,16 @@ public:
             int* data = (int*)dummy;
             item =new GleamItem<int>(name, type, data);
         }
+        else if (type == "UChar_t")
+        {
+            char* data = (char*)dummy;
+            item = new GleamItem<char>(name, type, data);
+        }
+        else if (type == "Char_t")
+        {
+            char* data = (char*)dummy;
+            item = new GleamItem<char>(name, type, data);
+        }
         else
         {
             throw std::invalid_argument("GleamTuple::getItem: attempting to set an unrecognized data type");
@@ -127,6 +143,10 @@ public:
         m_tuple->addItem(m_treename, name, &value);
     }
     void addItem(const std::string& name, unsigned long long & value)
+    {
+        m_tuple->addItem(m_treename, name, &value);
+    }
+    void addItem(const std::string& name, char & value)
     {
         m_tuple->addItem(m_treename, name, &value);
     }
