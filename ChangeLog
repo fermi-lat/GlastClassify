@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Wed May  6 07:43:54 PDT 2009
+GlastClassify/src/apply
+
+Modified Files:
+	RootTuple.cxx RootTuple.h apply_main.cxx 
+Log Message:
+Modifications for "final" Pass 7
+    *
+------------------------------------------------------------
 User: usher  Wed May  6 07:43:53 PDT 2009
 GlastClassify/src/XT
 
