@@ -1,4 +1,4 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.h,v 1.4 2008/02/08 21:18:12 usher Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.h,v 1.5 2008/07/18 04:09:43 heather Exp $
 // Original author T. Burnett (w/ help from H. Kelley)
 #ifndef ROOTTUPLE_H
 #define ROOTTUPLE_H
@@ -25,6 +25,7 @@ public:
     void addItem(const std::string& name, float& value);
     void addItem(const std::string& name, double& value);
     void addItem(const std::string& name, unsigned long long& value);
+    void addItem(const std::string& name, char & value);
 
     //! return false when no more events
     bool nextEvent();

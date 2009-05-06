@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeAnalysisFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.9 2009/01/22 20:44:21 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.10 2009/02/26 20:04:13 usher Exp $
 */
 
 #include "xmlTreeAnalysisFactory.h"
@@ -107,7 +107,7 @@ int GlastClassify::xmlTreeAnalysisFactory::findAllOutputVars(GlastClassify::Tree
     // Root...    
     DOMElement* domRoot = m_domDocument->getDocumentElement();
 
-    XTExprsnParser parser(tree->xtTupleMap());
+    XTExprsnParser parser(tree->xtTupleMap(), tree->xtConstants());
 
     xmlFindOutputVars varFinder(parser);
 
@@ -163,7 +163,7 @@ int GlastClassify::xmlTreeAnalysisFactory::findAllActivityNodes(GlastClassify::T
     // Build map between types and implementation of that type
     std::map<std::string, IxmlEngineFactory*> nodeFactoryMap;
 
-    XTExprsnParser parser(tree->xtTupleMap());
+    XTExprsnParser parser(tree->xtTupleMap(), tree->xtConstants());
 
     nodeFactoryMap["AppendEngineNode"]                  = new xmlAppendEngineFactory(parser);
     nodeFactoryMap["ClassificationAgreementEngineNode"] = new xmlClassificationAgreementEngineFactory(parser);

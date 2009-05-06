@@ -1,7 +1,7 @@
 /**@file XTExprsnParser.h
 @brief Contains class definitions for implementing a "local" ntuple  row
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.h,v 1.6 2007/07/13 19:19:28 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.h,v 1.7 2009/01/22 20:44:21 usher Exp $
 */
 
 #ifndef XTExprsnParser_h
@@ -17,7 +17,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTExprsnParser.h,v 1.
 class XTExprsnParser
 {
 public:
-    XTExprsnParser(XTtupleMap& tuple);
+    XTExprsnParser(XTtupleMap& tuple, XTtupleMap& constants);
     ~XTExprsnParser() {} 
 
     // Parse and expression
@@ -25,6 +25,7 @@ public:
 
     // Provide access mechanism to local tuple
     XTtupleMap& getXtTupleVars() {return m_tuple;}
+    XTtupleMap& getXtConstants() {return m_constants;}
 
 private:
     typedef std::pair<std::string,int>         DelimPair;
@@ -49,6 +50,7 @@ private:
     IXTExprsnNode* parseFunction(std::string& expression, std::string& type);
 
     XTtupleMap&   m_tuple;
+    XTtupleMap&   m_constants;
 
     DelimVector   m_delimiters;
     DelimMap      m_delimMap;

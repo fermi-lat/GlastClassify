@@ -3,7 +3,7 @@
 @brief declaration of class TreeAnalysis
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.5 2006/10/23 21:30:18 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.6 2007/07/13 18:33:23 usher Exp $
 */
 
 #ifndef GlastClassify_TreeAnalysis_h
@@ -61,6 +61,12 @@ public:
     */
     XTtupleMap& xtTupleMap() {return m_xtTupleMap;}
 
+    /** @brief This gives full access to the XTtupleMap used to hold constants
+               This is really intended to be used by the TreeAnalysis "Builder"
+               not by casual users!
+    */
+    XTtupleMap& xtConstants() {return m_xtConstants;}
+
     /** @brief Used by the TreeAnalysisBuilder to add a new node to our structure
     */
     void addNewNode(IImActivityNode* node);
@@ -90,6 +96,9 @@ private:
 
     // Class needed to calcluate local variables used in CT's
     XTtupleMap    m_xtTupleMap;
+
+    // Another to hold constants used in CT's
+    XTtupleMap    m_xtConstants;
 
     // Provide map between "local" variables in analysis and 
     // those existing in the input ntuple

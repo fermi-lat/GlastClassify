@@ -1,7 +1,7 @@
 /**@file XTtupleVars.h
 @brief Contains class definitions for implementing a "local" ntuple  row
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTtupleVars.h,v 1.4 2006/07/27 20:19:52 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XTtupleVars.h,v 1.5 2009/01/22 20:44:21 usher Exp $
 */
 
 #ifndef XTtupleVars_h
@@ -34,7 +34,7 @@ template <class T> std::ostream& operator <<(std::ostream& stream, const XTcolum
 class XTcolumnValBase
 {
 public:
-    XTcolumnValBase(const std::string& name, const std::string& type) : m_name(name), m_type(type), m_valid(false) {}
+    XTcolumnValBase(const std::string& name, const std::string& type) : m_name(name), m_type(type), m_valid(false) { }
     virtual ~XTcolumnValBase() {}
 
     const bool         dataIsValid() const {return m_valid;}
@@ -56,7 +56,7 @@ typedef std::map<std::string,XTcolumnValBase* > XTtupleMap;
 template <class T> class XTcolumnVal : public XTcolumnValBase
 {
 public: 
-    XTcolumnVal(const std::string& name, const std::string& type="continuous") : XTcolumnValBase(name,type) {}
+    XTcolumnVal(const std::string& name, const std::string& type="continuous") : XTcolumnValBase(name,type) { }
     ~XTcolumnVal() {} //delete T;}
 
     const T*           operator()()  const
