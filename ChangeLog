@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Wed May  6 07:43:53 PDT 2009
+GlastClassify/GlastClassify
+
+Modified Files:
+	ITupleInterface.h 
+Log Message:
+Modifications for "final" Pass 7
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-00-01, operation: add
 Package: GlastClassify
