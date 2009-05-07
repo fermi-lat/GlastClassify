@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu May  7 13:08:49 PDT 2009
+GlastClassify/src/ImActivityNodes
+
+Modified Files:
+	CreateColumnsEngineNode.cxx CreateColumnsEngineNode.h 
+Log Message:
+Change map to vector to maintain order of evaulation.
+    *
+------------------------------------------------------------
 User: usher  Wed May  6 07:43:54 PDT 2009
 GlastClassify/src/xmlBuilders
 
