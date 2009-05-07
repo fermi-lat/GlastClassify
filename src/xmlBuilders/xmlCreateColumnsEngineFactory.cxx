@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlCreateColumnsEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateColumnsEngineFactory.cxx,v 1.5 2006/07/27 20:19:52 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlCreateColumnsEngineFactory.cxx,v 1.6 2009/01/22 20:44:21 usher Exp $
 */
 
 #include "xmlCreateColumnsEngineFactory.h"
@@ -48,7 +48,7 @@ IImActivityNode* xmlCreateColumnsEngineFactory::operator()(const DOMElement* xml
     StringList columnNames;
     StringList colExpressions;
     std::vector<StringList> parsedColExps;
-    CreateColumnsEngineNode::XprsnNodeMap xprsnNodeMap;
+    CreateColumnsEngineNode::XprsnNodeVec xprsnNodeVec;
 
     DOMEvector xmlColumnsVec = getXTSubPropVec(xmlActivityNode, "newColumns");
 
@@ -106,14 +106,14 @@ IImActivityNode* xmlCreateColumnsEngineFactory::operator()(const DOMElement* xml
             XprsnParser().getXtTupleVars()[sVarName] = xtColumnVal;
         }
 
-        xprsnNodeMap[xtColumnVal] = xprsn;
+        xprsnNodeVec.push_back(CreateColumnsEngineNode::XprsnPair(xtColumnVal,xprsn));
     }
 
     // Set the expressions
     if (!columnNames.empty())
     {
         node->setColumnNames(columnNames);
-        node->setXprsnNodeMap(xprsnNodeMap);
+        node->setXprsnNodeVec(xprsnNodeVec);
     }
 
     return node;
