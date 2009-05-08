@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri May  8 09:45:46 PDT 2009
+GlastClassify/src
+
+Modified Files:
+	AtwoodTrees.cxx 
+Log Message:
+Updating the xml file to Pass 7 and removing the old Pass 6 file, making Pass 7 the default
+    *
+------------------------------------------------------------
 User: usher  Thu May  7 13:08:50 PDT 2009
 GlastClassify/src/xmlBuilders
 
