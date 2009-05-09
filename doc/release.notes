@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.76 2009/02/26 20:27:21 usher Exp $
+$Id: release.notes,v 1.77 2009/05/08 16:47:11 usher Exp $
 @verbatim
+ 9-May-09  v7r1p1 TU  New xml file to add a couple of CTB variables for Bill
  9-May-09  v7r1p0 TU  First working tag for Pass 7
 26-Feb-09  v7r0p1 TU  Fix bug that wreaked havoc on energy methods
 22-Jan-09  v7r0p0 TU  First round of updates for Pass 7
