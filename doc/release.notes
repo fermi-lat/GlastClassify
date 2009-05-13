@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.78 2009/05/09 03:03:05 usher Exp $
+$Id: release.notes,v 1.79 2009/05/13 03:18:58 usher Exp $
 @verbatim
+13-May-09  v7r2p1 JRB Patch to rename bit fuctions to avoid conflict on linux
 12-May-09  v7r2p0 TU  Version 16 of Pass 7, include bit functions and error trapping
  9-May-09  v7r1p1 TU  New xml file to add a couple of CTB variables for Bill
  9-May-09  v7r1p0 TU  First working tag for Pass 7
