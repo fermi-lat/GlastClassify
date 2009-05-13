@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.15 2008/03/19 00:54:57 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.16 2009/05/06 14:43:53 usher Exp $
 */
 
 #include "TreeAnalysis.h"
@@ -67,42 +67,69 @@ void TreeAnalysis::execute()
         // De-reference to continuous tuple type
         XTcolumnValBase* basePtr = dataIter->second;
 
-        if (basePtr->getType() != "continuous") continue;
-
-        XTcolumnVal<REALNUM>* valPtr = dynamic_cast<XTcolumnVal<REALNUM>*>(basePtr);
-
         // If the cross reference exists, set the local value
         if (nTupleIter != m_nTupleMap.end() && varName.substr(0,3) != "CTB") 
         {
-            // Test precision theory here
-            double tempRes = *(nTupleIter->second);
+            if (basePtr->getType() == "continuous")
+            {
+                // Test precision theory here
+                double tempRes = *(nTupleIter->second);
 
-            std::stringstream convString;
+                std::stringstream convString;
 
-            convString.setf(std::ios::fixed);
-            convString.precision(8);
-            convString << tempRes;
+                convString.setf(std::ios::fixed);
+                convString.precision(8);
+                convString << tempRes;
 
-            float tempRes2;
+                float tempRes2;
 
-            convString >> tempRes2;
+                convString >> tempRes2;
 
-            valPtr->setDataValue(tempRes2);
+                XTcolumnVal<REALNUM>* valPtr = dynamic_cast<XTcolumnVal<REALNUM>*>(basePtr);
+                valPtr->setDataValue(tempRes2);
+            }
+            else
+            {
+                XTcolumnVal<std::string>* valPtr = dynamic_cast<XTcolumnVal<std::string>*>(basePtr);
+//                valPtr->setDataValue(*(nTupleIter->second));
+                // Temporary kludge here which works ONLY because we don't have cat vars in tuple used by CT
+                std::string null = "null";
+                valPtr->setDataValue(null);
+                valPtr->clearValidFlag();
+            }
         }
         // Otherwise, no cross reference... set value to zero and set "valid" flag to false 
         else
         {
-            valPtr->setDataValue(0.);
-            valPtr->clearValidFlag();
+            if (basePtr->getType() == "continuous")
+            {
+                XTcolumnVal<REALNUM>* valPtr = dynamic_cast<XTcolumnVal<REALNUM>*>(basePtr);
+                valPtr->setDataValue(0.);
+                valPtr->clearValidFlag();
+            }
+            else
+            {
+                XTcolumnVal<std::string>* valPtr = dynamic_cast<XTcolumnVal<std::string>*>(basePtr);
+                std::string null = "null";
+                valPtr->setDataValue(null);
+                valPtr->clearValidFlag();
+            }
         }
     }
 
     // Execute the sheet
     try {
-    m_headNode->execute();
-    } catch(...)
+        m_headNode->execute();
+    }
+    catch(XTexception& e)
     {
-        int j = 0;
+        zeroCTvals();
+        throw(e);
+    } 
+    catch(...)
+    {
+        zeroCTvals();
+        throw;
     }
 
     // Done
