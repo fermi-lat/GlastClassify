@@ -1,7 +1,7 @@
 /**@file XprsnTree.h
 @brief Contains class definitions for implementing a very basic Decision Tree
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.17 2009/05/06 14:43:53 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.18 2009/05/13 03:17:30 usher Exp $
 */
 
 #ifndef XprsnTree_h
@@ -522,8 +522,8 @@ public:
         else if (name == "max")    mathOp = &XTExprsnFunction<T>::max;    // largest
         else if (name == "floor")  mathOp = &XTExprsnFunction<T>::floor;  // largest int not greater than x
         else if (name == "-")      mathOp = &XTExprsnFunction<T>::minus;  // unary minus in front of parens
-        else if (name == "bitAND") mathOp = &XTExprsnFunction<T>::bitand; // bit-wise AND operation
-        else if (name == "bitOR")  mathOp = &XTExprsnFunction<T>::bitor;  // bit-wise OR operation
+        else if (name == "bitAND") mathOp = &XTExprsnFunction<T>::myBitand; // bit-wise AND operation
+        else if (name == "bitOR")  mathOp = &XTExprsnFunction<T>::myBitor;  // bit-wise OR operation
         else throw XTENexception("XTExprsnFunction: Invalid function requested");
     }
     virtual ~XTExprsnFunction() {delete m_value;}
@@ -672,7 +672,7 @@ private:
         *m_value = -(temp);
         return m_value;
     }
-    const T* bitand(IXTExprsnNode& arg) const 
+    const T* myBitand(IXTExprsnNode& arg) const 
     {
         unsigned int arg1 = *(reinterpret_cast<const T*>(arg()));
         unsigned int arg2 = *(reinterpret_cast<const T*>(m_right()));
@@ -680,7 +680,7 @@ private:
         *m_value = rslt;
         return m_value;
     }
-    const T* bitor(IXTExprsnNode& arg) const 
+    const T* myBitor(IXTExprsnNode& arg) const 
     {
         unsigned int arg1 = *(reinterpret_cast<const T*>(arg()));
         unsigned int arg2 = *(reinterpret_cast<const T*>(m_right()));
