@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jrb  Wed May 13 16:48:06 PDT 2009
+GlastClassify/src/XT
+
+Modified Files:
+	XprsnTree.h 
+Log Message:
+gcc doesn't like names bitand, bitor.  Change to myBitand, myBitor
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-02-00, operation: add
 Package: GlastClassify
