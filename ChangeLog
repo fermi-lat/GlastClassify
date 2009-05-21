@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu May 21 14:43:58 PDT 2009
+GlastClassify/xml
+
+Modified Files:
+	Pass7_Analysis_Protected.xml 
+Log Message:
+Uploading Pass 7 v16.2 which removes a few unused variables and does other cleanup.
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-02-01, operation: add
 Package: GlastClassify
