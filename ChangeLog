@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri May 22 10:44:29 PDT 2009
+GlastClassify/src
+
+Modified Files:
+	ClassifyAlg.cxx 
+Log Message:
+Modification to tuple interface to insure tuple vars come from the output tree
+    *
+------------------------------------------------------------
 User: usher  Fri May 22 10:44:28 PDT 2009
 GlastClassify/cmt
 
