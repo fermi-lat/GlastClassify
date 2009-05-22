@@ -1,7 +1,7 @@
 /** @file ClassifyAlg.cxx
 @brief Declaration and implementation of Gaudi algorithm ClassifyAlg
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.6 2008/07/14 23:39:01 lsrea Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.7 2009/05/06 14:43:53 usher Exp $
 */
 
 #include "GaudiKernel/Algorithm.h"
@@ -20,7 +20,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.6 20
 template <class T> class GleamItem : public GlastClassify::Item {
 public:
     GleamItem<T>(const std::string& name, const std::string& type, T* data) :
-      m_pdata(data), m_name(name), m_type(type) {}
+      m_pdata(data), m_name(name), m_type(type)   {}
     
     virtual ~GleamItem<T>() {}
 
@@ -68,6 +68,7 @@ private:
     T*          m_pdata;
     std::string m_name;
     std::string m_type;
+    void*       m_treePtr;
 };
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -76,7 +77,13 @@ public:
     GleamTuple( INTupleWriterSvc* tuple, const std::string& treename)
         : m_tuple(tuple)
         , m_treename(treename)
-    {}
+    {
+        m_tuple->getOutputTreePtr(m_treePtr, m_treename);
+
+        if (!m_treePtr) 
+            throw std::invalid_argument("GleamTuple constructor: can not get pointer to output tree!");
+
+    }
 
 // LSR 14-Jul-08 code for ntuple types
 
@@ -85,7 +92,7 @@ public:
         const GlastClassify::Item* item = 0;
         void* dummy;
 
-        std::string type = m_tuple->getItem(m_treename, name, dummy);
+        std::string type = m_tuple->getItem(m_treename, name, dummy, m_treePtr);
 
         if (type == "Float_t")
         {
@@ -151,7 +158,8 @@ public:
         m_tuple->addItem(m_treename, name, &value);
     }
 private:
-    INTupleWriterSvc* m_tuple;
+    INTupleWriterSvc*  m_tuple;
+    void*              m_treePtr;
     const std::string& m_treename;
 };
 
