@@ -1,8 +1,9 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.82 2009/05/22 17:55:46 heather Exp $
+$Id: release.notes,v 1.83 2009/05/22 18:07:41 usher Exp $
 @verbatim
+23-May-09  v7r2p5 TU  Update to latest xml file (Pass7_v16.4.imw on Pass7 confluence page)
 22-May-09  v7r2p4 TU  Update to latest xml file (Pass7_v16.3.imw on Pass7 confluence page)
 22-May-09  v7r2p3 TU  Obtain output TTree ptr to force RootTupleSvc::getItem
                       to use the TTree we want to obtain branch pointers
