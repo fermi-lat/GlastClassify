@@ -1,8 +1,8 @@
 package GlastClassify
 
-version v7r2p4
+version v7r2p5
 author T. Usher <tracy.usher@slac.stanford.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.104 2009/05/22 17:55:46 heather Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.105 2009/05/22 18:07:40 usher Exp $
 use GlastPolicy *
 use facilities *
 
