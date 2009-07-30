@@ -2,6 +2,14 @@
 TAG
 Tag name: GlastClassify-07-03-00, operation: add
 Package: GlastClassify
+User: golpa  Wed Jul 29 21:34:47 2009
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: GlastClassify-07-03-00, operation: add
+Package: GlastClassify
 User: usher  Wed Jul 29 15:10:48 2009
 Files:
   GlastClassify/.cvsignore  1.1.1.1
