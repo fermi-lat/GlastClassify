@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Aug  3 10:00:30 PDT 2009
+GlastClassify/xml
+
+Modified Files:
+	Pass7_Analysis_Protected.xml 
+Log Message:
+Updating xml file to remove reference to McAcdXEnter (and YEnter)
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-03-00, operation: add
 Package: GlastClassify
