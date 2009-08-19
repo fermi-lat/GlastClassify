@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Tue Aug 18 20:53:12 PDT 2009
+GlastClassify/cmt
+
+Modified Files:
+      Tag: GlastReleasev15r47p15
+	requirements 
+Log Message:
+branch for GR v15r47p16 to allow ClassifyAlg to choose TTree* if merit intput files are involved
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-03-01, operation: add
 Package: GlastClassify
