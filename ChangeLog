@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Tue Aug 18 20:53:12 PDT 2009
+GlastClassify/doc
+
+Modified Files:
+      Tag: GlastReleasev15r47p15
+	release.notes 
+Log Message:
+branch for GR v15r47p16 to allow ClassifyAlg to choose TTree* if merit intput files are involved
+    *
+------------------------------------------------------------
+User: heather  Tue Aug 18 20:53:12 PDT 2009
 GlastClassify/cmt
 
 Modified Files:
