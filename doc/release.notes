@@ -1,8 +1,10 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.73 2008/07/23 04:37:23 heather Exp $
+$Id: release.notes,v 1.74 2008/08/10 04:25:43 lsrea Exp $
 @verbatim
+18-Aug-09  v6r5p2gr1 HMK branch for GR v15r47p16 to force use of output TTree
+           branches in case there is an input merit ntuple
 09-Aug-08  v6r5p2 LSR protect CTBCalPsfErr in the Pass6 xml file. Looks like I fixed this once before!
 22-Jul-08  v6r5p1 HMK fix typo
 22-Jul-08  v6r5   HMK Update revision for CMT env var removal for SCons
