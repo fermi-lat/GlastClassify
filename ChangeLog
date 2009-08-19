@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Tue Aug 18 20:55:34 PDT 2009
+GlastClassify
+
+Modified Files:
+      Tag: GlastReleasev15r47p15
+	SConscript 
+Log Message:
+update SConscript file
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-05-02-gr1, operation: add
 Package: GlastClassify
