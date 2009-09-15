@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlNewPredictEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.8 2009/01/22 20:44:21 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.9 2009/05/06 14:43:54 usher Exp $
 */
 
 #include "xmlNewPredictEngineFactory.h"
@@ -382,7 +382,7 @@ IXTExprsnNode* xmlNewPredictEngineFactory::parseNode(DOMElement* xmlElement)
 
             //*pValue = weight[m_yProbIndex];
 
-            int         catIdx = m_catIndex[score];
+            //int         catIdx = m_catIndex[score];
             //double      yProb  = weight[catIdx];
             double      yProb  = weight[m_yProbIndex];
         
@@ -429,12 +429,11 @@ std::string xmlNewPredictEngineFactory::getPredicateExpression(DOMElement* xmlPr
         std::vector<DOMElement *> xmlPredicateVec;
         xmlBase::Dom::getChildrenByTagName(xmlPredicate, "SimplePredicate", xmlPredicateVec);
 
-        if (xmlPredicateVec.size() > 2)
-        {
+        //if (xmlPredicateVec.size() > 2)
+        //{
             // Can happen legitimately
-            int j = 0;
             //throw Exception("PredictEngineFactory found simple predicate vector > 2 elements");
-        }
+        //}
 
         std::vector<DOMElement *>::iterator xmlPredicateVecIter = xmlPredicateVec.begin();
 
