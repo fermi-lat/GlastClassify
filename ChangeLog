@@ -1,22 +1,4 @@
 ------------------------------------------------------------
-User: usher  Tue Sep 15 11:11:21 PDT 2009
-GlastClassify/src/xmlBuilders
-
-Modified Files:
-	xmlNewlPredictEngineFactory.cxx xmlTreeAnalysisFactory.cxx 
-Log Message:
-fixing linux compiler warnings NOTE: cannot fix warnings in templated classes!
-    *
-------------------------------------------------------------
-User: usher  Tue Sep 15 11:11:20 PDT 2009
-GlastClassify/src
-
-Modified Files:
-	AtwoodTrees.cxx TreeAnalysis.cxx 
-Log Message:
-fixing linux compiler warnings NOTE: cannot fix warnings in templated classes!
-    *
-------------------------------------------------------------
 TAG
 Tag name: GlastClassify-06-05-02-gr1, operation: add
 Package: GlastClassify
