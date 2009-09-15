@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlTreeAnalysisFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.10 2009/02/26 20:04:13 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlTreeAnalysisFactory.cxx,v 1.11 2009/05/06 14:43:54 usher Exp $
 */
 
 #include "xmlTreeAnalysisFactory.h"
@@ -87,14 +87,17 @@ GlastClassify::TreeAnalysis* GlastClassify::xmlTreeAnalysisFactory::buildTreeAna
     m_idToINodeMap.clear();
     m_typeToINodeVecMap.clear();
 
+    // Counter that is really meant for debugging purposes
+    int numReturned = 0;
+
     // First pass through to find all output vars
-    int numVars  = findAllOutputVars(tree);
+    numReturned  = findAllOutputVars(tree);
 
     // Find the activity nodes in the document
-    int numNodes = findAllActivityNodes(tree);
+    numReturned = findAllActivityNodes(tree);
 
     // Link them together
-    int numLinks = linkActivityNodes(tree);
+    numReturned = linkActivityNodes(tree);
 
     return tree;
 }
@@ -294,15 +297,15 @@ int GlastClassify::xmlTreeAnalysisFactory::linkActivityNodes(GlastClassify::Tree
         tree->setHeadNode(headNode);
 
         // Leave this here for now to remind me that we may need to do something...
-        if (headVecSize > 1)
-        {
-            for(std::vector<IImActivityNode*>::iterator toNodeIter = m_iNodeVec.begin();
-                toNodeIter != m_iNodeVec.end(); toNodeIter++)
-            {
-                IImActivityNode* thisNode = *toNodeIter;
-                int j = 0;
-            }
-        }
+        //if (headVecSize > 1)
+        //{
+        //    for(std::vector<IImActivityNode*>::iterator toNodeIter = m_iNodeVec.begin();
+        //        toNodeIter != m_iNodeVec.end(); toNodeIter++)
+        //    {
+        //        IImActivityNode* thisNode = *toNodeIter;
+        //        int j = 0;
+        //    }
+        //}
     }
     else
     {

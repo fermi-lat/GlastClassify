@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.16 2009/05/06 14:43:53 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.17 2009/05/13 03:17:30 usher Exp $
 */
 
 #include "TreeAnalysis.h"
@@ -193,12 +193,6 @@ void TreeAnalysis::storeCTvals()
                 const_cast<GlastClassify::Item*>(m_nTupleMap[dataIter->first])->setDataValue(&result);
 
                 REALNUM test = *(m_nTupleMap[dataIter->first]);
-
-                if (test != result)
-                {
-                    // what do we do here?
-                    int j = 0;
-                }
             }
             else if (dataIter->second->getType() == "categorical")
             {
