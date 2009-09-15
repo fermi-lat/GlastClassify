@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Sep 15 11:11:21 PDT 2009
+GlastClassify/src/xmlBuilders
+
+Modified Files:
+	xmlNewlPredictEngineFactory.cxx xmlTreeAnalysisFactory.cxx 
+Log Message:
+fixing linux compiler warnings NOTE: cannot fix warnings in templated classes!
+    *
+------------------------------------------------------------
 User: usher  Tue Sep 15 11:11:20 PDT 2009
 GlastClassify/src
 
