@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Fri Nov 20 16:35:19 PST 2009
+GlastRelease-scons/GlastClassify
+
+Modified Files:
+	.cvsignore GlastClassifyLib.py SConscript 
+Log Message:
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-05-00, operation: add
 Package: GlastClassify
