@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.90 2009/10/16 15:58:56 usher Exp $
+$Id: release.notes,v 1.91 2009/12/08 06:51:15 jrb Exp $
 @verbatim
  * EOH *
 
+ GlastClassify-07-06-00 09-Feb-2009  TU Update to Pass7_v17.10.xml with Anders' request to change FswGamState
  GlastClassify-07-05-01 07-Dec-2009    jrb Add stuff for SCons build
 16-Oct-09  v7r5p0 TU  Update xml file to match v17.8 on the Pass 7 confluence page
  6-Oct-09  v7r4p0 TU  Update xml file to match v17.7 on the Pass 7 confluence page
