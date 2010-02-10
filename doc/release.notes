@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.89 2009/10/06 20:45:50 usher Exp $
+$Id: release.notes,v 1.90 2009/10/16 15:58:56 usher Exp $
 @verbatim
  * EOH *
 
+09-Feb-10  v7r5p0gr01 TU update xml file to 17.10 on Pass 7 Confluence page
 16-Oct-09  v7r5p0 TU  Update xml file to match v17.8 on the Pass 7 confluence page
  6-Oct-09  v7r4p0 TU  Update xml file to match v17.7 on the Pass 7 confluence page
 15-Sep-09  v7r3p2 TU  Fixing linux compiler warnings
