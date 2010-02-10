@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Wed Feb 10 08:27:20 PST 2010
+GlastClassify/xml
+
+Modified Files:
+      Tag: GlastReleasev17r35p1
+	Pass7_Analysis_Protected.xml 
+Log Message:
+Updating with correct mods of "standard" file
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-06-00, operation: del
 Package: GlastClassify
