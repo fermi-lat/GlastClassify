@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.90.2.1 2010/02/10 02:04:22 heather Exp $
+$Id: release.notes,v 1.90.2.2 2010/02/10 16:29:23 usher Exp $
 @verbatim
  * EOH *
 
+12-Feb-10  v7r5p0gr03 TU Fix categorical variable buffer overwrite problem
 10-Feb-10  v7r5p0gr02 TU Update xml file to fix problems with cat vars Vertex and HeavyOrAlpha
 09-Feb-10  v7r5p0gr01 TU update xml file to 17.10 on Pass 7 Confluence page
 16-Oct-09  v7r5p0 TU  Update xml file to match v17.8 on the Pass 7 confluence page
