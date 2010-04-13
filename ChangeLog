@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Tue Apr 13 11:41:44 PDT 2010
+GlastClassify
+
+Modified Files:
+	SConscript 
+Log Message:
+merge in GlastReleasev17r35p1 branch
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-05-00-gr03, operation: add
 Package: GlastClassify
