@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/SConscript,v 1.25 2010/06/11 00:36:24 jrb Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/SConscript,v 1.26 2010/06/12 17:26:51 jrb Exp $
 # Authors: Tracy Usher <usher@slac.stanford.edu>
 # Version: GlastClassify-07-06-02
 Import('baseEnv')
@@ -31,7 +31,8 @@ GlastClassify = libEnv.SharedLibrary('GlastClassify',
 staticProgEnv.Tool('registerTargets', package = 'GlastClassify',
                    staticLibraryCxts = [[ClassificationTree, staticLibEnv]],
                    libraryCxts = [[GlastClassify, libEnv]], 
-                   binaryCxts = [[apply, staticProgEnv]], 
+                   binaryCxts = [[apply, staticProgEnv]],
+                   xml = listFiles(['xml/*.xml']),
                    includes = listFiles(['GlastClassify/*.h']))
 
 
