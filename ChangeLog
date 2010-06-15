@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Mon Jun 14 19:27:05 PDT 2010
+GlastRelease-scons/GlastClassify
+
+Modified Files:
+	SConscript 
+Log Message:
+install contents of xml dir. 
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-06-02, operation: add
 Package: GlastClassify
