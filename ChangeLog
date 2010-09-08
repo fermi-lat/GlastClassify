@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Wed Sep  8 12:37:51 PDT 2010
+GlastClassify/src
+
+Modified Files:
+      Tag: GlastReleasev18r6p1
+	ClassifyAlg.cxx 
+Log Message:
+updates for Gaudi v21r7
+    *
+------------------------------------------------------------
+User: heather  Wed Sep  8 12:37:51 PDT 2010
 GlastClassify/doc
 
 Modified Files:
