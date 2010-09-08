@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Wed Sep  8 12:37:50 PDT 2010
+GlastClassify/cmt
+
+Modified Files:
+      Tag: GlastReleasev18r6p1
+	requirements 
+Log Message:
+updates for Gaudi v21r7
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-05-00-gr05, operation: add
 Package: GlastClassify
