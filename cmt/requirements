@@ -1,8 +1,8 @@
 package GlastClassify
-version v7r6p1
+version v7r6p1gr01
 
 author T. Usher <tracy.usher@slac.stanford.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.111.2.3 2010/02/13 00:14:09 usher Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.115 2010/04/13 18:41:45 heather Exp $
 
 use GlastPolicy *
 use facilities *
@@ -23,19 +23,21 @@ use xmlBase v5r*
 use TMine * rootExtensions
 
 use ntupleWriterSvc v*
-
+use RootmapPolicy * GlastPolicy
 use ROOT * IExternal
 macro_append ROOT_linkopts " $(ROOT_GUI_libs)"
 macro_append ROOT_cppflags "" WIN32 " /wd4800 "
 
 library  ClassificationTree -no_share                    \
                                 $(GlastClassify_headers) \
-                            -s= $(source)                \
+                             TreeAnalysis.cxx AtwoodTrees.cxx \
                             -s=ImActivityNodes $(source) \
                             -s=XT $(source)              \
                             -s=xmlBuilders $(source) 
 
-library  GlastClassify      -s=Dll $(source)   
+library  GlastClassify      ClassifyAlg.cxx   
+
+apply_pattern generate_rootmap library=GlastClassify
    
 macro_append GlastClassify_linkopts "" \
              Linux " -L${GlastClassify_cmtpath}/lib  -lClassificationTree " \
