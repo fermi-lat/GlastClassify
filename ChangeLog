@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Mon Oct  4 20:25:43 PDT 2010
+GlastClassify/cmt
+
+Modified Files:
+      Tag: GlastReleasev18r6p1
+	requirements 
+Log Message:
+minor mod for rootmap on win
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-06-01-gr01, operation: add
 Package: GlastClassify
