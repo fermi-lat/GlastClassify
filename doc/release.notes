@@ -1,12 +1,14 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.94 2010/06/12 17:26:51 jrb Exp $
+$Id: release.notes,v 1.95 2010/06/15 02:46:16 jrb Exp $
 @verbatim
  * EOH *
 
+ GlastClassify-07-06-03-gr01 06-Oct-2010 hmk Update Gaudi v21r7 along branch
  GlastClassify-07-06-03 14-Jun-2010    jrb for SCons builds
  GlastClassify-07-06-02 12-Jun-2010    jrb upgrades for SCons builds
+ GlastClassify-07-06-01-gr01 08-Sep-2010 HMK Update to Gaudi v21r7
  GlastClassify-07-06-01 13-Apr-2010  TU Update to Pass7_v17.10.xml with Anders' request to change FswGamState
  GlastClassify-07-05-01 07-Dec-2009    jrb Add stuff for SCons build
 12-Feb-10  v7r5p0gr03 TU Fix categorical variable buffer overwrite problem
