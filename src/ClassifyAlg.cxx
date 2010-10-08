@@ -1,7 +1,7 @@
 /** @file ClassifyAlg.cxx
 @brief Declaration and implementation of Gaudi algorithm ClassifyAlg
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.8 2009/05/22 17:44:29 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.9.10.1 2010/09/08 19:37:51 heather Exp $
 */
 
 #include "GaudiKernel/Algorithm.h"
@@ -218,8 +218,9 @@ private:
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-static const AlgFactory<ClassifyAlg>  Factory;
-const IAlgFactory& ClassifyAlgFactory = Factory;
+//static const AlgFactory<ClassifyAlg>  Factory;
+//const IAlgFactory& ClassifyAlgFactory = Factory;
+DECLARE_ALGORITHM_FACTORY(ClassifyAlg);
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ClassifyAlg::ClassifyAlg(const std::string& name, ISvcLocator* pSvcLocator) 
@@ -291,7 +292,7 @@ StatusCode ClassifyAlg::initialize()
 	      log << MSG::DEBUG << "Setting TMine::Messages::ERROR" << endreq;
 	      TMine::Messages::SetDefaultSeverity(TMine::Messages::ERROR);
 	      break;
-	    defaut:
+	    default:
 	      break;
 	    }
 	    if ( m_TMineTrace ) {
@@ -350,7 +351,7 @@ StatusCode ClassifyAlg::finalize()
     delete m_tMiner;
     delete m_ctree;
     delete m_tuple;
-    setFinalized(); //  prevent being called again
+    //setFinalized(); //  prevent being called again No longer available in Gaudi
     return StatusCode::SUCCESS;
 }
 
