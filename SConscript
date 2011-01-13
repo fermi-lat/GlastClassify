@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/SConscript,v 1.28.2.1 2010/10/08 16:32:16 heather Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/SConscript,v 1.28.2.2 2010/10/20 18:29:31 jrb Exp $
 # Authors: Tracy Usher <usher@slac.stanford.edu>
 # Version: GlastClassify-07-06-03-gr01
 
@@ -22,13 +22,15 @@ ClassificationTree = staticLibEnv.StaticLibrary('ClassificationTree',
 apply = staticProgEnv.Program('apply', listFiles(['src/apply/*.cxx']))
 
 # Might need to recompile for shared lib
-#libEnv.Tool('addLibrary', library = ['ClassificationTree'])
-
-GlastClassify = libEnv.ComponentLibrary('GlastClassify',
-                                        listFiles(['src/*.cxx',
-                                                   'src/ImActivityNodes/*.cxx',
-                                                   'src/XT/*.cxx',
-                                                   'src/xmlBuilders/*.cxx']))
+if baseEnv['PLATFORM'] == 'win32':
+    libEnv.Tool('addLibrary', library = ['ClassificationTree'])
+    GlastClassify = libEnv.ComponentLibrary('GlastClassify', ClassificationTree)
+else:
+    GlastClassify = libEnv.ComponentLibrary('GlastClassify',
+                                            listFiles(['src/*.cxx',
+                                                       'src/ImActivityNodes/*.cxx',
+                                                       'src/XT/*.cxx',
+                                                       'src/xmlBuilders/*.cxx']))
 
 
 
