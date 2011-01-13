@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jrb  Thu Jan 13 13:21:44 PST 2011
+GlastRelease-scons/GlastClassify
+
+Modified Files:
+      Tag: GlastReleasev18r7p1
+	SConscript 
+Log Message:
+slighly better kludge for getting correct Xerces path for genmap command
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-06-04, operation: add
 Package: GlastClassify
