@@ -1,10 +1,12 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.95 2010/06/15 02:46:16 jrb Exp $
+$Id: release.notes,v 1.96 2010/12/02 00:37:05 jrb Exp $
 @verbatim
  * EOH *
 
+ GlastClassify-07-07-01 31-Jan-2011    hmk use IExternal/TMineExt rather than
+                 TMine in rootExtensions
  GlastClassify-07-06-04 01-Dec-2010    jrb Make new main branch tag for SCons RM
  GlastClassify-07-06-03 14-Jun-2010    jrb for SCons builds
  GlastClassify-07-06-02 12-Jun-2010    jrb upgrades for SCons builds
