@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Mon Jan 31 19:58:26 PST 2011
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+move to use TMineExt rathern than TMine
+    *
+------------------------------------------------------------
 User: jrb  Thu Jan 13 13:21:44 PST 2011
 GlastRelease-scons/GlastClassify
 
