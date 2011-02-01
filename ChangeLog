@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Mon Jan 31 19:58:58 PST 2011
+GlastClassify
+
+Modified Files:
+	SConscript 
+Log Message:
+move to use TMineExt rathern than TMine
+    *
+------------------------------------------------------------
 User: heather  Mon Jan 31 19:58:26 PST 2011
 GlastClassify/doc
 
