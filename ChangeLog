@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Mon Feb 28 09:55:25 PST 2011
+GlastClassify/src
+
+Modified Files:
+	ClassifyAlg.cxx 
+Log Message:
+Expand env vars in xml and TMine cache file names.  Also, use parasitic mode in call to TMine::Init()
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-07-01, operation: add
 Package: GlastClassify
