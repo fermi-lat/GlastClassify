@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Tue Mar  1 20:38:30 PST 2011
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Fix warning in ClassifyAlg, and path in req file (not currently used)
+
+    *
+------------------------------------------------------------
 User: echarles  Mon Feb 28 09:55:25 PST 2011
 GlastClassify/src
 
