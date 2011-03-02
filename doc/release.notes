@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.96 2010/12/02 00:37:05 jrb Exp $
+$Id: release.notes,v 1.97 2011/02/01 03:58:26 heather Exp $
 @verbatim
  * EOH *
 
+ GlastClassify-07-07-01 02-Mar-2011 ec&lsrea
  GlastClassify-07-07-01 31-Jan-2011    hmk use IExternal/TMineExt rather than
                  TMine in rootExtensions
  GlastClassify-07-06-04 01-Dec-2010    jrb Make new main branch tag for SCons RM
