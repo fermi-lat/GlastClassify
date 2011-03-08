@@ -1,4 +1,4 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/GlastClassifyLib.py,v 1.3 2009/01/23 00:21:11 ecephas Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/GlastClassifyLib.py,v 1.4 2009/11/21 00:35:19 jrb Exp $
 def generate(env, **kw):
     if not kw.get('noGaudi', 0):
         env.Tool('addLibrary', library = env['gaudiLibs'])
@@ -9,5 +9,6 @@ def generate(env, **kw):
     env.Tool('xmlBaseLib')
     env.Tool('facilitiesLib')
     env.Tool('addLibrary', library = env['xercesLibs'])
+    env.Tool('addLibrary', library = env['TMineLibs'])
 def exists(env):
     return 1;
