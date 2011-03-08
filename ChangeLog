@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Mon Mar  7 16:10:24 PST 2011
+GlastRelease-scons/GlastClassify
+
+Modified Files:
+	GlastClassifyLib.py 
+Log Message:
+Add dependency on TMine external
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-07-02, operation: add
 Package: GlastClassify
