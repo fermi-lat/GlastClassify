@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.98 2011/03/02 14:06:42 heather Exp $
+$Id: release.notes,v 1.99 2011/03/08 00:12:53 jrb Exp $
 @verbatim
  * EOH *
 
+ GlastClassify-07-07-04 15-Mar-2011  lsrea make Pass7_Protected_Analysis the default xml file for TMine
  GlastClassify-07-07-03 07-Mar-2011    jrb Add dependency on libs from TMine external
  GlastClassify-07-07-01 02-Mar-2011 ec&lsrea
  GlastClassify-07-07-01 31-Jan-2011    hmk use IExternal/TMineExt rather than
