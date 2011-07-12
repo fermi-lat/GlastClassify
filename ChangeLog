@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: kadrlica  Tue Jul 12 16:02:14 PDT 2011
+GlastClassify/src
+
+Modified Files:
+      Tag: GlastReleasev19r2p0
+	ClassifyAlg.cxx 
+Log Message:
+Flipped the switch to use TMine by default
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-07-05, operation: add
 Package: GlastClassify
