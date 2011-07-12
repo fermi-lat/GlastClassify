@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kadrlica  Tue Jul 12 16:18:08 PDT 2011
+GlastClassify/src
+
+Modified Files:
+	ClassifyAlg.cxx 
+Log Message:
+Flipped the switch on TMine. Hopefully updated correctly this time.
+    *
+------------------------------------------------------------
 User: kadrlica  Tue Jul 12 16:02:14 PDT 2011
 GlastClassify/src
 
