@@ -1,7 +1,7 @@
 /** @file ClassifyAlg.cxx
 @brief Declaration and implementation of Gaudi algorithm ClassifyAlg
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.11 2011/03/02 04:38:31 lsrea Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.12 2011/03/15 21:38:55 lsrea Exp $
 */
 
 #include "GaudiKernel/Algorithm.h"
@@ -239,7 +239,7 @@ ClassifyAlg::ClassifyAlg(const std::string& name, ISvcLocator* pSvcLocator)
     declareProperty("PrintTreeInfo", m_treeInfo=false);
     
     // EAC mods
-    declareProperty("UseTMine",      m_useTMine=false);
+    declareProperty("UseTMine",      m_useTMine=true);
     declareProperty("TMineSelection",m_TMineSelection="");
     declareProperty("TMineTrace",    m_TMineTrace=false);    
     declareProperty("TMineCacheFile",m_TMineCacheFile="tmine_cache.root");
