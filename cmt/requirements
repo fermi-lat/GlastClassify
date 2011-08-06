@@ -1,8 +1,9 @@
 package GlastClassify
+version v7r5p0gr06
 
-version v7r5p0gr5
 author T. Usher <tracy.usher@slac.stanford.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.110.6.1 2010/07/06 21:49:13 echarles Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.124 2011/03/15 21:39:11 lsrea Exp $
+
 use GlastPolicy *
 use facilities *
 
@@ -19,6 +20,8 @@ macro source "*.cxx " WIN32 "*.h *.cxx"
 
 use classifier *
 use xmlBase v5r*
+#use TMine * rootExtensions
+use TMineExt * IExternal
 
 use ntupleWriterSvc v*
 
@@ -47,7 +50,7 @@ set PRUNEROWS "false"
 set MERIT_INPUT_FILE "C:/Glast/data/AllGammav17r3Overlay_merit.root"
 #set MERIT_INPUT_FILE "root://glast-rdr//glast/mc/ServiceChallenge/allGamma-GR-v13r9p3-Lyon/merit/allGamma-GR-v13r9p3-Lyon-000000-merit.root"
 set MERIT_OUTPUT_FILE "test.root"
-set CTREE_PATH "${GLASTCLASSIFYROOT}/xml/Pass7_Analysis_Protected.xml"
+set CTREE_PATH "${GLASTCLASSIFYXMLPATH}/Pass7_Analysis_Protected.xml"
 #set CTREE_PATH "${GLASTCLASSIFYROOT}/xml/ParticleSeparator.xml"
 
 application apply -s=../src/apply $(source)
