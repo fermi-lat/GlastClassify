@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Fri Aug  5 22:14:35 PDT 2011
+GlastClassify/doc
+
+Modified Files:
+      Tag: GlastReleasev17r35p23
+	release.notes 
+Log Message:
+merge in SCons updates along branch
+    *
+------------------------------------------------------------
+User: heather  Fri Aug  5 22:14:35 PDT 2011
 GlastClassify/cmt
 
 Modified Files:
