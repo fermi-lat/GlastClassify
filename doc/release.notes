@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.89.6.1 2010/07/06 21:49:13 echarles Exp $
+$Id: release.notes,v 1.89.6.2 2010/07/07 00:30:06 echarles Exp $
 @verbatim
  * EOH *
 
+ GlastClassify-07-05-00-gr06 05-Aug-2011 hmk  Merge in SCons updates for P7
  GlastClassify-07-05-00-gr05 06-Jul-2010 echarles Updated worksheet to v1.7 of users/rando/IMSheets/Pass7_NoLike_S2_AP.xml
  GlastClassify-07-05-00-gr04 06-Jul-2010 echarles Tagging along branch GlastReleasev17r36p1 for pass 7 reprocessing
  6-Oct-09  v7r4p0 TU  Update xml file to match v17.7 on the Pass 7 confluence page

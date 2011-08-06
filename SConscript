@@ -1,30 +1,39 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/SConscript,v 1.18.6.1 2010/07/06 21:49:13 echarles Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/SConscript,v 1.34 2011/03/15 21:39:11 lsrea Exp $
 # Authors: Tracy Usher <usher@slac.stanford.edu>
-# Version: GlastClassify-07-05-00-gr05
+# Version: GlastClassify-07-05-00-gr06
 Import('baseEnv')
 Import('listFiles')
 Import('packages')
-progEnv = baseEnv.Clone()
-libEnv = baseEnv.Clone()
+staticLibEnv = baseEnv.Clone()    # static library
+staticProgEnv = baseEnv.Clone()   # progs built on static library
+libEnv = baseEnv.Clone()          # gaudi cmp. library 
 
-libEnv.Tool('GlastClassifyLib', depsOnly = 1)
+staticProgEnv.Tool('GlastClassifyLib', depsOnly = 1, noGaudi = 1)
+libEnv.Tool('addLinkDeps', package='GlastClassify', toBuild='component')
+staticProgEnv.Tool('addLibrary', library = ['ClassificationTree'])
 
-ClassificationTree = libEnv.StaticLibrary('ClassificationTree', listFiles(['src/*.cxx',
-			'src/ImActivityNodes/*.cxx',
-			'src/XT/*.cxx',
-			'src/xmlBuilders/*.cxx']))
+ClassificationTree = staticLibEnv.StaticLibrary('ClassificationTree',
+                                                listFiles(['src/*.cxx',
+                                                           'src/ImActivityNodes/*.cxx',
+                                                           'src/XT/*.cxx',
+                                                           'src/xmlBuilders/*.cxx']))
+apply = staticProgEnv.Program('apply', listFiles(['src/apply/*.cxx']))
+
+# Might need to recompile for shared lib
+libEnv.Tool('addLibrary', library = ['ClassificationTree'])
+
+GlastClassify = libEnv.SharedLibrary('GlastClassify',
+                                     listFiles(['src/Dll/*.cxx']))
 
 
-GlastClassify = libEnv.SharedLibrary('GlastClassify', listFiles(['src/Dll/*.cxx']))
 
-progEnv.Tool('GlastClassifyLib')
-progEnv.Tool('addLibrary', library = ['ClassificationTree'])
-apply = progEnv.Program('apply', listFiles(['src/apply/*.cxx']))
-progEnv.Tool('registerObjects', package = 'GlastClassify', 
-	libraries = [ClassificationTree, GlastClassify], 
-	binaries = [apply], 
-	includes = listFiles(['GlastClassify/*.h']))
+staticProgEnv.Tool('registerTargets', package = 'GlastClassify',
+                   staticLibraryCxts = [[ClassificationTree, staticLibEnv]],
+                   libraryCxts = [[GlastClassify, libEnv]], 
+                   binaryCxts = [[apply, staticProgEnv]],
+                   xml = listFiles(['xml/*.xml']),
+                   includes = listFiles(['GlastClassify/*.h']))
 
 
 
