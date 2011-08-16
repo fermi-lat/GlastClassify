@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Aug 16 14:10:13 PDT 2011
+GlastClassify/src
+
+Modified Files:
+	ClassifyTool.cxx 
+Log Message:
+Make sure the tuple is zero-ed each event and written out
+    *
+------------------------------------------------------------
 User: usher  Tue Aug 16 11:23:06 PDT 2011
 GlastClassify/src
 
