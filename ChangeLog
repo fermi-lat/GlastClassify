@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: usher  Tue Aug 16 11:23:06 PDT 2011
+GlastClassify/src
+
+Modified Files:
+	ClassifyAlg.cxx 
+Added Files:
+	ClassifyTool.cxx 
+Log Message:
+Addition of a new tool, ClassifyTool, to enable exposure of classification trees to recon. The interface definition for ClassifyTool is located in GlastSvc/GlastClassify.
+    *
+------------------------------------------------------------
 User: usher  Tue Aug 16 11:23:05 PDT 2011
 GlastClassify/GlastClassify
 
