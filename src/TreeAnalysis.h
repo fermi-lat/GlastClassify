@@ -3,7 +3,7 @@
 @brief declaration of class TreeAnalysis
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.6 2007/07/13 18:33:23 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.7 2009/05/06 14:43:53 usher Exp $
 */
 
 #ifndef GlastClassify_TreeAnalysis_h
@@ -45,6 +45,11 @@ public:
     /** @brief This will zero the IM analysis output variables
     */
     void zeroCTvals();
+
+    /** @brief This will zero ALL variables in our tuple
+    *          ** Should not be used if analysis running on merit tuple! **
+    */
+    void zeroAllVals();
 
     /** @brief This stores IM analysis output variables into output ntuple
     */

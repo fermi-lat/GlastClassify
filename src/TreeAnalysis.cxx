@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.17 2009/05/13 03:17:30 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.18 2009/09/15 18:11:20 usher Exp $
 */
 
 #include "TreeAnalysis.h"
@@ -168,6 +168,42 @@ void TreeAnalysis::zeroCTvals()
                 valPtr->clearValidFlag();
             }
         }
+    }
+
+    return;
+}
+
+// Zero value all variables in our tuple
+void TreeAnalysis::zeroAllVals()
+{
+    // Transfer tuple variables to local tuple, if needed
+    for(XTtupleMap::iterator dataIter = m_xtTupleMap.begin(); dataIter != m_xtTupleMap.end(); dataIter++)
+    {
+        // Recover the variable name
+        const std::string& varName = dataIter->first;
+
+        // Note that if a variable is in our XTtupleMap but not in the ntuple we'll get an exception
+        // So we need to embed this in a try-catch block
+        try
+        {
+            const GlastClassify::Item* item = m_lookup.getItem(varName);
+            int                        charPos = item->getDataType().find("Char");
+
+            if (charPos == std::string::npos)
+            {
+                float data = 0.;
+
+                const_cast<GlastClassify::Item*>(item)->setDataValue(&data);
+            }
+            else
+            {
+                std::string data = "";
+
+                const_cast<GlastClassify::Item*>(item)->setDataValue(&data);            
+            }
+        }
+        // If caught we don't actually care to do anything
+        catch(...) {}
     }
 
     return;
