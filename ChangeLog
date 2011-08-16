@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Aug 16 11:23:05 PDT 2011
+GlastClassify/GlastClassify
+
+Modified Files:
+	ITupleInterface.h 
+Log Message:
+Addition of a new tool, ClassifyTool, to enable exposure of classification trees to recon. The interface definition for ClassifyTool is located in GlastSvc/GlastClassify.
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-gr02, operation: add
 Package: GlastClassify
