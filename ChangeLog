@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Aug 16 15:41:09 PDT 2011
+GlastClassify/src
+
+Modified Files:
+	TreeAnalysis.cxx TreeAnalysis.h 
+Log Message:
+Mods to zero out the ClassifyTool tuple each event
+    *
+------------------------------------------------------------
 User: usher  Tue Aug 16 14:10:13 PDT 2011
 GlastClassify/src
 
