@@ -1,7 +1,7 @@
 /** @file ITupleInterface.h
 @brief  Declare abstract class ITupleInterface
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/ITupleInterface.h,v 1.6 2008/07/14 23:39:00 lsrea Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/GlastClassify/ITupleInterface.h,v 1.7 2009/05/06 14:43:52 usher Exp $
 */
 
 
@@ -20,8 +20,10 @@ namespace GlastClassify{
     class Item {
     public:
         virtual ~Item(){};
-        virtual operator double()const = 0;
-        virtual void setDataValue(void* data) = 0;
+        virtual void        setDataValue(void* data)       = 0;
+        virtual void*       getDataAddr()            const = 0;
+        virtual std::string getDataType()            const = 0;
+        virtual operator double()                    const = 0;
     protected:
         Item(){};
     };
