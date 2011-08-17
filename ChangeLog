@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Aug 16 20:06:00 PDT 2011
+GlastClassify/src
+
+Modified Files:
+	ClassifyTool.cxx 
+Log Message:
+Some reworking to make sure ntuple written out correctly
+    *
+------------------------------------------------------------
 User: usher  Tue Aug 16 15:41:09 PDT 2011
 GlastClassify/src
 
