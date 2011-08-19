@@ -1,7 +1,7 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/SConscript,v 1.33 2011/03/15 21:30:22 lsrea Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/SConscript,v 1.34 2011/03/15 21:39:11 lsrea Exp $
 # Authors: Tracy Usher <usher@slac.stanford.edu>
-# Version: GlastClassify-07-07-05
+# Version: GlastClassify-07-08-00
 Import('baseEnv')
 Import('listFiles')
 Import('packages')
