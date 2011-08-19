@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.100 2011/03/15 21:30:22 lsrea Exp $
+$Id: release.notes,v 1.101 2011/03/15 21:39:11 lsrea Exp $
 @verbatim
  * EOH *
 
+ GlastClassify-07-08-00 19-Aug-2011  TU Tagging with ClassifyTool to allow recon access to classification 
  GlastClassify-07-07-05 15-Mar-2011  lsrea make Pass7_Protected_Analysis the default xml file for TMine
  GlastClassify-07-07-04 15-Mar-2011  lsrea make Pass7_Protected_Analysis the default xml file for TMine
  GlastClassify-07-07-03 07-Mar-2011    jrb Add dependency on libs from TMine external
