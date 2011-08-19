@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Aug 19 11:37:43 PDT 2011
+GlastClassify/src
+
+Modified Files:
+	ClassifyTool.cxx 
+Log Message:
+Small mods to enable memory resident ntuples
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-08-00, operation: add
 Package: GlastClassify
