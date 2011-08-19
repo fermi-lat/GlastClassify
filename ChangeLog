@@ -1,22 +1,4 @@
 ------------------------------------------------------------
-User: usher  Fri Aug 19 13:22:59 PDT 2011
-GlastClassify
-
-Modified Files:
-	SConscript 
-Log Message:
-Preparing to tag GlastClassify-07-08-02
-    *
-------------------------------------------------------------
-User: usher  Fri Aug 19 13:21:34 PDT 2011
-GlastClassify/src
-
-Modified Files:
-	ClassifyTool.cxx 
-Log Message:
-Fix slight issue to allow tuples to be written out.
-    *
-------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-08-01, operation: add
 Package: GlastClassify
