@@ -1,7 +1,7 @@
 /** @file ImSheetBuilder.cxx
  *    @brief implementation of classification::Tree; declaration and implementation or its private helper classification::ImSheetBuilder::Node
  *
- *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/AppendEngineNode.cxx,v 1.1 2005/11/07 21:50:53 usher Exp $
+ *    $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ImActivityNodes/AppendEngineNode.cxx,v 1.2 2005/11/22 21:19:01 usher Exp $
  */
 
 #include "AppendEngineNode.h"
@@ -45,7 +45,7 @@ void AppendEngineNode::print(std::ostream& out, int depth) const
 void AppendEngineNode::execute()
 {
     // Append Nodes only have one output node
-    m_nodeMap.begin()->second->execute();
+    if (!m_nodeMap.empty()) m_nodeMap.begin()->second->execute();
 
     return;
 }
