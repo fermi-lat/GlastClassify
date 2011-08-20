@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Aug 19 17:06:52 PDT 2011
+GlastClassify/src/apply
+
+Modified Files:
+	RootTuple.cxx 
+Log Message:
+Fix compile error
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-08-02, operation: add
 Package: GlastClassify
