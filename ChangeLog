@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Sat Aug 20 15:54:33 PDT 2011
+GlastClassify/src
+
+Modified Files:
+	ClassifyTool.cxx 
+Log Message:
+Apparently linux confuses the GleamTuple in ClassifyAlg with the GleamTuple in ClassifyTool, so rename
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-08-03, operation: add
 Package: GlastClassify
