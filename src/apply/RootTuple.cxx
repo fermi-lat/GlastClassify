@@ -1,7 +1,7 @@
 /** @file RootTuple.cxx
     @brief implement class RootTuple
 
- $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.14.44.1 2010/02/13 00:12:42 usher Exp $
+ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/RootTuple.cxx,v 1.15 2010/04/13 18:41:46 heather Exp $
   Original author T. Burnett (w/ help from H. Kelley)
 */
 #include "RootTuple.h"
@@ -37,9 +37,14 @@ public:
     RootItem(TLeaf * leaf) : m_leaf(leaf)
     {
         m_type  = m_leaf->GetTypeName();
+        m_name  = m_leaf->GetName();
         m_pdata = m_leaf->GetValuePointer();
     }
     operator double() const { return m_leaf->GetValue(); }
+
+    void*       getDataAddr() const {return m_pdata;}
+
+    std::string getDataType() const {return m_type;}
 
     void setDataValue(void* data) 
     {
@@ -102,6 +107,7 @@ public:
     }
 private:
     std::string m_type;
+    std::string m_name;
     void*       m_pdata;
     TLeaf*      m_leaf;
 };
