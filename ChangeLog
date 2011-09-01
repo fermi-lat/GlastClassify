@@ -2,6 +2,14 @@
 TAG
 Tag name: GlastRelease-19-03-06, operation: add
 Package: GlastClassify
+User: heather  Thu Sep  1 11:52:28 2011
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: GlastRelease-19-03-06, operation: add
+Package: GlastClassify
 User: heather  Thu Sep  1 11:52:22 2011
 Files:
   GlastClassify/.cvsignore  1.2
