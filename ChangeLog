@@ -2,6 +2,15 @@
 TAG
 Tag name: GlastRelease-17-35-24-gr04, operation: add
 Package: GlastClassify
+User: heather  Wed Sep  7 14:56:00 2011
+Files:
+  GlastClassify/xml/Pass7_Analysis_Protected.xml  1.9.6.2
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: GlastRelease-17-35-24-gr04, operation: add
+Package: GlastClassify
 User: heather  Wed Sep  7 14:55:54 2011
 Files:
 
