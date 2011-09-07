@@ -2,6 +2,14 @@
 TAG
 Tag name: GlastRelease-17-35-24-gr04, operation: add
 Package: GlastClassify
+User: heather  Wed Sep  7 14:55:54 2011
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: GlastRelease-17-35-24-gr04, operation: add
+Package: GlastClassify
 User: heather  Wed Sep  7 14:55:47 2011
 Files:
   GlastClassify/.cvsignore  1.1.1.1
