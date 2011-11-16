@@ -3,13 +3,13 @@
 @brief declaration of class TreeAnalysis
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.7 2009/05/06 14:43:53 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.h,v 1.8 2011/08/16 22:41:09 usher Exp $
 */
 
 #ifndef GlastClassify_TreeAnalysis_h
 #define GlastClassify_TreeAnalysis_h
 
-#include "GlastClassify/ITupleInterface.h"
+#include "GlastSvc/GlastClassify/ITupleInterface.h"
 
 class IImActivityNode;
 

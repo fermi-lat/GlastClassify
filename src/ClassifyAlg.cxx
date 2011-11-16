@@ -1,7 +1,7 @@
 /** @file ClassifyAlg.cxx
 @brief Declaration and implementation of Gaudi algorithm ClassifyAlg
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.11 2011/03/02 04:38:31 lsrea Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.14 2011/08/16 18:23:06 usher Exp $
 */
 
 #include "GaudiKernel/Algorithm.h"
@@ -15,7 +15,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyAlg.cxx,v 1.11 2
 #include "facilities/Util.h"
 
 #include "AtwoodTrees.h"
-#include "GlastClassify/ITupleInterface.h"
+#include "GlastSvc/GlastClassify/ITupleInterface.h"
 
 // EAC Mods
 #include <TDirectory.h>
@@ -37,9 +37,10 @@ public:
         return (double)*m_pdata;
     }
 
-    void*       getDataAddr() const {return m_pdata;}
+    const std::string& getDataName() const {return m_name;}
+    void*              getDataAddr() const {return m_pdata;}
 
-    std::string getDataType() const {return m_type;}
+    const std::string& getDataType() const {return m_type;}
 
 // LSR 14-Jul-08 code for ntuple types
 
