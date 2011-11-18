@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: usher  Fri Nov 18 09:41:23 PST 2011
-GlastClassify/src
-
-Modified Files:
-	ClassifyTool.cxx 
-Log Message:
-make sure the "saveRows" is set correctly on each call to the setup method
-    *
-------------------------------------------------------------
 TAG
 Tag name: GlastClassify-07-08-05, operation: add
 Package: GlastClassify
