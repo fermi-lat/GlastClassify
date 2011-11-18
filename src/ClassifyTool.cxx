@@ -7,7 +7,7 @@
  * @author The Tracking Software Group
  *
  * File and Version Information:
- *      $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyTool.cxx,v 1.7 2011/08/20 22:54:33 usher Exp $
+ *      $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyTool.cxx,v 1.8 2011/11/16 22:55:20 usher Exp $
  */
 
 #include "GaudiKernel/ToolFactory.h"
@@ -319,7 +319,7 @@ StatusCode ClassifyTool::setUpClassification(VarNameToValueMap& varMap,
     // so we have to do this on the side here... 
     int* dummyInt = new int();
 
-    if (tupleFileName != "") m_saveRows = true;
+    if (tupleFileName == "") m_saveRows = false;
 
     sc = m_rootTupleSvc->addItem(tupleName, "Dummy", dummyInt, tupleFileName, m_saveRows);
 
