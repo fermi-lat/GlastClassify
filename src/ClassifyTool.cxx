@@ -7,7 +7,7 @@
  * @author The Tracking Software Group
  *
  * File and Version Information:
- *      $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/ClassifyTool.cxx,v 1.8 2011/11/16 22:55:20 usher Exp $
+ *      $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/src/ClassifyTool.cxx,v 1.9 2011/11/18 17:41:23 usher Exp $
  */
 
 #include "GaudiKernel/ToolFactory.h"
@@ -249,8 +249,9 @@ private:
 };
 
 
-static ToolFactory<ClassifyTool> s_factory;
-const IToolFactory& ClassifyToolFactory = s_factory;
+//static ToolFactory<ClassifyTool> s_factory;
+//const IToolFactory& ClassifyToolFactory = s_factory;
+DECLARE_TOOL_FACTORY(ClassifyTool);
 
 //
 // Class constructor, no initialization here
