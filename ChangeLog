@@ -2,6 +2,15 @@
 TAG
 Tag name: GlastRelease-19-04-01, operation: add
 Package: GlastClassify
+User: heather  Tue Dec 13 18:42:47 2011
+Files:
+  GlastClassify/xml/Pass7_Analysis_Protected.xml  1.12
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: GlastRelease-19-04-01, operation: add
+Package: GlastClassify
 User: heather  Tue Dec 13 18:42:37 2011
 Files:
   GlastClassify/doc/release.notes  1.108
