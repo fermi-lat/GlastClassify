@@ -1,5 +1,21 @@
 ------------------------------------------------------------
 TAG
+Tag name: GlastRelease-19-04-01, operation: add
+Package: GlastClassify
+User: heather  Tue Dec 13 18:42:25 2011
+Files:
+  GlastClassify/.cvsignore  1.2
+  GlastClassify/ChangeLog  1.934
+  GlastClassify/SConscript  1.41
+  GlastClassify/GlastClassifyLib.py  1.5
+  GlastClassify/GlastClassify/ITupleInterface.h  1.8
+  GlastClassify/cmt/.cvsignore  1.1.1.1
+  GlastClassify/cmt/NMake  1.1.1.1
+  GlastClassify/cmt/requirements  1.132
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: GlastClassify-07-09-00, operation: add
 Package: GlastClassify
 User: heather  Mon Dec 12 13:22:25 2011
