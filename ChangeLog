@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Wed Dec 14 18:52:05 PST 2011
+GlastClassify/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+add ClassifyTool into shared lib
+    *
+------------------------------------------------------------
+User: heather  Wed Dec 14 18:52:05 PST 2011
 GlastClassify/cmt
 
 Modified Files:
