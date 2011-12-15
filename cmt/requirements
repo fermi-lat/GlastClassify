@@ -1,8 +1,8 @@
 package GlastClassify
-version v7r9p0
+version v7r9p1
 
 author T. Usher <tracy.usher@slac.stanford.edu>
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/cmt/requirements,v 1.132 2011/11/18 17:42:54 usher Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/cmt/requirements,v 1.133 2011/12/12 20:50:43 heather Exp $
 
 use GlastPolicy *
 use facilities  *
@@ -39,7 +39,7 @@ library  ClassificationTree -no_share                    \
                             -s=XT $(source)              \
                             -s=xmlBuilders $(source) 
 
-library  GlastClassify      ClassifyAlg.cxx   
+library  GlastClassify      ClassifyAlg.cxx   ClassifyTool.cxx
 
 apply_pattern generate_rootmap library=GlastClassify
    
