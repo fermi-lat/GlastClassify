@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Dec 14 18:52:05 PST 2011
+GlastClassify
+
+Modified Files:
+	SConscript 
+Log Message:
+add ClassifyTool into shared lib
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-gr17, operation: add
 Package: GlastClassify
