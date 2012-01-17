@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: cohen  Tue Jan 17 08:52:04 PST 2012
+GlastRelease-scons/GlastClassify/src/apply
+
+Modified Files:
+	apply_main.cxx 
+Log Message:
+fix C library includes for gcc4.4 compilation
+    *
+------------------------------------------------------------
+User: cohen  Tue Jan 17 08:52:04 PST 2012
 GlastRelease-scons/GlastClassify/src/XT
 
 Modified Files:
