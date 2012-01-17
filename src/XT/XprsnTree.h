@@ -1,12 +1,13 @@
 /**@file XprsnTree.h
 @brief Contains class definitions for implementing a very basic Decision Tree
 @author T. Usher
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/XT/XprsnTree.h,v 1.18 2009/05/13 03:17:30 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/src/XT/XprsnTree.h,v 1.19 2009/05/13 23:48:06 jrb Exp $
 */
 
 #ifndef XprsnTree_h
 #define XprsnTree_h
 
+#include <typeinfo>
 #include <iostream>
 #include <cmath>
 #include "ImPrecision.h"

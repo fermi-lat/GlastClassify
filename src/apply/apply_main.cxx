@@ -1,7 +1,7 @@
 /** @file apply_main.cxx 
 @brief Application that applies decision trees to a root tuple
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1.19 2009/05/06 14:43:54 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/src/apply/apply_main.cxx,v 1.20 2011/11/16 22:55:20 usher Exp $
 */
 
 #include "RootTuple.h"
@@ -16,6 +16,8 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/apply/apply_main.cxx,v 1
 #include <cassert>
 #include <stdexcept>
 #include <fstream>
+#include <cstdlib>
+#include <typeinfo>
 
 /** 
 @page applications apply
