@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.109 2011/12/12 20:50:43 heather Exp $
+$Id: release.notes,v 1.110 2011/12/15 02:52:05 heather Exp $
 @verbatim
  * EOH *
 
+ GlastClassify-07-09-02 23-Jan-2012    jrb Johann's patches for gcc41
  GlastClassify-07-09-01 14-Dec-2011 HMK Patch to include ClassifyTool in 
     shared lib
  GlastClassify-07-09-00 08-Dec-2011 HMK Merge in Gaudi v21r7
