@@ -2,7 +2,7 @@
 
 @brief implementation of class TreeAnalysis
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.17 2009/05/13 03:17:30 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.18 2009/09/15 18:11:20 usher Exp $
 */
 
 #include "TreeAnalysis.h"
@@ -14,6 +14,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/TreeAnalysis.cxx,v 1.17 
 #include <cmath>  // for M_PI, among others
 
 #include <sstream>
+#include <cstring>
 
 using namespace GlastClassify;
 
