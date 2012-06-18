@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: kadrlica  Sun Jun 17 22:42:13 PDT 2012
+GlastClassify/xml
+
+Modified Files:
+      Tag: GlastReleasev20r3p4
+	Pass7_Analysis_Protected.xml 
+Log Message:
+Stop some variables from leaking out of the worksheet
+    *
+------------------------------------------------------------
 User: kadrlica  Fri May 11 12:58:38 PDT 2012
 GlastClassify/cmt
 
