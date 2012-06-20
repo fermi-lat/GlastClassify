@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kadrlica  Tue Jun 19 17:03:56 PDT 2012
+GlastClassify/xml
+
+Modified Files:
+	Pass7_Analysis_Protected.xml 
+Log Message:
+Stopped deletion of CTBCALLEEProb in node 227 (GlastClassify was ignoring this while TMine was not)
+    *
+------------------------------------------------------------
 User: kadrlica  Sun Jun 17 23:00:47 PDT 2012
 GlastClassify/xml
 
