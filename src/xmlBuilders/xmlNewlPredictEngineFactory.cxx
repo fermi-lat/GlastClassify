@@ -2,7 +2,7 @@
 
 @brief implementation of class xmlNewPredictEngineFactory
 
-$Header: /nfs/slac/g/glast/ground/cvs/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.9 2009/05/06 14:43:54 usher Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/GlastClassify/src/xmlBuilders/xmlNewlPredictEngineFactory.cxx,v 1.10 2009/09/15 18:11:21 usher Exp $
 */
 
 #include "xmlNewPredictEngineFactory.h"
@@ -181,7 +181,8 @@ newPredictEngineNode::TreePairVector xmlNewPredictEngineFactory::parseForest(con
             XTtupleMap::iterator dataIter = XprsnParser().getXtConstants().find(sLevelName);
 
             // If already there then we can skip
-            if (dataIter == XprsnParser().getXtTupleVars().end())
+//            if (dataIter == XprsnParser().getXtTupleVars().end())
+            if (dataIter == XprsnParser().getXtConstants().end())
             {
                 // Add variable to list
                 XTcolumnValBase* basePtr = 0;
