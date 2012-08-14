@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Aug 14 14:09:11 PDT 2012
+GlastRelease-scons/GlastClassify
+
+Modified Files:
+	SConscript 
+Log Message:
+Preparing to tag GlastClassify-07-09-04
+    *
+------------------------------------------------------------
 User: usher  Tue Aug 14 14:07:27 PDT 2012
 GlastRelease-scons/GlastClassify/src/xmlBuilders
 
