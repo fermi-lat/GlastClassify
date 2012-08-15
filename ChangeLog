@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Tue Aug 14 22:06:12 PDT 2012
+GlastClassify/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+remove ClassificationTree static lib
+    *
+------------------------------------------------------------
 User: heather  Tue Aug 14 22:06:11 PDT 2012
 GlastClassify
 
