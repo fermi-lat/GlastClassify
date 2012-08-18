@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Fri Aug 17 17:28:54 PDT 2012
+GlastRelease-scons/GlastClassify
+
+Modified Files:
+	GlastClassifyLib.py 
+Log Message:
+support no-install headers on Windows
+    *
+------------------------------------------------------------
 User: heather  Tue Aug 14 22:06:12 PDT 2012
 GlastClassify/doc
 
