@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kadrlica  Wed Sep 19 16:48:21 PDT 2012
+GlastClassify
+
+Modified Files:
+	SConscript 
+Log Message:
+Recursively copy everything in xml directory
+    *
+------------------------------------------------------------
 User: jrb  Mon Aug 20 12:01:50 PDT 2012
 GlastClassify/cmt
 
