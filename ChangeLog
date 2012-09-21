@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kadrlica  Fri Sep 21 12:41:53 PDT 2012
+GlastClassify/xml/Pass8_Analysis_Open.d/weights
+
+Added Files:
+	WP8CTAllProb_BDT500D09NP.weights.xml 
+Log Message:
+First iteration of AllProb event classification; will need to be updated with new ROOT
+    *
+------------------------------------------------------------
 User: kadrlica  Wed Sep 19 16:55:54 PDT 2012
 GlastClassify/cmt
 
