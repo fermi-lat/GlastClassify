@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: carmelo  Tue Sep 25 02:27:02 PDT 2012
+GlastClassify/xml/Pass8_Analysis_Open.d/weights
+
+Added Files:
+	WP8CalOnlyBEP2Prob_bep2_mce7_BDTG.weights.xml 
+	WP8CalOnlyProb_BDTG.weights.xml 
+Log Message:
+adding CalOnly stuff to P8 ws
+    *
+------------------------------------------------------------
 User: carmelo  Tue Sep 25 02:27:01 PDT 2012
 GlastClassify/xml
 
