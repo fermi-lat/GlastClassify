@@ -1,10 +1,11 @@
 /** @file release.notes
  @brief package GlastClassify
 
-$Id: release.notes,v 1.116 2012/09/19 23:55:54 kadrlica Exp $
+$Id: release.notes,v 1.117 2012/09/21 19:44:50 kadrlica Exp $
 @verbatim
  * EOH *
 
+ GlastClassify-07-10-03 26-Sep-2012 carmelo Added cal-only first prototype
  GlastClassify-07-10-02 21-Sep-2012 kadrlica Added first pass of AllProb; will need update with new ROOT
  GlastClassify-07-10-01 19-Sep-2012 kadrlica Updated Pass8 worksheet with PSF, TKR, and CAL pieces. Added directory for Pass8 weights files.
  GlastClassify-07-10-00 20-Aug-2012    jrb for Windows no-install-headers
