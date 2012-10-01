@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Mon Oct  1 11:03:37 PDT 2012
+GlastClassify/xml
+
+Removed Files:
+	Pass8_Analysis_Open.xml 
+Log Message:
+removed P8 xml file and moved to pass8Analysis
+    *
+------------------------------------------------------------
 User: heather  Mon Oct  1 11:02:37 PDT 2012
 GlastClassify/xml/Pass8_Analysis_Open.d/weights
 
