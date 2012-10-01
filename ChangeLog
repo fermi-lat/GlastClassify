@@ -1,4 +1,20 @@
 ------------------------------------------------------------
+User: heather  Mon Oct  1 11:02:37 PDT 2012
+GlastClassify/xml/Pass8_Analysis_Open.d/weights
+
+Removed Files:
+	WP8CTAcdCpfProb_BDT500D07.weights.xml 
+	WP8CTAllProb_BDT500D09NP.weights.xml 
+	WP8CTCORETkrBestDir_BDT200D07NP.weights.xml 
+	WP8CTCalGamProb_BDT500D05.weights.xml 
+	WP8CTTkrGamProb_BDT500D05.weights.xml 
+	WP8CTTkrTree1Prob_BDT200D09.weights.xml 
+	WP8CalOnlyBEP2Prob_bep2_mce7_BDTG.weights.xml 
+	WP8CalOnlyProb_BDTG.weights.xml 
+Log Message:
+removing P8 weights files, moving to pass8Anaysis directory
+    *
+------------------------------------------------------------
 User: carmelo  Wed Sep 26 15:28:02 PDT 2012
 GlastClassify/cmt
 
